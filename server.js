@@ -8,15 +8,17 @@ const app = express();
 
 connectDB();
 
-app.get('/test', (req, res) =>
-  res.send('Hello World, this the Code Mentor Center backend server.')
-);
-
 // Init Built-In Parser
 
 app.use(express.json({ extended: false }));
 
-// Init API routes
+// Init Root Route
+
+app.get('/test', (req, res) =>
+  res.send('Hello World, this the Code Mentor Center backend server.')
+);
+
+// Init API Routes
 
 app.use('/api/users', require('./routes/api/register'));
 app.use('/api/auth', require('./routes/api/auth'));
