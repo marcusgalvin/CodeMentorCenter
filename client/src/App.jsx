@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { Fragment } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Landing } from "./components/layout";
 
-function App() {
+import "./index.css";
+
+const App = () => {
   return (
-    <div className="App">
-      <h1>Code Mentor Center</h1>
-    </div>
+    <Router>
+      <Fragment>
+        <Switch>
+          <Route exact path="/" component={Landing} />
+        </Switch>
+      </Fragment>
+    </Router>
   );
-}
+};
 
 export default App;

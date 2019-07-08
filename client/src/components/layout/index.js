@@ -1,4 +1,4 @@
-import ProfileCard from "./profileCard/ProfileCard";
+/*import ProfileCard from "./profileCard/ProfileCard";
 import ProfileDetails from "./profileCard/ProfileCard";
 import AboutUs from "./AboutUs";
 import CTARegister from "./CTARegister";
@@ -10,9 +10,11 @@ import RandomMentors from "./RandomMentors";
 import Search from "./Search";
 import TopMentors from "./TopMentors";
 import TopNavbar from "./TopNavbar";
+*/
+import Landing from "./Landing";
 
 export {
-  ProfileCard,
+  /*ProfileCard,
   ProfileDetails,
   AboutUs,
   CTARegister,
@@ -23,5 +25,7 @@ export {
   RandomMentors,
   Search,
   TopMentors,
-  TopNavbar
+  TopNavbar,
+*/
+  Landing
 };
