@@ -5,18 +5,19 @@ const Landing = () => {
     <section className="landing">
       <div className="landing-inner">
         {/* CMC Hero Banner Container */}
-        hero banner component
+        Hero banner component
         {/* Header Content w/ Register Button */}
-        call to action register button
+        CTA register container
         {/* Search Field Container */}
         <div className="search-landing">search component</div>
         {/* Top Rated Mentors Showcase */}
         <div className="top-rated-mentors">
           <h4 className="lead">Top Rated Mentors</h4>
           <div className="carousel-ct" />
+          Top Mentor's carousel container
         </div>
         {/* Higher Learning at CareerDevs */}
-        online learning component
+        Online learning container
         {/* Random Mentor Showcase */}
         <div className="random-mentors">
           <h4 className="lead">Mentors</h4>
@@ -27,6 +28,7 @@ const Landing = () => {
             of letters, as opposed to using
           </p>
           <div className="carousel-ct" />
+          Random Mentor's carousel container
         </div>
         {/* Random Mentee Showcase */}
         <div className="random-mentees">
@@ -38,6 +40,7 @@ const Landing = () => {
             of letters, as opposed to using
           </p>
           <div className="carousel-ct" />
+          Random Mentee's carousel container
         </div>
         {/* Footer Container */}
         footer component

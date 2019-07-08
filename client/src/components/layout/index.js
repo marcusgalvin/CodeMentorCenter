@@ -9,8 +9,8 @@ import RandomMentees from "./RandomMentees";
 import RandomMentors from "./RandomMentors";
 import Search from "./Search";
 import TopMentors from "./TopMentors";
-import TopNavbar from "./TopNavbar";
 */
+import TopNavbar from "./TopNavbar";
 import Landing from "./Landing";
 
 export {
@@ -25,7 +25,7 @@ export {
   RandomMentors,
   Search,
   TopMentors,
-  TopNavbar,
 */
+  TopNavbar,
   Landing
 };
