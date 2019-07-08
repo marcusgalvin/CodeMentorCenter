@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const config = require('config');
+const chalk = require('chalk');
 
 const db = config.get('mongoURI');
 
@@ -9,7 +10,7 @@ const connectDB = async () => {
       useNewUrlParser: true,
       useCreateIndex: true,
     });
-    console.log('MongoDB Connected!');
+    console.log(chalk.green.inverse('MongoDB Connected!'));
   } catch (err) {
     console.error(err.messsage);
     process.exit(1);
