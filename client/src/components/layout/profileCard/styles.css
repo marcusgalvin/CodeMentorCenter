@@ -1,3 +1,9 @@
+/*************************************************/
+/*************************************************/
+/*              Global Styles                    */
+/*************************************************/
+/*************************************************/
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -12,8 +18,8 @@ code {
     monospace;
 }
 
-/* CSS styles added in for front-end work
-/* Global Styles */
+/* CSS styles added in for front-end work */
+/******************************************/
 :root {
   --primary-color: #3b8beb;
   --red-color: #b23850;
@@ -51,7 +57,9 @@ img {
   width: 100%;
 }
 
-/* Text Styles*/
+/* Text Styles */
+/***************/
+
 .x-large {
   font-size: 4rem;
   line-height: 1.2;
@@ -77,6 +85,7 @@ img {
 }
 
 /* Padding */
+/***********/
 .p {
   padding: 0.5rem;
 }
@@ -110,6 +119,7 @@ img {
 }
 
 /* Margin */
+/**********/
 .m {
   margin: 0.5rem;
 }
@@ -246,6 +256,7 @@ img {
 }
 
 /* Forms */
+/*********/
 .form .form-group {
   margin: 1.2rem 0;
 }
@@ -326,7 +337,157 @@ section.container {
   font-size: 1.4rem;
 }
 
+/* Profiles Page */
+/*****************/
+.profile {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  align-items: center;
+  grid-gap: 2rem;
+  padding: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Profile Page */
+/****************/
+.profile-grid {
+  display: grid;
+  grid-template-areas:
+    "top top"
+    "about about"
+    "exp edu"
+    "github github";
+  grid-gap: 1rem;
+}
+
+.profile-top {
+  grid-area: top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile-top img {
+  width: 250px;
+}
+
+.profile-top .icons a {
+  color: #fff;
+  margin: 0 0.3rem;
+}
+
+.profile-top .icons a:hover {
+  color: var(--dark-color);
+}
+
+.profile-about {
+  grid-area: about;
+  text-align: center;
+}
+
+.profile-about .skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile-exp {
+  grid-area: exp;
+}
+
+.profile-edu {
+  grid-area: edu;
+}
+
+.profile-exp h2,
+.profile-edu h2 {
+  margin-bottom: 1rem;
+}
+
+.profile-exp > div,
+.profile-edu > div {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: #ccc 1px dotted;
+}
+
+.profile-exp > div:last-child,
+.profile-edu > div:last-child {
+  border: 0;
+}
+
+.profile-exp p,
+.profile-edu p {
+  margin: 0.5rem 0;
+}
+
+.profile-github {
+  grid-area: github;
+}
+
+.profile-github .repo {
+  display: flex;
+}
+
+.profile-github .repo > div:first-child {
+  flex: 7;
+  flex-basis: 70%;
+}
+
+.profile-github > div:last-child {
+  flex: 3;
+  flex-basis: 20%;
+}
+
+/* Posts Page */
+/**************/
+.post-form .post-form-header {
+  background: var(--primary-color);
+  padding: 0.5rem;
+}
+
+.post {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 2rem;
+  align-items: center;
+}
+
+.post > div:first-child {
+  text-align: center;
+}
+
+.post img {
+  width: 100px;
+}
+
+.post .comment-count {
+  background: var(--light-color);
+  color: var(--primary-color);
+  padding: 0.1rem 0.2rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.post .post-date {
+  color: #aaa;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/*************************************************/
+/*************************************************/
+/*              Code Menter Center               */
+/*                   Styles                      */
+/*************************************************/
+/*************************************************/
+
 /* Top Navigation Component */
+/****************************/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -373,6 +534,7 @@ section.container {
 }
 
 /* CMC Hero Banner Component */
+/*****************************/
 .heroImg {
   width: 100%;
   height: 100%;
@@ -380,6 +542,7 @@ section.container {
 }
 
 /* Search Option Component */
+/***************************/
 .search-landing {
   position: relative;
   display: block;
@@ -445,8 +608,9 @@ section.container {
   flex-wrap: wrap;
 }
 
-/* Top Mentors Component */
+/*   Top Mentors Component  */
 /* Random Mentors Component */
+/****************************/
 .top-rated-mentors,
 .random-mentors,
 .random-mentees {
@@ -479,6 +643,7 @@ section.container {
 }
 
 /* Profile Card (All) */
+/**********************/
 .p-card {
   margin: 30px;
   width: 325px;
@@ -586,6 +751,7 @@ section.container {
 }
 
 /* Landing Page */
+/****************/
 .landing {
   position: relative;
   top: 85px;
@@ -621,6 +787,7 @@ section.container {
 }
 
 /* Online Learning / Higher Learning */
+/*************************************/
 .higherLearning {
   margin-top: 70px;
   display: flex;
@@ -720,6 +887,7 @@ section.container {
 }
 
 /* Footer Conainer  */
+/********************/
 .footer-ct {
   position: relative;
   margin-top: 30px;
@@ -786,146 +954,8 @@ section.container {
   line-height: 1rem;
 }
 
-/* Profiles Page */
-.profile {
-  display: grid;
-  grid-template-columns: 2fr 4fr 2fr;
-  align-items: center;
-  grid-gap: 2rem;
-  padding: 1rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-}
-
-/* Profile Page */
-.profile-grid {
-  display: grid;
-  grid-template-areas:
-    "top top"
-    "about about"
-    "exp edu"
-    "github github";
-  grid-gap: 1rem;
-}
-
-.profile-top {
-  grid-area: top;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.profile-top img {
-  width: 250px;
-}
-
-.profile-top .icons a {
-  color: #fff;
-  margin: 0 0.3rem;
-}
-
-.profile-top .icons a:hover {
-  color: var(--dark-color);
-}
-
-.profile-about {
-  grid-area: about;
-  text-align: center;
-}
-
-.profile-about .skills {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.profile-exp {
-  grid-area: exp;
-}
-
-.profile-edu {
-  grid-area: edu;
-}
-
-.profile-exp h2,
-.profile-edu h2 {
-  margin-bottom: 1rem;
-}
-
-.profile-exp>div,
-.profile-edu>div {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: #ccc 1px dotted;
-}
-
-.profile-exp>div:last-child,
-.profile-edu>div:last-child {
-  border: 0;
-}
-
-.profile-exp p,
-.profile-edu p {
-  margin: 0.5rem 0;
-}
-
-.profile-github {
-  grid-area: github;
-}
-
-.profile-github .repo {
-  display: flex;
-}
-
-.profile-github .repo>div:first-child {
-  flex: 7;
-  flex-basis: 70%;
-}
-
-.profile-github>div:last-child {
-  flex: 3;
-  flex-basis: 20%;
-}
-
-/* Posts Page */
-.post-form .post-form-header {
-  background: var(--primary-color);
-  padding: 0.5rem;
-}
-
-.post {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-gap: 2rem;
-  align-items: center;
-}
-
-.post>div:first-child {
-  text-align: center;
-}
-
-.post img {
-  width: 100px;
-}
-
-.post .comment-count {
-  background: var(--light-color);
-  color: var(--primary-color);
-  padding: 0.1rem 0.2rem;
-  border-radius: 5px;
-  font-size: 0.8rem;
-}
-
-.post .post-date {
-  color: #aaa;
-  font-size: 0.8rem;
-  margin-bottom: 0.5rem;
-}
-
 /* Mobile Styles */
+/*****************/
 @media (max-width: 700px) {
   .container {
     top: 0;
@@ -940,6 +970,7 @@ section.container {
   }
 
   /* Text Styles */
+  /***************/
   .x-large {
     font-size: 3rem;
   }
@@ -953,6 +984,7 @@ section.container {
   }
 
   /* Navigation component */
+  /************************/
   .navbar {
     display: block;
     position: relative;
@@ -994,6 +1026,7 @@ section.container {
   }
 
   /* Search Component */
+  /********************/
   .search {
     margin: 0 auto;
     width: 90%;
@@ -1008,6 +1041,7 @@ section.container {
   }
 
   /* Higher Learning */
+  /*******************/
   .higherLearning {
     display: block;
   }
@@ -1023,6 +1057,7 @@ section.container {
   }
 
   /* Footer */
+  /**********/
   .social-ct,
   .location-ct,
   .sitemap-ct {
@@ -1030,11 +1065,13 @@ section.container {
   }
 
   /* Landing Page */
+  /****************/
   .landing {
     top: 0;
   }
 
   /* Profiles Page */
+  /*****************/
   .profile {
     grid-template-columns: 1fr;
     text-align: center;
@@ -1045,7 +1082,7 @@ section.container {
   }
 
   /* Profile Page */
-
+  /****************/
   .profile-top img,
   .profile img {
     width: 200px;
@@ -1081,6 +1118,7 @@ section.container {
   }
 
   /* About Us */
+  /************/
   .about h1 {
     margin-top: 40px;
   }
