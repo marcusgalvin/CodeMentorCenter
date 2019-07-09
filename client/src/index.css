@@ -977,6 +977,10 @@ section.container {
 /* Hero Banner Component */
 /*************************/
 @media (max-width: 781px) {
+  .container {
+    top: 0;
+    margin: 0 auto;
+  }
   .heroImg {
     height: 310px;
   }
@@ -990,6 +994,7 @@ section.container {
 @media (max-width: 450px) {
   .container {
     top: 0;
+    margin: 0 auto;
   }
 
   section.container {
