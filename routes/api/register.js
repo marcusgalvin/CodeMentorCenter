@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const { check, validationResult } = require('express-validator');
 const nodemailer = require('nodemailer');
+const chalk = require('chalk');
 const User = require('../../models/User');
 
 const router = express.Router();
@@ -74,14 +75,14 @@ router.post(
         from: 'codementorcenter@gmail.com',
         to: email,
         subject: 'Welcome to CodeMentorCenter!',
-        text: 'More to come...',
+        text: 'Welcome to CodeMentorCenter! More to come soon...',
       };
 
       transporter.sendMail(mailOptions, function(error, info) {
         if (error) {
           console.log(error);
         } else {
-          console.log(`Email sent: ${info.response}`);
+          console.log(chalk.cyan.inverse(`Email sent: ${info.response}`));
         }
       });
 
