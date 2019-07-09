@@ -506,7 +506,6 @@ section.container {
   z-index: 1;
   width: 100%;
   top: 0;
-  border-bottom: solid 1px var(--dark-color);
   background-color: var(--cmc-cream-color);
   opacity: 0.9;
 }
@@ -544,12 +543,20 @@ section.container {
   display: block;
 }
 
+.menu-btn {
+  display: none;
+}
+
 /* CMC Hero Banner Component */
 /*****************************/
 .heroImg {
   width: 100%;
   height: auto;
   display: block;
+  background: url(/static/media/hero_bannerCMCCouple.1a888d86.jpg) no-repeat
+    center 0;
+  background-size: cover;
+  height: 450px;
 }
 
 /* CMC Intro Text & CTA Register Button Component */
@@ -558,9 +565,6 @@ section.container {
   margin-top: 15px;
   color: var(--dark-color);
   padding: 0 25px;
-}
-
-.cta-btn {
 }
 
 .ctaRegister p {
@@ -976,7 +980,21 @@ section.container {
 
 /* Mobile Styles */
 /*****************/
-@media (max-width: 700px) {
+
+/* Hero Banner Component */
+/*************************/
+@media (max-width: 781px) {
+  .heroImg {
+    height: 310px;
+  }
+  .navbar ul li a {
+    padding: 0.35rem;
+  }
+}
+
+/* Hero Banner Component */
+/*************************/
+@media (max-width: 450px) {
   .container {
     top: 0;
   }
@@ -1010,6 +1028,8 @@ section.container {
     position: relative;
     text-align: center;
     height: auto;
+    padding: 0;
+    background-color: #fff;
   }
 
   .navbar ul {
@@ -1021,13 +1041,9 @@ section.container {
     margin-bottom: 1rem;
   }
 
-  .navbar .welcome {
-    display: none;
-  }
-
   .navbar .logo {
     display: block;
-    margin: 10px auto 20px;
+    margin: 25px auto 0;
   }
 
   .navbar ul {
@@ -1035,14 +1051,124 @@ section.container {
   }
 
   .navbar ul li {
-    background: #e7e3d4;
-    border: 1px solid #8590aa;
+    background: var(--cmc-cream-color);
+    border: 1px solid #ccc;
+  }
+
+  .navbar ul li a {
+    margin: 0;
   }
 
   .navbar ul a {
     display: block;
     width: 100%;
     height: 100%;
+  }
+
+  .navbar a:hover {
+    color: var(--white-color);
+  }
+
+  .hamburgerIcon {
+    display: block;
+    font-size: 2rem;
+  }
+
+  /* Mobile Navigation */
+  .m-nav {
+    display: block;
+    width: 100%;
+    z-index: 3;
+  }
+
+  .m-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: var(--white-color);
+  }
+
+  .m-nav li a:hover,
+  .m-nav .menu-btn:hover {
+    background-color: var(--cmc-darkblue-color);
+  }
+
+  /* menu */
+  .m-nav .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+
+  /* hamburger icon */
+  .m-nav .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+
+  .m-nav .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background 0.2s ease-out;
+    width: 18px;
+  }
+
+  .m-nav .menu-icon .navicon:before,
+  .m-nav .menu-icon .navicon:after {
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+
+  .m-nav .menu-icon .navicon:before {
+    top: 5px;
+  }
+
+  .m-nav .menu-icon .navicon:after {
+    top: -5px;
+  }
+
+  /* menu btn */
+  .m-nav .menu-btn {
+    display: none;
+  }
+
+  .m-nav .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+
+  .m-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .m-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+
+  /* Hero Banner Component */
+  /*************************/
+  .heroImg {
+    height: 210px;
   }
 
   /* Search Component */
