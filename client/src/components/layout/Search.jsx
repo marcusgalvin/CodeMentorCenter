@@ -11,11 +11,7 @@ const Search = () => {
         you.
       </p>
       <form className="search" action="">
-        <input
-          type="search"
-          placeholder="Search for the right mentor..."
-          required
-        />
+        <input type="search" placeholder="Search..." required />
         <Link to="/" className="btn btn-rounded search-btn">
           SEARCH
         </Link>
