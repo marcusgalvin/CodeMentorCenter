@@ -31,12 +31,6 @@ code {
   --success-color: #28a745;
   --white-color: #fff;
   --dark-color: #343a40;
-
-  /***** All colors below should eventually get replaced with new CMC color scheme *****/
-  --primary-color: #3b8beb;
-  --red-color: #b23850;
-  --lightblue-color: #c4dbf6;
-  --light-color: #f4f4f4;
 }
 
 * {
@@ -54,7 +48,7 @@ body {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--cmc-darkblue-color);
   text-decoration: none;
 }
 
@@ -86,12 +80,13 @@ img {
 }
 
 .text-primary {
-  color: var(--primary-color);
+  color: var(--cmc-lightblue-color);
 }
 
 .text-dark {
   color: var(--dark-color);
 }
+*/
 
 /* Padding */
 /***********/
@@ -161,10 +156,12 @@ img {
   margin: 3rem 0;
 }
 
+/* Buttons */
+/**********/
 .btn {
   display: inline-block;
-  background: var(--light-color);
-  color: #333;
+  background: var(--cmc-lightblue-color);
+  color: var(--dark-color);
   padding: 0.4rem 1.3rem;
   font-size: 1rem;
   border: none;
@@ -176,7 +173,7 @@ img {
 
 .btn-rounded {
   border-radius: 30px;
-  padding: 6px 33px 3px;
+  padding: 3px 33px 3px;
 }
 
 .badge {
@@ -184,40 +181,40 @@ img {
   padding: 0.1rem;
   text-align: center;
   margin: 0.3rem;
-  background: var(--light-color);
-  color: #333;
+  background: var(--cmc-lightblue-color);
+  color: var(--dark-color);
 }
 
 .alert {
   padding: 0.8rem;
   margin: 1rem 0;
   opacity: 0.9;
-  background: var(--light-color);
-  color: #333;
+  background: var(--cmc-lightblue-color);
+  color: var(--dark-color);
 }
 
 .btn-primary,
 .bg-primary,
 .badge-primary,
 .alert-primary {
-  background: var(--primary-color);
-  color: #fff;
+  background: var(--cmc-darkblue-color);
+  color: var(--white-color);
 }
 
 .btn-light,
 .bg-light,
 .badge-light,
 .alert-light {
-  background: var(--light-color);
-  color: #333;
+  background: var(--cmc-lightblue-color);
+  color: var(--dark-color);
 }
 
 .btn-dark,
 .bg-dark,
 .badge-dark,
 .alert-dark {
-  background: var(--dark-color);
-  color: #fff;
+  background: var(--cmc-darkblue-color);
+  color: var(--white-color);
 }
 
 .btn-danger,
@@ -225,7 +222,7 @@ img {
 .badge-danger,
 .alert-danger {
   background: var(--danger-color);
-  color: #fff;
+  color: var(--white-color);
 }
 
 .btn-success,
@@ -233,20 +230,20 @@ img {
 .badge-success,
 .alert-success {
   background: var(--success-color);
-  color: #fff;
+  color: var(--white-color);
 }
 
 .btn-white,
 .bg-white,
 .badge-white,
 .alert-white {
-  background: #fff;
-  color: #333;
+  background: var(--white-color);
+  color: var(--dark-color);
   border: #ccc solid 1px;
 }
 
 .btn:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .bg-light,
@@ -494,6 +491,10 @@ section.container {
 /*************************************************/
 /*************************************************/
 
+/***********************************/
+/*** In-page Components Styling ****/
+/***********************************/
+
 /* Top Navigation Component */
 /****************************/
 .navbar {
@@ -549,6 +550,22 @@ section.container {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* CMC Intro Text & CTA Register Button Component */
+/*****************************/
+.ctaRegister .lead {
+  margin-top: 15px;
+  color: var(--dark-color);
+  padding: 0 25px;
+}
+
+.cta-btn {
+}
+
+.ctaRegister p {
+  margin: 0 auto;
+  width: 80%;
 }
 
 /* Search Option Component */
@@ -760,42 +777,6 @@ section.container {
   font-size: 0.8rem;
 }
 
-/* Landing Page */
-/****************/
-.landing {
-  position: relative;
-  top: 109px;
-}
-
-.landing-inner {
-  color: var(--dark-color);
-  height: 100%;
-  width: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  bottom: 0;
-}
-
-.ctaRegister .lead {
-  margin-top: 15px;
-  color: var(--dark-color);
-  padding: 0 25px;
-}
-
-.cta-btn {
-  margin: 2rem 0;
-}
-
-.ctaRegister p {
-  margin: 0 auto;
-  width: 80%;
-  color: var(--dark-color);
-}
-
 /* Online Learning / Higher Learning */
 /*************************************/
 .higherLearning {
@@ -830,73 +811,7 @@ section.container {
   background-color: var(--red-color);
 }
 
-/* About Us Page */
-.about {
-  text-align: center;
-  background-color: #fff;
-}
-
-.about h1 {
-  margin-top: -85px;
-  font-size: 50px;
-  color: #00;
-}
-
-.about h2 {
-  color: #00;
-}
-
-.about p {
-  color: #000;
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 25px 0;
-}
-
-.about .meet {
-  color: #00;
-  padding: 10px;
-}
-
-.about .person1,
-.about .person2,
-.about .person3,
-.about .person4,
-.about .person5 {
-  margin-bottom: 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  width: 300px;
-  height: 300px;
-  padding: 10px;
-  border: 5px solid gray;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--light-color);
-}
-
-.about .column {
-  margin: 0 15px;
-  float: center;
-}
-
-.about .row {
-  margin-bottom: 60px;
-  justify-content: center;
-  clear: both;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.about img {
-  width: 100px;
-  border-radius: 50%;
-}
-
-/* Footer Conainer  */
+/*  Footer Conainer */
 /********************/
 .footer-ct {
   position: relative;
@@ -963,6 +878,101 @@ section.container {
   text-align: center;
   line-height: 1rem;
 }
+
+/***********************************/
+/** Full Page Components Styling ***/
+/***********************************/
+
+/* Landing Page */
+/****************/
+.landing {
+  position: relative;
+  top: 109px;
+}
+
+.landing-inner {
+  color: var(--dark-color);
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  bottom: 0;
+}
+
+/* About Us Page */
+/*****************/
+.about {
+  text-align: center;
+  background-color: #fff;
+}
+
+.about h1 {
+  margin-top: -85px;
+  font-size: 50px;
+  color: #00;
+}
+
+.about h2 {
+  color: #00;
+}
+
+.about p {
+  color: #000;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 25px 0;
+}
+
+.about .meet {
+  color: #00;
+  padding: 10px;
+}
+
+.about .person1,
+.about .person2,
+.about .person3,
+.about .person4,
+.about .person5 {
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  border: 5px solid gray;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-color);
+}
+
+.about .column {
+  margin: 0 15px;
+  float: center;
+}
+
+.about .row {
+  margin-bottom: 60px;
+  justify-content: center;
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+/**********************************************/
+/** Media Queries - Mobile Viewport Styling ***/
+/**********************************************/
 
 /* Mobile Styles */
 /*****************/

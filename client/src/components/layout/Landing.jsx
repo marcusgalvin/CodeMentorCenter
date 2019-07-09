@@ -1,5 +1,6 @@
 import React from "react";
 import HeroBanner from "./HeroBanner";
+import CTARegister from "./CTARegister";
 
 const Landing = () => {
   return (
@@ -8,7 +9,7 @@ const Landing = () => {
         {/* CMC Hero Banner Container */}
         <HeroBanner />
         {/* Header Content w/ Register Button */}
-        CTA register container
+        <CTARegister />
         {/* Search Field Container */}
         <div className="search-landing">search component</div>
         {/* Top Rated Mentors Showcase */}
