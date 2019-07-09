@@ -1,8 +1,13 @@
 const express = require('express');
 const chalk = require('chalk');
+const cors = require('cors');
 const connectDB = require('./config/db');
 
 const app = express();
+
+// Init Cors
+
+app.use(cors());
 
 // Connect DB
 
