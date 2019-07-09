@@ -3,6 +3,7 @@ const config = require('config');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const { check, validationResult } = require('express-validator');
+const nodemailer = require('nodemailer');
 const User = require('../../models/User');
 
 const router = express.Router();
@@ -59,7 +60,32 @@ router.post(
 
       await user.save();
 
-      // 6. Return Token
+      // 6. Send Confirmation E-mail to New User!
+
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: 'codementorcenter@gmail.com',
+          pass: config.get('emailPass'),
+        },
+      });
+
+      const mailOptions = {
+        from: 'codementorcenter@gmail.com',
+        to: email,
+        subject: 'Welcome to CodeMentorCenter!',
+        text: 'More to come...',
+      };
+
+      transporter.sendMail(mailOptions, function(error, info) {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log(`Email sent: ${info.response}`);
+        }
+      });
+
+      // 7. Return Token
 
       const payload = {
         user: {
