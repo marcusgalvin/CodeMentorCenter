@@ -21,13 +21,22 @@ code {
 /* CSS styles added in for front-end work */
 /******************************************/
 :root {
+  /***** NEW CMC COLOR SCHEME *****/
+  --cmc-olivegreen-color: #687864;
+  --cmc-darkblue-color: #31708e;
+  --cmc-medblue-color: #5085a5;
+  --cmc-lightblue-color: #8fc1e3;
+  --cmc-cream-color: #f7f9fb;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+  --white-color: #fff;
+  --dark-color: #343a40;
+
+  /***** All colors below should eventually get replaced with new CMC color scheme *****/
   --primary-color: #3b8beb;
   --red-color: #b23850;
   --lightblue-color: #c4dbf6;
-  --dark-color: #343a40;
   --light-color: #f4f4f4;
-  --danger-color: #dc3545;
-  --success-color: #28a745;
 }
 
 * {
@@ -40,8 +49,8 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
-  color: #333;
+  background-color: var(--white-color);
+  color: var(--dark-color);
 }
 
 a {
@@ -491,13 +500,13 @@ section.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 2rem;
+  padding: 0.5rem 2rem;
   position: fixed;
   z-index: 1;
   width: 100%;
   top: 0;
   border-bottom: solid 1px var(--dark-color);
-  background-color: #fff;
+  background-color: var(--cmc-cream-color);
   opacity: 0.9;
 }
 
@@ -519,8 +528,12 @@ section.container {
   margin-right: 0.6rem;
 }
 
+.navbar .fas {
+  font-size: 1.3rem;
+}
+
 .logo {
-  width: 120px;
+  width: 175px;
   height: auto;
 }
 
@@ -751,7 +764,7 @@ section.container {
 /****************/
 .landing {
   position: relative;
-  top: 120px;
+  top: 109px;
 }
 
 .landing-inner {
