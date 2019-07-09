@@ -13,7 +13,6 @@ class Navbar extends Component {
               <img src={cmcNavLogo} alt="Code Mentor Center" />
             </Link>
           </div>
-<<<<<<< HEAD
           <ul>
             <li>
               <Link to="/mentors">
@@ -52,36 +51,6 @@ class Navbar extends Component {
               </Link>
             </li>
           </ul>
-=======
-          <div class="m-nav">
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn">
-              <span class="navicon" />
-            </label>
-            <ul class="menu">
-              <li>
-                <Link to="/mentors">
-                  <i class="fas fa-user-ninja" /> MENTORS
-                </Link>
-              </li>
-              <li>
-                <Link to="/mentees">
-                  <i class="fas fa-user" /> MENTEES
-                </Link>
-              </li>
-              <li>
-                <Link to="/createProfile">
-                  <i class="far fa-address-card fas" /> CREATE PROFILE
-                </Link>
-              </li>
-              <li>
-                <Link to="/" className="nav-link">
-                  <i class="fas fa-sign-out-alt" /> LOGOUT
-                </Link>
-              </li>
-            </ul>
-          </div>
->>>>>>> 83311d5ce3cbda5118f2421026d4230deed1c477
         </nav>
       </div>
     );
