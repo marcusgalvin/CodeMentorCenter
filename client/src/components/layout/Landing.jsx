@@ -1,11 +1,12 @@
 import React from "react";
+import HeroBanner from "./HeroBanner";
 
 const Landing = () => {
   return (
     <section className="landing">
       <div className="landing-inner">
         {/* CMC Hero Banner Container */}
-        Hero banner component
+        <HeroBanner />
         {/* Header Content w/ Register Button */}
         CTA register container
         {/* Search Field Container */}
