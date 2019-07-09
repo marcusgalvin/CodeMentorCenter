@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import cmcNavLogo from "../images/logo_cmcNavbar.png";
 
 class Navbar extends Component {
   render() {
@@ -7,7 +8,9 @@ class Navbar extends Component {
       <div className="container">
         <nav className="navbar bg-white">
           <div className="logo">
-            <Link to="/">FPO Logo</Link>
+            <Link to="/">
+              <img src={cmcNavLogo} alt="Code Mentor Center" />
+            </Link>
           </div>
           <ul>
             <li>
