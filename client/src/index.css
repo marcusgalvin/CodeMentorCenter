@@ -564,12 +564,13 @@ section.container {
 .ctaRegister .lead {
   margin-top: 15px;
   color: var(--dark-color);
-  padding: 0 25px;
+  padding: 1rem;
 }
 
 .ctaRegister p {
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
+  padding-bottom: 15px;
 }
 
 /* Search Option Component */
@@ -577,7 +578,7 @@ section.container {
 .search-landing {
   position: relative;
   display: block;
-  top: 60px;
+  top: 20px;
   width: 100%;
   padding: 40px 0;
   background-color: #8590aa;
