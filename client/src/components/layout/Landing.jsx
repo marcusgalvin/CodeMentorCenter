@@ -1,6 +1,7 @@
 import React from "react";
 import HeroBanner from "./HeroBanner";
 import CTARegister from "./CTARegister";
+import Search from "./Search";
 
 const Landing = () => {
   return (
@@ -11,7 +12,9 @@ const Landing = () => {
         {/* Header Content w/ Register Button */}
         <CTARegister />
         {/* Search Field Container */}
-        <div className="search-landing">search component</div>
+        <div className="search-landing">
+          <Search />
+        </div>
         {/* Top Rated Mentors Showcase */}
         <div className="top-rated-mentors">
           <h4 className="lead">Top Rated Mentors</h4>
