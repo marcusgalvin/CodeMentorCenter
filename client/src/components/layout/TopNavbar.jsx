@@ -14,21 +14,23 @@ class Navbar extends Component {
           </div>
           <ul>
             <li>
-              <i class="fas fa-user-ninja" />
-              <Link to="/mentors">MENTORS</Link>
+              <Link to="/mentors">
+                <i class="fas fa-user-ninja" /> MENTORS
+              </Link>
             </li>
             <li>
-              <i class="fas fa-user" />
-              <Link to="/mentees">MENTEES</Link>
+              <Link to="/mentees">
+                <i class="fas fa-user" /> MENTEES
+              </Link>
             </li>
             <li>
-              <i class="far fa-address-card fas" />
-              <Link to="/createProfile">CREATE PROFILE</Link>
+              <Link to="/createProfile">
+                <i class="far fa-address-card fas" /> CREATE PROFILE
+              </Link>
             </li>
             <li>
-              <i class="fas fa-sign-out-alt" />
               <Link to="/" className="nav-link">
-                LOGOUT
+                <i class="fas fa-sign-out-alt" /> LOGOUT
               </Link>
             </li>
           </ul>

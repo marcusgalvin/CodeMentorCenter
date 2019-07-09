@@ -521,7 +521,7 @@ section.container {
 }
 
 .navbar a:hover {
-  color: var(--primary-color);
+  color: var(--cmc-darkblue-color);
 }
 
 .navbar .welcome span {
