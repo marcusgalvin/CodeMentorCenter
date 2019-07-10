@@ -6,6 +6,7 @@ import TopMentors from "./TopMentors";
 import RandomMentors from "./RandomMentors";
 import RandomMentees from "./RandomMentees";
 import OnlineLearning from "./OnlineLearning";
+import Footer from "./Footer";
 
 const Landing = () => {
   return (
@@ -27,7 +28,7 @@ const Landing = () => {
           {/* Random Mentee Showcase */}
           <RandomMentees />
           {/* Footer Container */}
-          footer component
+          <Footer />
         </div>
       </section>
     </div>

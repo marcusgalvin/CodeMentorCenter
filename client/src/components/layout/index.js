@@ -1,7 +1,6 @@
 /*
 import ProfileDetails from "./profileCard/ProfileCard";
 import AboutUs from "./AboutUs";
-import Footer from "./Footer";
 */
 import TopNavbar from "./TopNavbar";
 import Landing from "./Landing";
@@ -13,13 +12,12 @@ import RandomMentors from "./RandomMentors";
 import TopMentors from "./TopMentors";
 import RandomMentees from "./RandomMentees";
 import OnlineLearning from "./OnlineLearning";
+import Footer from "./Footer";
 
 export {
   /*
   ProfileDetails,
   AboutUs,
-  Footer,
-  
 */
   TopNavbar,
   Landing,
@@ -30,5 +28,6 @@ export {
   TopMentors,
   RandomMentors,
   RandomMentees,
-  OnlineLearning
+  OnlineLearning,
+  Footer
 };

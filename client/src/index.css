@@ -804,6 +804,9 @@ section.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
+  background: var(--cream-color);
+  padding: 30px 0;
 }
 
 .ad-img img {
@@ -854,6 +857,10 @@ section.container {
   background-color: #fafafa;
 }
 
+.footer-ct span {
+  color: var(--cmc-darkblue-color);
+}
+
 .social-ct,
 .location-ct,
 .sitemap-ct {
@@ -889,15 +896,28 @@ section.container {
 }
 
 .social-ct ul li {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  color: var(--dark-color);
+}
+
+.social-ct a {
+  color: var(--dark-color);
+}
+
+.social-ct a:hover {
+  color: var(--cmc-darkblue-color);
 }
 
 .social-ct ul li:last-child {
   padding-left: 15px;
 }
 
+.sitemap-ct a {
+  color: var(--dark-color);
+}
+
 .sitemap-ct a:hover {
-  color: var(--red-color);
+  color: var(--cmc-darkblue-color);
 }
 
 .copyright {
