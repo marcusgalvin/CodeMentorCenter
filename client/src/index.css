@@ -22,15 +22,19 @@ code {
 /******************************************/
 :root {
   /***** NEW CMC COLOR SCHEME *****/
-  --cmc-olivegreen-color: #687864;
-  --cmc-darkblue-color: #31708e;
-  --cmc-medblue-color: #5085a5;
-  --cmc-lightblue-color: #8fc1e3;
-  --cmc-cream-color: #f7f9fb;
-  --danger-color: #dc3545;
-  --success-color: #28a745;
+  /* Theme */
+  --cmc-red-color: #b23850;
+  --cmc-darkblue-color: #3b8beb;
+  --cmc-lightblue-color: #c4dbf6;
+  --cmc-tan-color: #e7e3d4;
+  --cmc-gray-color: #8590aa;
+  /* General */
+  --cream-color: #f7f9fb;
   --white-color: #fff;
   --dark-color: #343a40;
+  /* Error Handling */
+  --danger-color: #dc3545;
+  --success-color: #28a745;
 }
 
 * {
@@ -332,7 +336,6 @@ button {
 
 .container {
   position: relative;
-  top: 85px;
 }
 
 section.container {
@@ -506,7 +509,7 @@ section.container {
   z-index: 1;
   width: 100%;
   top: 0;
-  background-color: var(--cmc-cream-color);
+  background-color: var(--cream-color);
   opacity: 0.9;
 }
 
@@ -551,12 +554,12 @@ section.container {
 /*****************************/
 .heroImg {
   width: 100%;
-  height: auto;
   display: block;
-  background: url(/static/media/hero_bannerCMCCouple.1a888d86.jpg) no-repeat
-    center 0;
+  background: url(./components/images/hero_bannerCMCCouple.jpg) no-repeat center
+    0;
   background-size: cover;
-  height: 450px;
+  background-position: center;
+  height: 400px;
 }
 
 /* CMC Intro Text & CTA Register Button Component */
@@ -588,7 +591,7 @@ section.container {
   margin: 0 auto;
   width: 500px;
   height: 40px;
-  background: #fff;
+  background: var(--white-color);
   border-radius: 21px;
   box-shadow: 3px 5px 12px #51585b;
 }
@@ -615,8 +618,8 @@ section.container {
   float: right;
   top: -34px;
   left: 3px;
-  background-color: var(--cmc-darkblue-color);
-  color: #fff;
+  background-color: var(--cmc-red-color);
+  color: var(--white-color);
 }
 
 .search-landing p {
@@ -674,11 +677,11 @@ section.container {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
   padding-bottom: 15px;
   border-radius: 6px 6px 6px 6px;
-  background-color: #fff;
+  background-color: var(--white-color);
 }
 
 .p-card .head {
-  background-color: var(--lightblue-color);
+  background-color: var(--cmc-lightblue-color);
   border-radius: 6px 6px 0 0;
 }
 
@@ -980,6 +983,7 @@ section.container {
   .container {
     top: 0;
     margin: 0 auto;
+    min-width: 375px;
   }
   .heroImg {
     height: 310px;
@@ -991,10 +995,11 @@ section.container {
 
 /* Hero Banner Component */
 /*************************/
-@media (max-width: 450px) {
+@media (max-width: 467px) {
   .container {
     top: 0;
     margin: 0 auto;
+    min-width: 375px;
   }
 
   section.container {
