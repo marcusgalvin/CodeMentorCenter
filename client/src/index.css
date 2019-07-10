@@ -935,11 +935,11 @@ section.container {
 .about h1 {
   margin-top: -85px;
   font-size: 50px;
-  color: #00;
+  color: #000;
 }
 
 .about h2 {
-  color: #00;
+  color: #000;
 }
 
 .about p {
@@ -951,7 +951,7 @@ section.container {
 }
 
 .about .meet {
-  color: #00;
+  color: #000;
   padding: 10px;
 }
 

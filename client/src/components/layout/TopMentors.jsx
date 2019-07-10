@@ -17,6 +17,7 @@ export default class extends React.Component {
         naturalSlideHeight={125}
         totalSlides={2}
       >
+        <h4>Top Mentors</h4>
         <ButtonBack>Back</ButtonBack> |<ButtonNext>Next</ButtonNext>
         <p className="scrollProfile">Scroll down to vew more</p>
         <p className="scrollProfile">
