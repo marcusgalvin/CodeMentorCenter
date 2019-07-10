@@ -1,4 +1,4 @@
-/*import ProfileCard from "./profileCard/ProfileCard";
+/*
 import ProfileDetails from "./profileCard/ProfileCard";
 import AboutUs from "./AboutUs";
 import Footer from "./Footer";
@@ -12,9 +12,10 @@ import Landing from "./Landing";
 import HeroBanner from "./HeroBanner";
 import CTARegister from "./CTARegister";
 import Search from "./Search";
+import ProfileCard from "./profileCard/ProfileCard";
 
 export {
-  /*ProfileCard,
+  /*
   ProfileDetails,
   AboutUs,
   Footer,
@@ -27,5 +28,6 @@ export {
   Landing,
   HeroBanner,
   CTARegister,
-  Search
+  Search,
+  ProfileCard
 };
