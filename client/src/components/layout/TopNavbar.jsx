@@ -15,6 +15,7 @@ class Navbar extends Component {
           <div class="m-nav">
             <input class="menu-btn" type="checkbox" id="menu-btn" />
             <label class="menu-icon" for="menu-btn">
+              <p>Menu</p>
               <span class="navicon" />
             </label>
             <ul class="menu">
