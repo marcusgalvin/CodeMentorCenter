@@ -72,7 +72,7 @@ router.post(
       });
 
       const mailOptions = {
-        from: 'codementorcenter@gmail.com',
+        from: 'CodeMentorCenter@gmail.com',
         to: email,
         subject: 'Welcome to CodeMentorCenter!',
         text: 'Welcome to CodeMentorCenter! More to come soon...',
@@ -82,7 +82,7 @@ router.post(
         if (error) {
           console.log(error);
         } else {
-          console.log(chalk.cyan.inverse(`Email sent: ${info.response}`));
+          console.log(`Email sent: ${info.response}`);
         }
       });
 
