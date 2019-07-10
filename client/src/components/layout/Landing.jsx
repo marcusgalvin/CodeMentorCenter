@@ -3,6 +3,9 @@ import HeroBanner from "./HeroBanner";
 import CTARegister from "./CTARegister";
 import Search from "./Search";
 import TopMentors from "./TopMentors";
+import RandomMentors from "./RandomMentors";
+import RandomMentees from "./RandomMentees";
+import OnlineLearning from "./OnlineLearning";
 
 const Landing = () => {
   return (
@@ -18,31 +21,11 @@ const Landing = () => {
           {/* Top Rated Mentors Showcase */}
           <TopMentors />
           {/* Higher Learning at CareerDevs */}
-          Online learning container
+          <OnlineLearning />
           {/* Random Mentor Showcase */}
-          <div className="random-mentors">
-            <h4 className="lead">Mentors</h4>
-            <p>
-              Long established fact that a reader will be distracted by the
-              readable content of a page when looking at its layout. The point
-              of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using
-            </p>
-            <div className="carousel-ct" />
-            Random Mentor's carousel container
-          </div>
+          <RandomMentors />
           {/* Random Mentee Showcase */}
-          <div className="random-mentees">
-            <h4 className="lead">Mentees</h4>
-            <p>
-              Long established fact that a reader will be distracted by the
-              readable content of a page when looking at its layout. The point
-              of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using
-            </p>
-            <div className="carousel-ct" />
-            Random Mentee's carousel container
-          </div>
+          <RandomMentees />
           {/* Footer Container */}
           footer component
         </div>

@@ -164,8 +164,6 @@ img {
 /**********/
 .btn {
   display: inline-block;
-  background: var(--cmc-lightblue-color);
-  color: var(--dark-color);
   padding: 0.4rem 1.3rem;
   font-size: 1rem;
   border: none;
@@ -802,14 +800,21 @@ section.container {
 /* Online Learning / Higher Learning */
 /*************************************/
 .higherLearning {
-  margin-top: 70px;
+  margin: 30px 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ad-img img {
+  width: 100%;
+  height: auto;
 }
 
 .ad-img,
 .ad-copy {
-  width: 50%;
+  display: inline-flex;
+  width: 600px;
 }
 
 .ad-copy {
@@ -818,19 +823,20 @@ section.container {
   flex-direction: column;
   justify-content: center;
   padding: 10px;
+  background-color: var(--cream-color);
 }
 
 .ad-copy p {
   margin: 0 auto;
   font-size: 0.8rem;
   line-height: 1rem;
-  width: 80%;
+  width: 90%;
   padding: 30px 0;
 }
 
 .ad-copy .btn {
   margin: 0 auto;
-  background-color: var(--red-color);
+  background-color: var(--cmc-red-color);
 }
 
 /*  Footer Conainer */
