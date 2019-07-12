@@ -1,20 +1,35 @@
-const express = require("express")
-const mongoose = require("mongoose")
+const express = require('express');
+const chalk = require('chalk');
+const cors = require('cors');
+const connectDB = require('./config/db');
 
-//  routes
-// const users = require("./routes/api/users");
+const app = express();
 
-const app = express()
+// Init Cors
 
-// initiate API routes
+app.use(cors());
 
-// ROUTE  http://localhost:5000/api/user
-// DESC   register / login / get user info
-// app.use("/api/user", users)
+// Connect DB
 
+connectDB();
 
-app.get("/test", (req, res) => res.send("Hello World, this the Code Mentor Center backend server."))
+// Init Built-In Parser
 
-const PORT = process.env.PORT || 5000
+app.use(express.json({ extended: false }));
 
-app.listen(PORT, () => console.log("Server is running on port:" + PORT))
+// Init Root Route
+
+app.get('/', (req, res) =>
+  res.send('Hello World, this the Code Mentor Center backend server.')
+);
+
+// Init API Routes
+
+app.use('/api/register', require('./routes/api/register'));
+app.use('/api/auth', require('./routes/api/auth'));
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () =>
+  console.log(chalk.yellow.inverse(`Server is running on port:${PORT}`))
+);

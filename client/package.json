@@ -3,7 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1.0.2",
+    "auth0-lock": "^11.16.3",
+    "bootstrap": "^4.3.1",
+    "pure-react-carousel": "^1.21.1",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
