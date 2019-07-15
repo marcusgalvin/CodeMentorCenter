@@ -66,7 +66,7 @@ const ProfileSchema = new mongoose.Schema({
         required: true
       },
       experience: {
-        type: Number,
+        type: String,
         required: true
       }
     }],
@@ -76,16 +76,7 @@ const ProfileSchema = new mongoose.Schema({
         default: "English",
         required: true
       }
-    }],
-    languages: [{
-      language: {
-        type: String
-      },
-      experience: {
-        type: Number,
-        required: true
-      }
-    }],
+    }]
   },
   social: {
     githubURL: {
