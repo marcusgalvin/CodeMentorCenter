@@ -57,6 +57,9 @@ const ProfileSchema = new mongoose.Schema({
       type: Boolean,
       default: false
     },
+    description: {
+      type: String
+    },
     languages: [{
       language: {
         type: String,

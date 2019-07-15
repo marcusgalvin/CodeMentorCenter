@@ -15,8 +15,6 @@ const UserSchema = new mongoose.Schema({
     require: true,
   },
   username: String,
-  mentor: Boolean,
-
   image: String,
   date: {
     type: Date,
