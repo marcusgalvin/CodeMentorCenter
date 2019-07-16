@@ -335,12 +335,12 @@ router.post("/mentorship/:user_id/finish", auth, async (req, res) => {
       user: req.user.id
     });
 
-    const mentee = profile.mentees.find(
-      mentee => mentee.user === req.params.user_id
+    const mentee = profile.currentMentees.find(
+      mentee => mentee.user.toString() === req.params.user_id
     );
-
+    console.log(mentee)
     //mentees profile
-    let menteesProfile = await Profile.findOne({
+    let menteeProfile = await Profile.findOne({
       user: req.params.user_id
     });
 
@@ -368,7 +368,7 @@ router.post("/mentorship/:user_id/finish", auth, async (req, res) => {
     };
 
     profile.previousMentees.unshift(mentorPayload);
-    menteeUserProfile.previousMentors.unshift(menteePayload);
+    menteeProfile.previousMentors.unshift(menteePayload);
 
     emailSubject = "Mentorship Complete!";
     //URL for reviewing mentors needs to be updated once complete
@@ -377,18 +377,18 @@ router.post("/mentorship/:user_id/finish", auth, async (req, res) => {
     } has completed. Thank you for using the Code Mentor Center. Please leave a review of your mentor here http://www.codementorcenter.com/review/:mentor_id`
 
     //get index of currentMentee to remove
-    const removeIndex = profile.currentMentees
+    const removeMenteeIndex = profile.currentMentees
       .map(mentee => mentee.user)
       .indexOf(req.params.mentee_id);
 
-    profile.currentMentees.splice(removeIndex, 1);
+    profile.currentMentees.splice(removeMenteeIndex, 1);
 
     //get index of currentMentor to remove
-    const removeIndex = profile.currentMentors
+    const removeMentorIndex = profile.currentMentors
       .map(mentor => mentor.user)
       .indexOf(req.user.id);
 
-    profile.currentMentors.splice(removeIndex, 1);
+    profile.currentMentors.splice(removeMentorIndex, 1);
 
     //save both profiles
     await profile.save();
