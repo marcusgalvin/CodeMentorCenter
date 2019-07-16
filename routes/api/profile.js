@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const config = require('config');
+const config = require("config");
 const auth = require("../../middleware/auth");
 const {
   check,
@@ -8,7 +8,7 @@ const {
 } = require("express-validator");
 const Profile = require("../../models/Profile");
 const User = require("../../models/User");
-const nodemailer = require('nodemailer');
+const nodemailer = require("nodemailer");
 
 //@route GET api/profile/me
 //@desc  get current users profile
@@ -170,9 +170,13 @@ router.post(
       check("requestType", "Request type is required")
       .not()
       .isEmpty(),
-      check("requestType").custom((value, { req }) => {
+      check("requestType").custom((value, {
+        req
+      }) => {
         if (value !== "needMentor" || value !== "wantToMentor") {
-          throw new Error("Request type must be either needMentor or wantToMentor");
+          throw new Error(
+            "Request type must be either needMentor or wantToMentor"
+          );
         } else {
           return true;
         }
@@ -259,19 +263,27 @@ router.post("/request/:request_id/accept", auth, async (req, res) => {
     //get email and name of current user
     let currentUser = await User.findById(req.user.id);
 
-    let emailSubject = ""
-    let emailText = ""
+    let emailSubject = "";
+    let emailText = "";
 
     if (requestType === "needMentor") {
       profile.currentMentees.unshift(payload);
       requestUserProfile.currentMentors.unshift(payload);
-      emailSubject = "I would like to mentor you!"
-      emailText = `Hi ${requestUser.name}! My name is ${currentUser.name} and I have accepted your request to be your mentor. Please send an email at your earliest convenience to ${currentUser.email} with either your Facebook messenger or Slack info so we can chat and get your mentorship underway. Have a nice day!`
+      emailSubject = "I would like to mentor you!";
+      emailText = `Hi ${requestUser.name}! My name is ${
+        currentUser.name
+      } and I have accepted your request to be your mentor. Please send an email at your earliest convenience to ${
+        currentUser.email
+      } with either your Facebook messenger or Slack info so we can chat and get your mentorship underway. Have a nice day!`;
     } else {
       profile.currentMentors.unshift(payload);
       requestUserProfile.currentMentees.unshift(payload);
-      emailSubject = "I would like you to mentor me!"
-      emailText = `Hi ${requestUser.name}! My name is ${currentUser.name}and I have accepted your request to be your mentee. Please send an email at your earliest convenience to ${currentUser.email} with either your Facebook messenger or Slack info so we can chat. Have a nice day!`
+      emailSubject = "I would like you to mentor me!";
+      emailText = `Hi ${requestUser.name}! My name is ${
+        currentUser.name
+      }and I have accepted your request to be your mentee. Please send an email at your earliest convenience to ${
+        currentUser.email
+      } with either your Facebook messenger or Slack info so we can chat. Have a nice day!`;
     }
     //get index of request to remove
     const removeIndex = profile.requests
@@ -287,15 +299,15 @@ router.post("/request/:request_id/accept", auth, async (req, res) => {
     //  Send E-mail to requester!
 
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      service: "gmail",
       auth: {
-        user: 'codementorcenter@gmail.com',
-        pass: config.get('emailPass'),
-      },
+        user: "codementorcenter@gmail.com",
+        pass: config.get("emailPass")
+      }
     });
 
     const mailOptions = {
-      from: 'CodeMentorCenter@gmail.com',
+      from: "CodeMentorCenter@gmail.com",
       to: requestUser.email,
       subject: emailSubject,
       text: emailText
@@ -308,7 +320,106 @@ router.post("/request/:request_id/accept", auth, async (req, res) => {
         console.log(`Email sent: ${info.response}`);
       }
     });
+  } catch (error) {
+    console.error(error.message);
+    res.send(500).send("server error");
+  }
+});
 
+//@route POST api/profile/mentorship/:user_id/finish
+//@desc  for mentor to complete mentorship with a mentee
+//@access  private
+router.post("/mentorship/:user_id/finish", auth, async (req, res) => {
+  try {
+    //current users profile
+    let profile = await Profile.findOne({
+      user: req.user.id
+    });
+
+    const mentee = profile.currentMentees.find(
+      mentee => mentee.user.toString() === req.params.user_id
+    );
+    console.log(mentee)
+    //mentees profile
+    let menteeProfile = await Profile.findOne({
+      user: req.params.user_id
+    });
+
+    //this may be overkill calling both users. look into refactoring this somehow
+    //get email and name of request user
+    let menteeUser = await User.findById(req.params.user_id);
+    //get email and name of current user
+    let currentUser = await User.findById(req.user.id);
+
+    let emailSubject = "";
+    let emailText = "";
+
+    const menteePayload = {
+      description: mentee.description,
+      language: mentee.language,
+      user: req.user.id,
+      startDate: mentee.startDate
+    };
+
+    const mentorPayload = {
+      description: mentee.description,
+      language: mentee.language,
+      user: mentee.user,
+      startDate: mentee.startDate
+    };
+
+    profile.previousMentees.unshift(mentorPayload);
+    menteeProfile.previousMentors.unshift(menteePayload);
+
+    emailSubject = "Mentorship Complete!";
+    //URL for reviewing mentors needs to be updated once complete
+    emailText = `Hi ${menteeUser.name}! Your mentorship with ${
+      currentUser.name
+    } has completed. Thank you for using the Code Mentor Center. Please leave a review of your mentor here http://www.codementorcenter.com/review/:mentor_id`
+
+    //get index of currentMentee to remove
+    const removeMenteeIndex = profile.currentMentees
+      .map(mentee => mentee.user)
+      .indexOf(req.params.mentee_id);
+
+    profile.currentMentees.splice(removeMenteeIndex, 1);
+
+    //get index of currentMentor to remove
+    const removeMentorIndex = profile.currentMentors
+      .map(mentor => mentor.user)
+      .indexOf(req.user.id);
+
+    profile.currentMentors.splice(removeMentorIndex, 1);
+
+    //save both profiles
+    await profile.save();
+    await menteeProfile.save();
+    res.json(profile);
+
+    //  Send E-mail to mentee!
+
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: "codementorcenter@gmail.com",
+        pass: config.get("emailPass")
+      }
+    });
+
+    const mailOptions = {
+      from: "CodeMentorCenter@gmail.com",
+      to: menteeUser.email,
+      subject: emailSubject,
+      text: emailText
+    };
+
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log(`Email sent: ${info.response}`);
+      }
+    });
   } catch (error) {
     console.error(error.message);
     res.send(500).send("server error");

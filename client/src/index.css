@@ -64,6 +64,14 @@ img {
   width: 100%;
 }
 
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
 /* Text Styles */
 /***************/
 
@@ -1150,6 +1158,12 @@ section.container {
   padding-right: 5px;
 }
 
+/* Edit User Profile */
+/***************************/
+.editProfile-ct {
+  position: relative;
+  top: 108px;
+}
 /* Add the following to edit profile
 
 .becomeMentor {
