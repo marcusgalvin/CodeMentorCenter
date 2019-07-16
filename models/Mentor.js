@@ -1,10 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-/* tom blais notes:   how will we keep track of who needs
- mentorship, and how mentorship is requested */
-
-const ProfileSchema = new mongoose.Schema({
+const MentorSchema = new mongoose.Schema({
   user: {
     type: Schema.Types.ObjectId,
     required: true
@@ -16,10 +13,6 @@ const ProfileSchema = new mongoose.Schema({
     type: String
   },
   company: {
-    type: String
-  },
-  //senior, associate, etc
-  jobDevRole: {
     type: String
   },
   school: {
