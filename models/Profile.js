@@ -9,8 +9,10 @@ const ProfileSchema = new mongoose.Schema({
     type: Schema.Types.ObjectId,
     required: true
   },
+  //if available true, else false
   status: {
-    type: String
+    type: Boolean,
+    default: false
   },
   bio: {
     type: String
