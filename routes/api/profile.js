@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const config = require('config');
 const auth = require("../../middleware/auth");
 const {
   check,
@@ -169,6 +170,13 @@ router.post(
       check("requestType", "Request type is required")
       .not()
       .isEmpty(),
+      check("requestType").custom((value, { req }) => {
+        if (value !== "needMentor" || value !== "wantToMentor") {
+          throw new Error("Request type must be either needMentor or wantToMentor");
+        } else {
+          return true;
+        }
+      }),
       //description and language may be unneccassery if the info comes from the users profile under mentor/mentee section
       check("description", "Description is required")
       .not()
@@ -247,13 +255,9 @@ router.post("/request/:request_id/accept", auth, async (req, res) => {
 
     //this may be overkill calling both users. look into refactoring this somehow
     //get email and name of request user
-    let requestUser = await User.findOne({
-      user: request.user
-    });
+    let requestUser = await User.findById(request.user);
     //get email and name of current user
-    let currentUser = await User.findOne({
-      user: req.user.id
-    });
+    let currentUser = await User.findById(req.user.id);
 
     let emailSubject = ""
     let emailText = ""
@@ -262,7 +266,7 @@ router.post("/request/:request_id/accept", auth, async (req, res) => {
       profile.currentMentees.unshift(payload);
       requestUserProfile.currentMentors.unshift(payload);
       emailSubject = "I would like to mentor you!"
-      emailText = `Hi ${requestUser.name}! My name is ${currentUser.name}and I have accepted your request to be your mentor. Please send an email at your earliest convenience to ${currentUser.email} with either your Facebook messenger or Slack info so we can chat and get your mentorship underway. Have a nice day!`
+      emailText = `Hi ${requestUser.name}! My name is ${currentUser.name} and I have accepted your request to be your mentor. Please send an email at your earliest convenience to ${currentUser.email} with either your Facebook messenger or Slack info so we can chat and get your mentorship underway. Have a nice day!`
     } else {
       profile.currentMentors.unshift(payload);
       requestUserProfile.currentMentees.unshift(payload);

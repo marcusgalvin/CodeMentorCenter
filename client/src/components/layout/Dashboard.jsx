@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const Dashboard = () => {
   return (
@@ -19,8 +20,7 @@ const Dashboard = () => {
           </button>
         </div>
         <div className="requestAlert">
-          <i class="fas fa-envelope-open-text" /> You have a pending mentorship
-          request below!
+          <i class="fas fa-envelope-open-text" /> You have a pending requests!
         </div>
       </div>
       <div className="dashProfileSummary">
@@ -144,7 +144,10 @@ const Dashboard = () => {
                 <span>User:</span>Sally North
               </li>
               <li>
-                <span>Mentor Start Date:</span>July 7, 2019
+                <span>Start Date:</span>July 7, 2019
+              </li>
+              <li>
+                <span>Mentorship Expires:</span> <span>22</span> Days
               </li>
               <li>
                 <button className="btn btn-danger">End Mentorship</button>
@@ -152,10 +155,13 @@ const Dashboard = () => {
             </ul>
             <ul>
               <li>
-                <span>User:</span>Sally North
+                <span>User:</span>Milton Bradley
               </li>
               <li>
-                <span>Mentor Start Date:</span>July 7, 2019
+                <span>Start Date:</span>June 3, 2019
+              </li>
+              <li>
+                <span>Mentorship Expires:</span> <span>5</span> Days
               </li>
               <li>
                 <button className="btn btn-danger">End Mentorship</button>
@@ -163,10 +169,13 @@ const Dashboard = () => {
             </ul>
             <ul>
               <li>
-                <span>User:</span>Sally North
+                <span>User:</span>Peter Milo
               </li>
               <li>
-                <span>Mentor Start Date:</span>July 7, 2019
+                <span>Start Date:</span>June 27, 2019
+              </li>
+              <li>
+                <span>Mentorship Expires:</span> <span>13</span> Days
               </li>
               <li>
                 <button className="btn btn-danger">End Mentorship</button>
@@ -174,6 +183,7 @@ const Dashboard = () => {
             </ul>
           </div>
         </div>
+        <Footer />
       </div>
     </Fragment>
   );
