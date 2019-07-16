@@ -7,100 +7,125 @@ const ProfileEdit = () => {
       <div className="editProfile-ct">
         <h3>Create Your Profile</h3>
         <p className="lead">
-          <i className="fas fa-user" /> Let's get some information to make your
-          profile stand out
+          <i className="fas fa-user" /> Please fill out the information below to
+          become part of the CMC family.
         </p>
-        <small>* = required field</small>
+        <p className="fieldRequired">
+          <i class="fas fa-star-of-life" /> = required field
+        </p>
         <form className="form">
-          <div className="form-group">
-            <select name="status">
-              <option value="0">* Select Professional Status</option>
-              <option value="Developer">Developer</option>
-              <option value="Junior Developer">Junior Developer</option>
-              <option value="Senior Developer">Senior Developer</option>
-              <option value="Manager">Manager</option>
-              <option value="Student or Learning">Student or Learning</option>
-              <option value="Instructor">Instructor or Teacher</option>
-              <option value="Intern">Intern</option>
-              <option value="Other">Other</option>
-            </select>
-            <small className="form-text">
-              Give us an idea of where you are at in your career
-            </small>
+          <div className="personalInfo">
+            <div className="form-group">
+              <input type="text" placeholder="Company" name="company" />
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                placeholder="University / School / Bootcamp"
+                name="school"
+              />
+            </div>
+            <div className="form-group">
+              <input type="text" placeholder="City" name="City" />
+              <select>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+              </select>
+              <input type="text" placeholder="Country" name="Country" />
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                placeholder="Github Latest Repo"
+                name="githubusername"
+              />
+              <small className="form-text">Add your latest Github repo</small>
+            </div>
+            <div className="form-group">
+              <textarea placeholder="Bio" name="bio" />
+            </div>
           </div>
-          <div className="form-group">
-            <input type="text" placeholder="Company" name="company" />
-            <small className="form-text">
-              Could be your own company or one you work for
-            </small>
-          </div>
-          <div className="form-group">
-            <input type="text" placeholder="Website" name="website" />
-            <small className="form-text">
-              Could be your own or a company website
-            </small>
-          </div>
-          <div className="form-group">
-            <input type="text" placeholder="Location" name="location" />
-            <small className="form-text">
-              City & state suggested (eg. Boston, MA)
-            </small>
-          </div>
-          <div className="form-group">
-            <input type="text" placeholder="* Skills" name="skills" />
-            <small className="form-text">
-              Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
-            </small>
-          </div>
-          <div className="form-group">
-            <input
-              type="text"
-              placeholder="Github Username"
-              name="githubusername"
-            />
-            <small className="form-text">
-              If you want your latest repos and a Github link, include your
-              username
-            </small>
-          </div>
-          <div className="form-group">
-            <textarea placeholder="A short bio of yourself" name="bio" />
-            <small className="form-text">Tell us a little about yourself</small>
-          </div>
-          <div className="my-2">
-            <button type="button" className="btn btn-light">
-              Add Social Network Links
-            </button>
-            <span>Optional</span>
-          </div>
-          <div className="form-group social-input">
-            <i className="fab fa-twitter fa-2x" />
-            <input type="text" placeholder="Twitter URL" name="twitter" />
-          </div>
+          <div className="socialInfo">
+            <div className="form-group social-input">
+              <i className="fab fa-twitter fa-2x" />
+              <input type="text" placeholder="Twitter URL" name="twitter" />
+            </div>
 
-          <div className="form-group social-input">
-            <i className="fab fa-facebook fa-2x" />
-            <input type="text" placeholder="Facebook URL" name="facebook" />
-          </div>
+            <div className="form-group social-input">
+              <i className="fab fa-facebook fa-2x" />
+              <input type="text" placeholder="Facebook URL" name="facebook" />
+            </div>
 
-          <div className="form-group social-input">
-            <i className="fab fa-youtube fa-2x" />
-            <input type="text" placeholder="YouTube URL" name="youtube" />
-          </div>
+            <div className="form-group social-input">
+              <i className="fab fa-youtube fa-2x" />
+              <input type="text" placeholder="YouTube URL" name="youtube" />
+            </div>
 
-          <div className="form-group social-input">
-            <i className="fab fa-linkedin fa-2x" />
-            <input type="text" placeholder="Linkedin URL" name="linkedin" />
-          </div>
+            <div className="form-group social-input">
+              <i className="fab fa-linkedin fa-2x" />
+              <input type="text" placeholder="Linkedin URL" name="linkedin" />
+            </div>
 
-          <div className="form-group social-input">
-            <i className="fab fa-instagram fa-2x" />
-            <input type="text" placeholder="Instagram URL" name="instagram" />
+            <div className="form-group social-input">
+              <i className="fab fa-instagram fa-2x" />
+              <input type="text" placeholder="Instagram URL" name="instagram" />
+            </div>
           </div>
-          <input type="submit" className="btn btn-primary my-1" />
-          <Link className="btn btn-light my-1" to="/dashboard">
-            Go Back
-          </Link>
+          <div className="profileBtns">
+            <input type="submit" className="btn btn-primary my-1" />
+            <Link className="btn btn-light my-1" to="/dashboard">
+              Go Back
+            </Link>
+          </div>
         </form>
       </div>
     </Fragment>

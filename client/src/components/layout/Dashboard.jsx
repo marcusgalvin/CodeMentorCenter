@@ -9,8 +9,7 @@ const Dashboard = () => {
         <i className="fas fa-user" /> Welcome John Doe
         <div className="dashNav">
           <div className="onlineStatus">
-            <i class="fas fa-toggle-on success" /> Mentor Status:{" "}
-            <span>Online</span>
+            Mentor Status: <span>Online</span>
           </div>
           <Link to="/profileedit" class="edit">
             <i class="fas fa-user-circle" /> Edit Profile
@@ -25,7 +24,7 @@ const Dashboard = () => {
       </div>
       <div className="dashProfileSummary">
         <div className="basic profileSummary">
-          <h2>Basic Profile Information</h2>
+          <h3>Basic Profile Information</h3>
           <div className="profileImg">
             <i class="fas fa-user-circle" />
           </div>
@@ -62,7 +61,7 @@ const Dashboard = () => {
           </p>
         </div>
         <div className="detail profileSummary">
-          <h2>Detailed Profile Information</h2>
+          <h3>Detailed Profile Information</h3>
           <ul>
             <li>
               <strong>Company:</strong> USA Company Inc.
@@ -92,7 +91,7 @@ const Dashboard = () => {
           </ul>
         </div>
         <div className="mentorDashboard">
-          <h2 className="requestHead">Mentorship Requests</h2>
+          <h3 className="requestHead">Mentorship Requests</h3>
           {/* Show All Requested Mentorship */}
           {/********************************** */}
           {/* Stand-alone Request */}
@@ -137,7 +136,7 @@ const Dashboard = () => {
               </li>
             </ul>
           </div>
-          <h2 className="currentHead">Current Mentorship</h2>
+          <h3 className="currentHead">Current Mentorship</h3>
           <div className="currentMentorship">
             <ul>
               <li>
