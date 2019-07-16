@@ -157,6 +157,144 @@ router.post("/", auth, async (req, res) => {
   }
 });
 
+//@route POST api/profile/:user_id/request
+//@desc  request a mentor/mentee
+//@access  private
+router.post(
+  "/:user_id/request",
+  [
+    auth,
+    [
+      check("requestType", "Request type is required")
+        .not()
+        .isEmpty(),
+      //description and language may be unneccassery if the info comes from the users profile under mentor/mentee section
+      check("description", "Description is required")
+        .not()
+        .isEmpty(),
+      check("language", "Language is required")
+        .not()
+        .isEmpty()
+    ]
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({
+        errors: errors.array()
+      });
+    }
+    try {
+      let profile = await Profile.findOne({ user: req.params.user_id });
+
+      //check if user has an existing request
+      const request = profile.requests.filter(
+        request => request.user.toString() === req.user.id
+      );
+
+      const newRequest = {
+        description: req.body.description,
+        requestType: req.body.requestType,
+        language: req.body.language,
+        user: req.user.id
+      };
+
+      //if request exists update with new content
+      if (request.length > 0) {
+        return res.status(400).json({
+          msg: "A request already exists for this user"
+        });
+      }
+
+      profile.requests.unshift(newRequest);
+      await profile.save();
+
+      res.json(profile);
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Server Error");
+    }
+  }
+);
+
+//@route POST api/profile/request/:request_id/accept
+//@desc  accept request
+//@access  private
+router.post("/request/:request_id/accept", auth, async (req, res) => {
+  try {
+    let profile = await Profile.findOne({ user: req.user.id });
+
+    const request = profile.requests.find(
+      request => request.id === req.params.request_id
+    );
+
+    let requestUserProfile = await Profile.findOne({ user: request.user });
+    //type will be either "needMentor" or "wantToMentor"
+    const requestType = request.requestType;
+    const payload = {
+      description: request.description,
+      language: request.language,
+      user: request.user
+    };
+    if (requestType === "needMentor") {
+      profile.currentMentees.unshift(payload);
+      requestUserProfile.currentMentors.unshift(payload);
+    } else {
+      profile.currentMentors.unshift(payload);
+      requestUserProfile.currentMentees.unshift(payload);
+    }
+    //get index of request to remove
+    const removeIndex = profile.requests
+      .map(request => request.id)
+      .indexOf(req.params.request_id);
+
+    profile.requests.splice(removeIndex, 1);
+    //save both profiles
+    await profile.save();
+    await requestUserProfile.save();
+    res.json(profile);
+  } catch (error) {
+    console.error(error.message);
+    res.send(500).send("server error");
+  }
+});
+
+//@route DELETE api/profile/:user_id/request/:request_id
+//@desc  delete / deny request
+//@access  private
+router.delete("/:user_id/request/:request_id", auth, async (req, res) => {
+  try {
+    const profile = await Profile.findOne({ user: req.params.user_id });
+
+    const request = profile.requests.find(
+      request => request.id === req.params.request_id
+    );
+    //make sure request exists
+    if (!request) {
+      return res.status(404).json({ msg: "request not found" });
+    }
+    //make sure user matches either profile user or request user
+    //  ===> is this a SECURE method??? <===
+    if (
+      request.user.toString() !== req.user.id &&
+      profile.user.toString() !== req.user.id
+    ) {
+      return res.status(401).json({ msg: "Unautharized user" });
+    }
+    //get index of request to remove
+    const removeIndex = profile.requests
+      .map(request => request.id)
+      .indexOf(req.params.request_id);
+
+    profile.requests.splice(removeIndex, 1);
+    await profile.save();
+    res.json(profile);
+  } catch (error) {
+    console.error(error.message);
+    res.send(500).send("server error");
+  }
+});
+
 //@route POST api/profile/:user_id/review
 //@desc  review a mentor
 //@access  private

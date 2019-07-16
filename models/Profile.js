@@ -159,8 +159,7 @@ const ProfileSchema = new mongoose.Schema({
         type: String
       },
       startDate: {
-        type: Date,
-        default: Date.now
+        type: Date
       },
       endDate: {
         type: Date,
