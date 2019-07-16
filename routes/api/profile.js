@@ -375,7 +375,7 @@ router.post("/mentorship/:user_id/finish", auth, async (req, res) => {
     //URL for reviewing mentors needs to be updated once complete
     emailText = `Hi ${menteeUser.name}! Your mentorship with ${
       currentUser.name
-    } has completed. Thank you for using the Code Mentor Center. Please leave a review of your mentor here http://www.codementorcenter.com/review/:mentor_id`
+    } has completed. Thank you for using the Code Mentor Center to further your programming skills. Please take a minute to leave a review of your mentor here http://www.codementorcenter.com/review/:mentor_id`
 
     //get index of currentMentee to remove
     const removeMenteeIndex = profile.currentMentees
