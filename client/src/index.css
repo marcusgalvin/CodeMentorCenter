@@ -416,15 +416,15 @@ section.container {
   margin-bottom: 1rem;
 }
 
-.profile-exp>div,
-.profile-edu>div {
+.profile-exp > div,
+.profile-edu > div {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: #ccc 1px dotted;
 }
 
-.profile-exp>div:last-child,
-.profile-edu>div:last-child {
+.profile-exp > div:last-child,
+.profile-edu > div:last-child {
   border: 0;
 }
 
@@ -441,12 +441,12 @@ section.container {
   display: flex;
 }
 
-.profile-github .repo>div:first-child {
+.profile-github .repo > div:first-child {
   flex: 7;
   flex-basis: 70%;
 }
 
-.profile-github>div:last-child {
+.profile-github > div:last-child {
   flex: 3;
   flex-basis: 20%;
 }
@@ -464,7 +464,7 @@ section.container {
   align-items: center;
 }
 
-.post>div:first-child {
+.post > div:first-child {
   text-align: center;
 }
 
@@ -557,7 +557,8 @@ section.container {
 /*****************************/
 .heroImg {
   width: 100%;
-  background: url(./components/images/hero_bannerCMCCouple.jpg) no-repeat center 0;
+  background: url(./components/images/hero_bannerCMCCouple.jpg) no-repeat center
+    0;
   background-size: cover;
   background-position: center;
   height: 400px;
@@ -1430,24 +1431,24 @@ section.container {
     display: none;
   }
 
-  .m-nav .menu-btn:checked~.menu {
+  .m-nav .menu-btn:checked ~ .menu {
     max-height: 240px;
   }
 
-  .m-nav .menu-btn:checked~.menu-icon .navicon {
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
   }
 
-  .m-nav .menu-btn:checked~.menu-icon .navicon:before {
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon:before {
     transform: rotate(-45deg);
   }
 
-  .m-nav .menu-btn:checked~.menu-icon .navicon:after {
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon:after {
     transform: rotate(45deg);
   }
 
-  .m-nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
-  .m-nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+  .m-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .m-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
   }
 
@@ -1579,9 +1580,6 @@ section.container {
     width: 90%;
     margin: 10px auto 0;
   }
-<<<<<<< HEAD
-}
-=======
 
   .dashNav .edit {
     background-color: var(--cmc-darkblue-color);
@@ -1600,4 +1598,3 @@ section.container {
     width: 90%;
   }
 }
->>>>>>> 6d5ea6923bf244755536d1a298bf500bd25f1461
