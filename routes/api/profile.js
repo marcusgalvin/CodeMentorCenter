@@ -165,6 +165,7 @@ router.post(
   [
     auth,
     [
+      //type will be either "needMentor" or "wantToMentor"
       check("requestType", "Request type is required")
       .not()
       .isEmpty(),
