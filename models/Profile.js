@@ -36,151 +36,193 @@ const ProfileSchema = new mongoose.Schema({
       type: String
     }
   },
-  needMentorship: {
-    check: {
-      type: Boolean,
-      default: false
-    },
-    description: {
-      type: String
-    },
-    language: {
-      type: String,
-      required: true
-    },
-    speakingLanguage: [{
-      language: {
-        type: String,
-        default: "English",
-        required: true
-      }
-    }]
-  },
-  mentor: {
-    check: {
-      type: Boolean,
-      default: false
-    },
-    description: {
-      type: String
-    },
-    languages: [{
-      language: {
-        type: String,
-        required: true
-      },
-      experience: {
-        type: String,
-        required: true
-      }
-    }],
-    speakingLanguage: [{
-      language: {
-        type: String,
-        default: "English",
-        required: true
-      }
-    }]
-  },
   social: {
     githubURL: {
       type: String
     },
-    instagramURL: {
+    twitterURL: {
       type: String
     },
-    linkedIn: {
+    linkedInURL: {
       type: String
     },
     otherURL: {
       type: String
     }
   },
-  languages: [{
-    language: {
-      type: String
+  languages: [
+    {
+      language: {
+        type: String
+      }
     }
-  }],
-  requests: [{
-    user: {
-      type: Schema.Types.ObjectId,
-      required: true
+  ],
+  projects: [
+    {
+      title: {
+        type: String,
+      },
+      description: {
+        type: String,
+      },
+      githubRepoURL: {
+        type: String
+      }
+    }
+  ],
+  beMentee: {
+    check: {
+      type: Boolean,
+      default: false
     },
-    requestType: {
+    description: {
       type: String,
-      required: true
+    },
+    //for now pick one language, maybe change to more later
+    language: {
+      type: String,
+    },
+    speakingLanguage: {
+      type: String,
+    }
+  },
+  beMentor: {
+    check: {
+      type: Boolean,
+      default: false
     },
     description: {
-      type: String
+      type: String,
     },
-    language: {
-      type: String
+    languages: [
+      {
+        language: {
+          type: String,
+        },
+        // roman numeral "I" through "V"
+        experience: {
+          type: String,
+        }
+      }
+    ],
+    speakingLanguages: [
+      {
+        language: {
+          type: String,
+        }
+      }
+    ]
+  },
+  currentMentors: [
+    {
+      user: {
+        type: Schema.Types.ObjectId,
+      },
+      description: {
+        type: String
+      },
+      language: {
+        type: String
+      },
+      startDate: {
+        type: Date,
+        default: Date.now
+      }
     }
-  }],
-  mentor: [{
-    user: {
-      type: Schema.Types.ObjectId,
-      required: true
+  ],
+  currentMentees: [
+    {
+      user: {
+        type: Schema.Types.ObjectId,
+      },
+      description: {
+        type: String
+      },
+      language: {
+        type: String
+      },
+      startDate: {
+        type: Date,
+        default: Date.now
+      }
     }
-  }],
-  mentoring: [{
-    user: {
-      type: Schema.Types.ObjectId,
-      required: true
-    },
-    startDate: {
-      type: Date,
-      default: Date.now
-    },
-    description: {
-      type: String
-    },
-    language: {
-      type: String
+  ],
+  previousMentors: [
+    {
+      user: {
+        type: Schema.Types.ObjectId,
+      },
+      description: {
+        type: String
+      },
+      language: {
+        type: String
+      },
+      startDate: {
+        type: Date,
+        default: Date.now
+      },
+      endDate: {
+        type: Date,
+        default: Date.now
+      }
     }
-  }],
-  previousMentors: [{
-    user: {
-      type: Schema.Types.ObjectId,
-      required: true
+  ],
+  previousMentees: [
+    {
+      user: {
+        type: Schema.Types.ObjectId,
+      },
+      description: {
+        type: String
+      },
+      language: {
+        type: String
+      },
+      //get from current mentees
+      startDate: {
+        type: Date
+      },
+      endDate: {
+        type: Date,
+        default: Date.now
+      }
     }
-  }],
-  mentored: [{
-    user: {
-      type: Schema.Types.ObjectId,
-      required: true
-    },
-    startDate: {
-      type: Date
-    },
-    endDate: {
-      type: Date,
-      default: Date.now
-    },
-    description: {
-      type: String
-    },
-    language: {
-      type: String
+  ],
+  requests: [
+    {
+      user: {
+        type: Schema.Types.ObjectId,
+      },
+      requestType: {
+        type: String,
+      },
+      description: {
+        type: String
+      },
+      language: {
+        type: String
+      }
     }
-  }],
-  reviews: [{
-    user: {
-      type: Schema.Types.ObjectId,
-      ref: "users"
-    },
-    rating: {
-      type: Number,
-      required: true
-    },
-    text: {
-      type: String
-    },
-    date: {
-      type: Date,
-      default: Date.now
+  ],
+  reviews: [
+    {
+      user: {
+        type: Schema.Types.ObjectId,
+        ref: "users"
+      },
+      rating: {
+        type: Number,
+      },
+      text: {
+        type: String
+      },
+      date: {
+        type: Date,
+        default: Date.now
+      }
     }
-  }],
+  ],
   date: {
     type: Date,
     default: Date.now

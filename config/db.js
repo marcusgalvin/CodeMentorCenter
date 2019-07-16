@@ -9,6 +9,7 @@ const connectDB = async () => {
     await mongoose.connect(db, {
       useNewUrlParser: true,
       useCreateIndex: true,
+      useFindAndModify: false
     });
     console.log(chalk.green.inverse('MongoDB Connected!'));
   } catch (err) {

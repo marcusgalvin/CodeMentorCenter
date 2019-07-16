@@ -25,6 +25,13 @@ router.post(
     check('password', 'Password must contain atleast (6) characters').isLength({
       min: 6,
     }),
+    check("password2").custom((value, { req }) => {
+      if (value !== req.body.password) {
+        throw new Error("Password confirmation field must match the password field");
+      } else {
+        return true;
+      }
+    })
   ],
 
   async (req, res) => {
