@@ -1169,7 +1169,6 @@ section.container {
 
 /* About Us Page */
 /*****************/
-<<<<<<< HEAD
 .aboutUsBanner {
   font-size: 3rem;
   color: var(--cmc-darkblue-color);
@@ -1226,8 +1225,6 @@ section.container {
   color: white;
   transform: rotateY(180deg);
 }
-=======
->>>>>>> 6d5ea6923bf244755536d1a298bf500bd25f1461
 
 /**********************************************/
 /** Media Queries - Mobile Viewport Styling ***/
