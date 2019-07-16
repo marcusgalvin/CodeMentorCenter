@@ -416,15 +416,15 @@ section.container {
   margin-bottom: 1rem;
 }
 
-.profile-exp > div,
-.profile-edu > div {
+.profile-exp>div,
+.profile-edu>div {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: #ccc 1px dotted;
 }
 
-.profile-exp > div:last-child,
-.profile-edu > div:last-child {
+.profile-exp>div:last-child,
+.profile-edu>div:last-child {
   border: 0;
 }
 
@@ -441,12 +441,12 @@ section.container {
   display: flex;
 }
 
-.profile-github .repo > div:first-child {
+.profile-github .repo>div:first-child {
   flex: 7;
   flex-basis: 70%;
 }
 
-.profile-github > div:last-child {
+.profile-github>div:last-child {
   flex: 3;
   flex-basis: 20%;
 }
@@ -464,7 +464,7 @@ section.container {
   align-items: center;
 }
 
-.post > div:first-child {
+.post>div:first-child {
   text-align: center;
 }
 
@@ -557,8 +557,7 @@ section.container {
 /*****************************/
 .heroImg {
   width: 100%;
-  background: url(./components/images/hero_bannerCMCCouple.jpg) no-repeat center
-    0;
+  background: url(./components/images/hero_bannerCMCCouple.jpg) no-repeat center 0;
   background-size: cover;
   background-position: center;
   height: 400px;
@@ -1174,69 +1173,61 @@ section.container {
 
 /* About Us Page */
 /*****************/
-.about {
+.aboutUsBanner {
+  font-size: 3rem;
+  color: var(--cmc-darkblue-color);
   text-align: center;
-  background-color: #fff;
+  margin-top: 6.5rem;
 }
 
-.about h1 {
-  margin-top: -85px;
-  font-size: 50px;
-  color: #000;
-}
-
-.about h2 {
-  color: #000;
-}
-
-.about p {
-  color: #000;
-  width: 90%;
-  margin: 0 auto;
+.card-container {
+  display: flex;
   text-align: center;
-  padding: 25px 0;
 }
 
-.about .meet {
-  color: #000;
-  padding: 10px;
+.flip-card {
+  background-color: transparent;
+  width: 15rem;
+  height: 25rem;
+  perspective: 100rem;
+  /* Remove this if you don't want the 3D effect */
 }
 
-.about .person1,
-.about .person2,
-.about .person3,
-.about .person4,
-.about .person5 {
-  margin-bottom: 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  width: 300px;
-  height: 300px;
-  padding: 10px;
-  border: 5px solid gray;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--light-color);
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-.about .column {
-  margin: 0 15px;
-  float: center;
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-.about .row {
-  margin-bottom: 60px;
-  justify-content: center;
-  clear: both;
-  display: flex;
-  flex-wrap: wrap;
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
 }
 
-.about img {
-  width: 100px;
-  border-radius: 50%;
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: var(--cmc-lightblue-color);
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
 }
 
 /**********************************************/
@@ -1442,24 +1433,24 @@ section.container {
     display: none;
   }
 
-  .m-nav .menu-btn:checked ~ .menu {
+  .m-nav .menu-btn:checked~.menu {
     max-height: 240px;
   }
 
-  .m-nav .menu-btn:checked ~ .menu-icon .navicon {
+  .m-nav .menu-btn:checked~.menu-icon .navicon {
     background: transparent;
   }
 
-  .m-nav .menu-btn:checked ~ .menu-icon .navicon:before {
+  .m-nav .menu-btn:checked~.menu-icon .navicon:before {
     transform: rotate(-45deg);
   }
 
-  .m-nav .menu-btn:checked ~ .menu-icon .navicon:after {
+  .m-nav .menu-btn:checked~.menu-icon .navicon:after {
     transform: rotate(45deg);
   }
 
-  .m-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-  .m-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  .m-nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+  .m-nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
     top: 0;
   }
 
@@ -1589,8 +1580,4 @@ section.container {
   .about .person5 {
     margin: 15px;
   }
-}
-
-.aboutUsBanner {
-  text-align: center;
 }
