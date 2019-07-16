@@ -92,17 +92,20 @@ const Dashboard = () => {
           </ul>
         </div>
         <div className="mentorDashboard">
-          <h2>Mentorship Requests</h2>
+          <h2 className="requestHead">Mentorship Requests</h2>
+          {/* Show All Requested Mentorship */}
+          {/********************************** */}
+          {/* Stand-alone Request */}
           <div className="requestedMentorship">
             <ul>
               <li>
-                <strong>User:</strong> Paul Jones
+                <span>User:</span>Paul Jones
               </li>
               <li>
-                <strong>Languages:</strong> JavaScript, HTML, CSS
+                <span>Languages:</span>JavaScript, HTML, CSS
               </li>
               <li>
-                <strong>Request Summary:</strong>
+                <span>Request Summary:</span>
                 Hello, it seems that your skills would be a perfect fit for what
                 I'm trying learn on the road to becoming a software engineer.
                 Hope you can help. Thanks Paul.
@@ -110,6 +113,63 @@ const Dashboard = () => {
               <li>
                 <button className="btn btn-success">Accept</button>
                 <button className="btn btn-danger">Deny</button>
+              </li>
+            </ul>
+          </div>
+          {/********************************** */}
+          {/* Stand-alone Request */}
+          <div className="requestedMentorship">
+            <ul>
+              <li>
+                <span>User:</span>Sally North
+              </li>
+              <li>
+                <span>Languages:</span>C#, JavaScript
+              </li>
+              <li>
+                <span>Request Summary:</span>
+                Hi, I have a solid background in C# but would love some help
+                with React. Thanks
+              </li>
+              <li>
+                <button className="btn btn-success">Accept</button>
+                <button className="btn btn-danger">Deny</button>
+              </li>
+            </ul>
+          </div>
+          <h2 className="currentHead">Current Mentorship</h2>
+          <div className="currentMentorship">
+            <ul>
+              <li>
+                <span>User:</span>Sally North
+              </li>
+              <li>
+                <span>Mentor Start Date:</span>July 7, 2019
+              </li>
+              <li>
+                <button className="btn btn-danger">End Mentorship</button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <span>User:</span>Sally North
+              </li>
+              <li>
+                <span>Mentor Start Date:</span>July 7, 2019
+              </li>
+              <li>
+                <button className="btn btn-danger">End Mentorship</button>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <span>User:</span>Sally North
+              </li>
+              <li>
+                <span>Mentor Start Date:</span>July 7, 2019
+              </li>
+              <li>
+                <button className="btn btn-danger">End Mentorship</button>
               </li>
             </ul>
           </div>

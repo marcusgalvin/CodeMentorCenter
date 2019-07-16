@@ -960,33 +960,13 @@ section.container {
 
 /* User Profile Dashboard */
 /***************************/
+/* Welcome Header Band */
 .dash-alerts-bands {
   position: relative;
   top: 108px;
   background-color: var(--dark-color);
   color: var(--cream-color);
   padding: 1rem;
-}
-
-.onlineStatus {
-  margin: 0 20px;
-}
-
-.onlineStatus span {
-  color: #28a745;
-}
-
-.onlineStatus .success {
-  padding-top: 4px;
-  color: #28a745;
-}
-
-.onlineStatus .fas {
-  position: relative;
-  top: 4px;
-  right: 1px;
-  padding: 5px 10px 0 0;
-  font-size: 1.5rem !important;
 }
 
 .dash-alerts-bands .fas {
@@ -1027,6 +1007,29 @@ section.container {
   padding: 5px 10px;
 }
 
+/* Mentor Available Status */
+.onlineStatus {
+  margin: 0 20px;
+}
+
+.onlineStatus span {
+  color: #28a745;
+}
+
+.onlineStatus .success {
+  padding-top: 4px;
+  color: #28a745;
+}
+
+.onlineStatus .fas {
+  position: relative;
+  top: 4px;
+  right: 1px;
+  padding: 5px 10px 0 0;
+  font-size: 1.5rem !important;
+}
+
+/* Profile Information */
 .dashProfileSummary {
   position: relative;
   top: 108px;
@@ -1076,7 +1079,6 @@ section.container {
   background: var(--cmc-lightblue-color);
   width: 82%;
   text-align: center;
-  border-radius: 5%;
   margin: 10px auto;
 }
 
@@ -1109,14 +1111,50 @@ section.container {
   width: 92%;
 }
 
-.requestedMentorship {
-  margin: 0 auto;
+/* Requsted Mentionship Container */
+.requestedMentorship,
+.currentMentorship {
+  margin: 10px auto 0;
   border: 1px var(var(--dark-color)) dotted;
-  background-color: var(--cream-color);
+  background-color: var(--cmc-lightblue-color);
   padding: 10px;
   width: 90%;
   text-align: center;
+  border: 1px solid var(--cmc-gray-color);
 }
+
+.currentMentorship {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.currentHead {
+  margin-top: 25px;
+}
+
+.currentMentorship ul {
+  border: 1px solid var(--dark-color);
+  background-color: var(--white-color);
+  padding: 10px;
+}
+
+.currentMentorship li button {
+  padding: 4px 8px;
+  font-size: 0.8rem;
+}
+
+.currentMentorship li:last-child {
+  text-align: center;
+}
+
+.requestedMentorship span,
+.currentMentorship span {
+  font-weight: 700;
+  padding-right: 5px;
+}
+
+/* Add the following to edit profile
 
 .becomeMentor {
   width: 90%;
@@ -1131,6 +1169,8 @@ section.container {
 .becomeMentor p {
   padding-bottom: 15px;
 }
+
+*/
 
 /* About Us Page */
 /*****************/
