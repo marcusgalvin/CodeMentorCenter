@@ -1,9 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const auth = require("../../middleware/auth");
-const { check, validationResult } = require("express-validator");
+const {
+  check,
+  validationResult
+} = require("express-validator");
 const Profile = require("../../models/Profile");
 const User = require("../../models/User");
+const nodemailer = require('nodemailer');
 
 //@route GET api/profile/me
 //@desc  get current users profile
@@ -133,17 +137,13 @@ router.post("/", auth, async (req, res) => {
 
     if (profile) {
       //update profile
-      profile = await Profile.findOneAndUpdate(
-        {
-          user: req.user.id
-        },
-        {
-          $set: profileFields
-        },
-        {
-          new: true
-        }
-      );
+      profile = await Profile.findOneAndUpdate({
+        user: req.user.id
+      }, {
+        $set: profileFields
+      }, {
+        new: true
+      });
       return res.json(profile);
     }
 
@@ -166,15 +166,15 @@ router.post(
     auth,
     [
       check("requestType", "Request type is required")
-        .not()
-        .isEmpty(),
+      .not()
+      .isEmpty(),
       //description and language may be unneccassery if the info comes from the users profile under mentor/mentee section
       check("description", "Description is required")
-        .not()
-        .isEmpty(),
+      .not()
+      .isEmpty(),
       check("language", "Language is required")
-        .not()
-        .isEmpty()
+      .not()
+      .isEmpty()
     ]
   ],
   async (req, res) => {
@@ -185,7 +185,9 @@ router.post(
       });
     }
     try {
-      let profile = await Profile.findOne({ user: req.params.user_id });
+      let profile = await Profile.findOne({
+        user: req.params.user_id
+      });
 
       //check if user has an existing request
       const request = profile.requests.filter(
@@ -222,13 +224,18 @@ router.post(
 //@access  private
 router.post("/request/:request_id/accept", auth, async (req, res) => {
   try {
-    let profile = await Profile.findOne({ user: req.user.id });
+    let profile = await Profile.findOne({
+      user: req.user.id
+    });
 
     const request = profile.requests.find(
       request => request.id === req.params.request_id
     );
 
-    let requestUserProfile = await Profile.findOne({ user: request.user });
+    let requestUserProfile = await Profile.findOne({
+      user: request.user
+    });
+
     //type will be either "needMentor" or "wantToMentor"
     const requestType = request.requestType;
     const payload = {
@@ -236,12 +243,30 @@ router.post("/request/:request_id/accept", auth, async (req, res) => {
       language: request.language,
       user: request.user
     };
+
+    //this may be overkill calling both users. look into refactoring this somehow
+    //get email and name of request user
+    let requestUser = await User.findOne({
+      user: request.user
+    });
+    //get email and name of current user
+    let currentUser = await User.findOne({
+      user: req.user.id
+    });
+
+    let emailSubject = ""
+    let emailText = ""
+
     if (requestType === "needMentor") {
       profile.currentMentees.unshift(payload);
       requestUserProfile.currentMentors.unshift(payload);
+      emailSubject = "I would like to mentor you!"
+      emailText = `Hi ${requestUser.name}! My name is ${currentUser.name}and I have accepted your request to be your mentor. Please send an email at your earliest convenience to ${currentUser.email} with either your Facebook messenger or Slack info so we can chat and get your mentorship underway. Have a nice day!`
     } else {
       profile.currentMentors.unshift(payload);
       requestUserProfile.currentMentees.unshift(payload);
+      emailSubject = "I would like you to mentor me!"
+      emailText = `Hi ${requestUser.name}! My name is ${currentUser.name}and I have accepted your request to be your mentee. Please send an email at your earliest convenience to ${currentUser.email} with either your Facebook messenger or Slack info so we can chat. Have a nice day!`
     }
     //get index of request to remove
     const removeIndex = profile.requests
@@ -253,6 +278,32 @@ router.post("/request/:request_id/accept", auth, async (req, res) => {
     await profile.save();
     await requestUserProfile.save();
     res.json(profile);
+
+    //  Send E-mail to requester!
+
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'codementorcenter@gmail.com',
+        pass: config.get('emailPass'),
+      },
+    });
+
+    const mailOptions = {
+      from: 'CodeMentorCenter@gmail.com',
+      to: requestUser.email,
+      subject: emailSubject,
+      text: emailText
+    };
+
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log(`Email sent: ${info.response}`);
+      }
+    });
+
   } catch (error) {
     console.error(error.message);
     res.send(500).send("server error");
@@ -264,14 +315,18 @@ router.post("/request/:request_id/accept", auth, async (req, res) => {
 //@access  private
 router.delete("/:user_id/request/:request_id", auth, async (req, res) => {
   try {
-    const profile = await Profile.findOne({ user: req.params.user_id });
+    const profile = await Profile.findOne({
+      user: req.params.user_id
+    });
 
     const request = profile.requests.find(
       request => request.id === req.params.request_id
     );
     //make sure request exists
     if (!request) {
-      return res.status(404).json({ msg: "request not found" });
+      return res.status(404).json({
+        msg: "request not found"
+      });
     }
     //make sure user matches either profile user or request user
     //  ===> is this a SECURE method??? <===
@@ -279,7 +334,9 @@ router.delete("/:user_id/request/:request_id", auth, async (req, res) => {
       request.user.toString() !== req.user.id &&
       profile.user.toString() !== req.user.id
     ) {
-      return res.status(401).json({ msg: "Unautharized user" });
+      return res.status(401).json({
+        msg: "Unautharized user"
+      });
     }
     //get index of request to remove
     const removeIndex = profile.requests
@@ -304,8 +361,8 @@ router.post(
     auth,
     [
       check("rating", "Rating is required")
-        .not()
-        .isEmpty()
+      .not()
+      .isEmpty()
     ]
   ],
   async (req, res) => {
@@ -316,7 +373,9 @@ router.post(
       });
     }
     try {
-      let profile = await Profile.findOne({ user: req.params.user_id });
+      let profile = await Profile.findOne({
+        user: req.params.user_id
+      });
 
       //check if user has an existing review
       const review = profile.reviews.filter(
@@ -331,22 +390,18 @@ router.post(
 
       //if review exists update with new content
       if (review.length > 0) {
-        profile = await Profile.findOneAndUpdate(
-          {
-            user: req.params.user_id,
-            "reviews.user": req.user.id
-          },
-          {
-            $set: {
-              "reviews.$.rating": req.body.rating,
-              "reviews.$.text": req.body.text,
-              "reviews.$.date": Date.now()
-            }
-          },
-          {
-            new: true
+        profile = await Profile.findOneAndUpdate({
+          user: req.params.user_id,
+          "reviews.user": req.user.id
+        }, {
+          $set: {
+            "reviews.$.rating": req.body.rating,
+            "reviews.$.text": req.body.text,
+            "reviews.$.date": Date.now()
           }
-        );
+        }, {
+          new: true
+        });
         return res.json(profile);
       }
 
@@ -366,19 +421,25 @@ router.post(
 //@access  private
 router.delete("/:user_id/review/:review_id", auth, async (req, res) => {
   try {
-    const profile = await Profile.findOne({ user: req.params.user_id });
+    const profile = await Profile.findOne({
+      user: req.params.user_id
+    });
 
     const review = profile.reviews.find(
       review => review.id === req.params.review_id
     );
     //make sure review exists
     if (!review) {
-      return res.status(404).json({ msg: "review not found" });
+      return res.status(404).json({
+        msg: "review not found"
+      });
     }
     //make sure user matches
     //  ===> is this a SECURE method??? <===
     if (review.user.toString() !== req.user.id) {
-      return res.status(401).json({ msg: "Unautharized user" });
+      return res.status(401).json({
+        msg: "Unautharized user"
+      });
     }
     //get index of review to remove
     const removeIndex = profile.reviews
