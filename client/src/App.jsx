@@ -5,6 +5,7 @@ import Login from "./Auth/Login";
 import Logout from "./Auth/Logout";
 import AboutUs from "./components/layout/AboutUs";
 import Dashboard from "./components/layout/Dashboard";
+import ProfileEdit from "./components/layout/ProfileEdit";
 
 import "./index.css";
 
@@ -13,8 +14,10 @@ const App = () => {
     <Router>
       <Fragment>
         <TopNavbar />
-        <Route path="/Dashboard" component={Dashboard} />
-
+        <Switch>
+          <Route path="/Dashboard" component={Dashboard} />
+          <Route path="/ProfileEdit" component={ProfileEdit} />
+        </Switch>
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route path="/login" component={Login} />

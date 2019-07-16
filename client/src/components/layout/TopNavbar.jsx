@@ -30,8 +30,8 @@ class Navbar extends Component {
                 </Link>
               </li>
               <li>
-                <Link to="/createProfile">
-                  <i class="far fa-address-card fas" /> CREATE PROFILE
+                <Link to="/dashboard">
+                  <i class="far fa-address-card fas" /> PROFILE
                 </Link>
               </li>
               <li>

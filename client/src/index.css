@@ -84,7 +84,7 @@ img {
 }
 
 .text-primary {
-  color: var(--cmc-lightblue-color);
+  color: var(--cmc-darkblue-color);
 }
 
 .text-dark {
@@ -416,15 +416,15 @@ section.container {
   margin-bottom: 1rem;
 }
 
-.profile-exp>div,
-.profile-edu>div {
+.profile-exp > div,
+.profile-edu > div {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: #ccc 1px dotted;
 }
 
-.profile-exp>div:last-child,
-.profile-edu>div:last-child {
+.profile-exp > div:last-child,
+.profile-edu > div:last-child {
   border: 0;
 }
 
@@ -441,12 +441,12 @@ section.container {
   display: flex;
 }
 
-.profile-github .repo>div:first-child {
+.profile-github .repo > div:first-child {
   flex: 7;
   flex-basis: 70%;
 }
 
-.profile-github>div:last-child {
+.profile-github > div:last-child {
   flex: 3;
   flex-basis: 20%;
 }
@@ -464,7 +464,7 @@ section.container {
   align-items: center;
 }
 
-.post>div:first-child {
+.post > div:first-child {
   text-align: center;
 }
 
@@ -557,7 +557,8 @@ section.container {
 /*****************************/
 .heroImg {
   width: 100%;
-  background: url(./components/images/hero_bannerCMCCouple.jpg) no-repeat center 0;
+  background: url(./components/images/hero_bannerCMCCouple.jpg) no-repeat center
+    0;
   background-size: cover;
   background-position: center;
   height: 400px;
@@ -957,6 +958,180 @@ section.container {
   bottom: 0;
 }
 
+/* User Profile Dashboard */
+/***************************/
+.dash-alerts-bands {
+  position: relative;
+  top: 108px;
+  background-color: var(--dark-color);
+  color: var(--cream-color);
+  padding: 1rem;
+}
+
+.onlineStatus {
+  margin: 0 20px;
+}
+
+.onlineStatus span {
+  color: #28a745;
+}
+
+.onlineStatus .success {
+  padding-top: 4px;
+  color: #28a745;
+}
+
+.onlineStatus .fas {
+  position: relative;
+  top: 4px;
+  right: 1px;
+  padding: 5px 10px 0 0;
+  font-size: 1.5rem !important;
+}
+
+.dash-alerts-bands .fas {
+  padding-right: 5px;
+  font-size: 1rem;
+}
+
+.dash-alerts-bands .dashNav {
+  position: relative;
+  top: -10px;
+  float: right;
+  display: flex;
+  padding: 3px;
+}
+
+.dashNav .edit,
+.dashNav .delete {
+  margin: 3px;
+  color: var(--cream-color);
+  background: none;
+  border: 1px solid var(--cream-color);
+  padding: 3px;
+}
+
+.dashNav .edit:hover {
+  color: var(--cream-color);
+  background: var(--cmc-darkblue-color);
+}
+
+.dashNav .delete:hover {
+  color: var(--cream-color);
+  background: var(--cmc-red-color);
+}
+
+.requestAlert {
+  margin-top: 15px;
+  background-color: var(--cmc-red-color);
+  padding: 5px 10px;
+}
+
+.dashProfileSummary {
+  position: relative;
+  top: 108px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dashProfileSummary a:link,
+.dashProfileSummary a:visited {
+  color: var(--dark-color);
+}
+
+.dashProfileSummary a:link:hover,
+.dashProfileSummary a:visited:hover {
+  color: var(--cmc-darkblue-color);
+  text-decoration: underline;
+}
+
+.profileSummary,
+.displayAllMentorships,
+.mentorDashboard {
+  margin: 11px;
+  padding: 20px;
+  background-color: var(--cream-color);
+  border: 1px var(--dark-color) dotted;
+}
+
+.dashProfileSummary .basic,
+.dashProfileSummary .detail {
+  font-size: 1rem;
+  text-align: center;
+  width: 45%;
+}
+
+.dashProfileSummary .basic h2,
+.dashProfileSummary .detail h2,
+.mentorDashboard h2 {
+  font-size: 1.1rem;
+  text-decoration: underline;
+  padding-bottom: 15px;
+}
+
+.profileImg {
+  font-size: 7rem;
+  padding: 0px;
+  background: var(--cmc-lightblue-color);
+  width: 82%;
+  text-align: center;
+  border-radius: 5%;
+  margin: 10px auto;
+}
+
+.dashProfileSummary ul {
+  list-style: none;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.dashProfileSummary li {
+  padding: 5px;
+}
+
+.menteeHelp,
+.mentoredHelp {
+  font-size: 0.8rem;
+}
+
+.menteeHelp {
+  padding-top: 15px;
+}
+
+.menteeHelp span,
+.mentoredHelp span {
+  font-weight: 700;
+}
+
+.mentorDashboard {
+  text-align: center;
+  width: 92%;
+}
+
+.requestedMentorship {
+  margin: 0 auto;
+  border: 1px var(var(--dark-color)) dotted;
+  background-color: var(--cream-color);
+  padding: 10px;
+  width: 90%;
+  text-align: center;
+}
+
+.becomeMentor {
+  width: 90%;
+  padding: 15px;
+  text-align: center;
+}
+
+.becomeMentor h1 {
+  padding-bottom: 15px;
+}
+
+.becomeMentor p {
+  padding-bottom: 15px;
+}
+
 /* About Us Page */
 /*****************/
 .about {
@@ -1227,24 +1402,24 @@ section.container {
     display: none;
   }
 
-  .m-nav .menu-btn:checked~.menu {
+  .m-nav .menu-btn:checked ~ .menu {
     max-height: 240px;
   }
 
-  .m-nav .menu-btn:checked~.menu-icon .navicon {
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
   }
 
-  .m-nav .menu-btn:checked~.menu-icon .navicon:before {
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon:before {
     transform: rotate(-45deg);
   }
 
-  .m-nav .menu-btn:checked~.menu-icon .navicon:after {
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon:after {
     transform: rotate(45deg);
   }
 
-  .m-nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
-  .m-nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+  .m-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .m-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
   }
 
@@ -1377,5 +1552,5 @@ section.container {
 }
 
 .aboutUsBanner {
-  text-align: center,
+  text-align: center;
 }
