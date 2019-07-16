@@ -852,8 +852,6 @@ section.container {
 /*  Footer Conainer */
 /********************/
 .footer-ct {
-  position: relative;
-  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -1062,7 +1060,7 @@ section.container {
 .dashProfileSummary .detail {
   font-size: 1rem;
   text-align: center;
-  width: 45%;
+  width: 44%;
 }
 
 .dashProfileSummary .basic h2,
@@ -1084,8 +1082,6 @@ section.container {
 
 .dashProfileSummary ul {
   list-style: none;
-  text-align: left;
-  padding-left: 30px;
 }
 
 .dashProfileSummary li {
@@ -1108,7 +1104,7 @@ section.container {
 
 .mentorDashboard {
   text-align: center;
-  width: 92%;
+  width: 90%;
 }
 
 /* Requsted Mentionship Container */
@@ -1116,17 +1112,17 @@ section.container {
 .currentMentorship {
   margin: 10px auto 0;
   border: 1px var(var(--dark-color)) dotted;
-  background-color: var(--cmc-lightblue-color);
-  padding: 10px;
+  padding: 5px;
   width: 90%;
   text-align: center;
-  border: 1px solid var(--cmc-gray-color);
+}
+
+.requestedMentorship {
+  background-color: var(--cmc-lightblue-color);
 }
 
 .currentMentorship {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: block;
 }
 
 .currentHead {
@@ -1134,9 +1130,9 @@ section.container {
 }
 
 .currentMentorship ul {
-  border: 1px solid var(--dark-color);
+  border: 1px dotted var(--dark-color);
   background-color: var(--white-color);
-  padding: 10px;
+  padding: 5px;
 }
 
 .currentMentorship li button {
@@ -1174,70 +1170,6 @@ section.container {
 
 /* About Us Page */
 /*****************/
-.about {
-  text-align: center;
-  background-color: #fff;
-}
-
-.about h1 {
-  margin-top: -85px;
-  font-size: 50px;
-  color: #000;
-}
-
-.about h2 {
-  color: #000;
-}
-
-.about p {
-  color: #000;
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 25px 0;
-}
-
-.about .meet {
-  color: #000;
-  padding: 10px;
-}
-
-.about .person1,
-.about .person2,
-.about .person3,
-.about .person4,
-.about .person5 {
-  margin-bottom: 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  width: 300px;
-  height: 300px;
-  padding: 10px;
-  border: 5px solid gray;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--light-color);
-}
-
-.about .column {
-  margin: 0 15px;
-  float: center;
-}
-
-.about .row {
-  margin-bottom: 60px;
-  justify-content: center;
-  clear: both;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.about img {
-  width: 100px;
-  border-radius: 50%;
-}
 
 /**********************************************/
 /** Media Queries - Mobile Viewport Styling ***/
@@ -1343,6 +1275,7 @@ section.container {
   .navbar ul li {
     background: var(--cream-color);
     border: 1px solid #ccc;
+    padding: 10px 0;
   }
 
   .navbar ul li a {
@@ -1571,26 +1504,41 @@ section.container {
     padding: 0.3rem 0.4rem;
   }
 
-  /* About Us */
-  /************/
-  .about h1 {
-    margin-top: 40px;
+  /* User Profile Dashboard */
+  /**************************/
+  .dash-alerts-bands {
+    top: 0;
+    text-align: center;
   }
 
-  .about .column {
+  .dash-alerts-bands .dashNav {
+    float: none;
+    margin-top: 15px;
+    display: block;
     padding: 0;
-    margin: 0;
   }
 
-  .about .person1,
-  .about .person2,
-  .about .person3,
-  .about .person4,
-  .about .person5 {
-    margin: 15px;
+  .dashNav .edit,
+  .dashNav .delete {
+    display: block;
+    width: 90%;
+    margin: 10px auto 0;
   }
-}
 
-.aboutUsBanner {
-  text-align: center;
+  .dashNav .edit {
+    background-color: var(--cmc-darkblue-color);
+  }
+
+  .dashNav .delete {
+    background-color: var(--cmc-red-color);
+  }
+
+  .dashProfileSummary {
+    top: 5px;
+  }
+
+  .dashProfileSummary .basic,
+  .dashProfileSummary .detail {
+    width: 90%;
+  }
 }
