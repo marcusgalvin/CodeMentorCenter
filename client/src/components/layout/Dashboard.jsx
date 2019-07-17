@@ -8,6 +8,7 @@ const Dashboard = () => {
       <div className="dash-alerts-bands">
         <i className="fas fa-user" /> Welcome John Doe
         <div className="dashNav">
+          {/* Indicator to show if mentor is available. Uses checkbox:mentorStatus on edit profile form */}
           <div className="onlineStatus">
             Mentor Status: <span>Online</span>
           </div>
@@ -18,6 +19,7 @@ const Dashboard = () => {
             <i className="fas fa-user-minus" /> Delete My Account
           </button>
         </div>
+        {/* Request alert band is triggered if a user is rquesting mentorship */}
         <div className="requestAlert">
           <i class="fas fa-envelope-open-text" /> You have a pending requests!
         </div>
@@ -90,6 +92,7 @@ const Dashboard = () => {
             </li>
           </ul>
         </div>
+        {/* Shows both mentor requests and current mentorships */}
         <div className="mentorDashboard">
           <h3 className="requestHead">Mentorship Requests</h3>
           {/* Show All Requested Mentorship */}
@@ -136,8 +139,13 @@ const Dashboard = () => {
               </li>
             </ul>
           </div>
+          <hr />
+          {/* Show All Current Mentorships */}
+          {/********************************** */}
           <h3 className="currentHead">Current Mentorship</h3>
           <div className="currentMentorship">
+            {/********************************** */}
+            {/* Stand-alone mentorship */}
             <ul>
               <li>
                 <span>User:</span>Sally North
@@ -152,6 +160,8 @@ const Dashboard = () => {
                 <button className="btn btn-danger">End Mentorship</button>
               </li>
             </ul>
+            {/********************************** */}
+            {/* Stand-alone mentorship */}
             <ul>
               <li>
                 <span>User:</span>Milton Bradley
@@ -166,6 +176,8 @@ const Dashboard = () => {
                 <button className="btn btn-danger">End Mentorship</button>
               </li>
             </ul>
+            {/********************************** */}
+            {/* Stand-alone mentorship */}
             <ul>
               <li>
                 <span>User:</span>Peter Milo

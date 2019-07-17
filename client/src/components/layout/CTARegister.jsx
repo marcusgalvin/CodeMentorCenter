@@ -6,7 +6,7 @@ const CTARegister = () => {
     <Fragment>
       <div className="ctaRegister">
         <h4 className="lead">
-          Making software stronger...one developer at a time.
+          Making software stronger... one developer at a time.
         </h4>
         <p>
           We've added a mentorship program to CodeMentorCenter so you can build
@@ -29,9 +29,11 @@ const CTARegister = () => {
           of the mentees who enroll in CareerDevs and complete two months.
           Exelsior!
         </p>
-        <h5 className="my-1">
-          Try it out today! There's a mentor waiting to help you.
-        </h5>
+        <p className="my-1">
+          <strong>
+            Try it out today! There's a mentor waiting to help you.
+          </strong>
+        </p>
         <div className="my-1">
           <Link to="/register" className="btn btn-primary btn-rounded">
             REGISTER

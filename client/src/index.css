@@ -72,68 +72,6 @@ h3 {
   font-size: 1.5rem;
 }
 
-/* Text Styles */
-/***************/
-.x-large {
-  font-size: 4rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.large {
-  font-size: 3rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-primary {
-  color: var(--cmc-darkblue-color);
-}
-
-.text-dark {
-  color: var(--dark-color);
-}
-
-*/
-
-/* Padding */
-/***********/
-.p {
-  padding: 0.5rem;
-}
-
-.p-1 {
-  padding: 1rem;
-}
-
-.p-2 {
-  padding: 2rem;
-}
-
-.p-3 {
-  padding: 3rem;
-}
-
-.py {
-  padding: 0.5rem 0;
-}
-
-.py-1 {
-  padding: 1rem 0;
-}
-
-.py-2 {
-  padding: 2rem 0;
-}
-
-.py-3 {
-  padding: 3rem 0;
-}
-
 /* Margin */
 /**********/
 .m {
@@ -351,147 +289,6 @@ section.container {
   font-size: 1.4rem;
 }
 
-/* Profiles Page */
-/*****************/
-.profile {
-  display: grid;
-  grid-template-columns: 2fr 4fr 2fr;
-  align-items: center;
-  grid-gap: 2rem;
-  padding: 1rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-}
-
-/* Profile Page */
-/****************/
-.profile-grid {
-  display: grid;
-  grid-template-areas:
-    "top top"
-    "about about"
-    "exp edu"
-    "github github";
-  grid-gap: 1rem;
-}
-
-.profile-top {
-  grid-area: top;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.profile-top img {
-  width: 250px;
-}
-
-.profile-top .icons a {
-  color: #fff;
-  margin: 0 0.3rem;
-}
-
-.profile-top .icons a:hover {
-  color: var(--dark-color);
-}
-
-.profile-about {
-  grid-area: about;
-  text-align: center;
-}
-
-.profile-about .skills {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.profile-exp {
-  grid-area: exp;
-}
-
-.profile-edu {
-  grid-area: edu;
-}
-
-.profile-exp h2,
-.profile-edu h2 {
-  margin-bottom: 1rem;
-}
-
-.profile-exp > div,
-.profile-edu > div {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: #ccc 1px dotted;
-}
-
-.profile-exp > div:last-child,
-.profile-edu > div:last-child {
-  border: 0;
-}
-
-.profile-exp p,
-.profile-edu p {
-  margin: 0.5rem 0;
-}
-
-.profile-github {
-  grid-area: github;
-}
-
-.profile-github .repo {
-  display: flex;
-}
-
-.profile-github .repo > div:first-child {
-  flex: 7;
-  flex-basis: 70%;
-}
-
-.profile-github > div:last-child {
-  flex: 3;
-  flex-basis: 20%;
-}
-
-/* Posts Page */
-.post-form .post-form-header {
-  background: var(--primary-color);
-  padding: 0.5rem;
-}
-
-.post {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-gap: 2rem;
-  align-items: center;
-}
-
-.post > div:first-child {
-  text-align: center;
-}
-
-.post img {
-  width: 100px;
-}
-
-.post .comment-count {
-  background: var(--light-color);
-  color: var(--primary-color);
-  padding: 0.1rem 0.2rem;
-  border-radius: 5px;
-  font-size: 0.8rem;
-}
-
-.post .post-date {
-  color: #aaa;
-  font-size: 0.8rem;
-  margin-bottom: 0.5rem;
-}
-
 /*************************************************/
 /*************************************************/
 /*              Code Menter Center               */
@@ -622,7 +419,7 @@ section.container {
 .search-btn {
   position: relative;
   float: right;
-  top: -34px;
+  top: -35px;
   left: 3px;
   background-color: var(--cmc-red-color);
   color: var(--white-color);
@@ -1108,18 +905,17 @@ section.container {
 }
 
 .mentorDashboard {
-  text-align: center;
   width: 90%;
 }
 
 /* Requsted Mentionship Container */
+/**********************************/
 .requestedMentorship,
 .currentMentorship {
-  margin: 10px auto 0;
+  margin: 10px auto 20px;
   border: 1px var(var(--dark-color)) dotted;
   padding: 5px;
   width: 90%;
-  text-align: center;
 }
 
 .requestedMentorship {
@@ -1127,7 +923,8 @@ section.container {
 }
 
 .currentMentorship {
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 
 .currentHead {
@@ -1138,6 +935,8 @@ section.container {
   border: 1px dotted var(--dark-color);
   background-color: var(--white-color);
   padding: 5px;
+  margin: 0 10px;
+  width: 100%;
 }
 
 .currentMentorship li button {
@@ -1156,7 +955,7 @@ section.container {
 }
 
 /* Edit User Profile */
-/***************************/
+/*********************/
 .editProfile-ct {
   position: relative;
   top: 108px;
@@ -1381,6 +1180,16 @@ section.container {
 
   .scrollProfile {
     display: block;
+  }
+
+  /* Dashboard Page */
+  /*****************/
+  .currentMentorship {
+    display: block;
+  }
+
+  .currentMentorship ul {
+    margin: 10px 0;
   }
 
   /* Edit Profile Page */

@@ -2,6 +2,9 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 
+{
+  /* This style brings the content below the fixed header */
+}
 const footerDiv = {
   marginTop: "108px"
 };
@@ -19,6 +22,7 @@ const ProfileEdit = () => {
           <i class="fas fa-star-of-life" /> = required field
         </p> */}
         <form className="form">
+          {/* Standard profile registration form */}
           <div className="menteeForm-ct">
             <div className="personalInfo">
               <div className="form-group">
@@ -132,6 +136,7 @@ const ProfileEdit = () => {
               </div>
             </div>
           </div>
+          {/* Mentee sign up form */}
           <div className="menteeSignUp">
             <h3>Looking for mentorship?</h3>
             <p>
@@ -170,6 +175,7 @@ const ProfileEdit = () => {
               </div>
             </div>
           </div>
+          {/* Mentor sign up form */}
           <div className="mentorSignUp">
             <h3>Become a CMC mentor</h3>
             <p>
@@ -190,6 +196,7 @@ const ProfileEdit = () => {
             <h3>
               Click Here <i class="fas fa-user-ninja" /> Learn More
             </h3>
+            {/* Hidden mentor fields */}
             <div className="hiddenMentorFields">
               <input type="checkbox" className="beMentor" />{" "}
               <strong>Please sign me up as a mentor</strong>
