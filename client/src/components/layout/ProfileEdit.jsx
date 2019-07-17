@@ -176,14 +176,13 @@ const ProfileEdit = () => {
             <h3>Become a CMC mentor</h3>
             <p>
               Our goal is to ensure that you have the best learning experience
-              possible. We thought that other tutoring companies weren’t
-              providing a level of service to justify their price tag. This
-              meant designing a platform where tutors and students could connect
-              with each other. We wanted to give students more options in order
-              for them to match with their perfect tutor. You no longer need to
-              spend countless hours finding a tutor, you can spend that time in
-              the classroom. And the more time you spend learning, the happier
-              we are.
+              possible. We felt other tutoring sites weren’t providing a level
+              of service that should be giving. This meant designing a platform
+              where mentors and mentees could connect with each other. We wanted
+              to give visitors more options in order for them to match with
+              their perfect mentor. You no longer need to spend countless hours
+              finding a mentor, you can spend that time learning. And the more
+              time you spend learning, the happier we are.
               <br />
               <br />
               Become a mentor today and help the programming community...one
@@ -250,7 +249,6 @@ const ProfileEdit = () => {
           </div>
         </form>
       </div>
-      >
       <div style={footerDiv}>
         <Footer />
       </div>
