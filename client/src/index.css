@@ -74,7 +74,6 @@ h3 {
 
 /* Text Styles */
 /***************/
-
 .x-large {
   font-size: 4rem;
   line-height: 1.2;
@@ -281,7 +280,6 @@ h3 {
 .form .form-text {
   display: block;
   margin-top: 0.3rem;
-  color: #888;
 }
 
 .form input[type="text"],
@@ -308,7 +306,7 @@ button {
 
 .form .social-input i {
   padding: 0.5rem;
-  width: 4rem;
+  width: 2rem;
 }
 
 .form .social-input i.fa-twitter {
@@ -424,15 +422,15 @@ section.container {
   margin-bottom: 1rem;
 }
 
-.profile-exp>div,
-.profile-edu>div {
+.profile-exp > div,
+.profile-edu > div {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: #ccc 1px dotted;
 }
 
-.profile-exp>div:last-child,
-.profile-edu>div:last-child {
+.profile-exp > div:last-child,
+.profile-edu > div:last-child {
   border: 0;
 }
 
@@ -449,12 +447,12 @@ section.container {
   display: flex;
 }
 
-.profile-github .repo>div:first-child {
+.profile-github .repo > div:first-child {
   flex: 7;
   flex-basis: 70%;
 }
 
-.profile-github>div:last-child {
+.profile-github > div:last-child {
   flex: 3;
   flex-basis: 20%;
 }
@@ -472,7 +470,7 @@ section.container {
   align-items: center;
 }
 
-.post>div:first-child {
+.post > div:first-child {
   text-align: center;
 }
 
@@ -565,7 +563,8 @@ section.container {
 /*****************************/
 .heroImg {
   width: 100%;
-  background: url(./components/images/hero_bannerCMCCouple.jpg) no-repeat center 0;
+  background: url(./components/images/hero_bannerCMCCouple.jpg) no-repeat center
+    0;
   background-size: cover;
   background-position: center;
   height: 400px;
@@ -1169,9 +1168,124 @@ section.container {
   color: var(--cmc-red-color);
 }
 
+.editProfile-ct .lead {
+  padding-top: 15px;
+}
+
+.editProfile-ct .menteeForm-ct {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .editProfile-ct .personalInfo,
 .editProfile-ct .socialInfo {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.editProfile-ct .personalInfo {
+  flex-grow: 4;
+  flex-shrink: 4;
+  padding-right: 25px;
+}
+
+.editProfile-ct .socialInfo {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.editProfile-ct .personalInfo .form-group,
+.editProfile-ct .socialInfo .form-group {
+  margin: 0.2rem 0;
+}
+
+.personalInfo .form-group input,
+.personalInfo .form-group select,
+.personalInfo .form-group textarea,
+.socialInfo .form-group input,
+.socialInfo .form-group .fab {
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+.personalInfo .form-group input::placeholder,
+.socialInfo .form-group input::placeholder,
+.personalInfo .form-group select::placeholder,
+.personalInfo .form-group textarea::placeholder {
+  color: var(--dark-color);
+}
+
+.personalInfo .form-group select {
+  background-color: var(--white-color);
+}
+
+.personalInfo .location {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.mentorSelect {
+  margin: 15px auto;
+  text-align: center;
+  width: 85%;
+}
+/***************
+**********/
+.mentorSignUp {
+  position: relative;
+  text-align: center;
+}
+
+#mentorViewMore[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+
+label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  color: var(--cmc-darkblue-color);
+}
+label:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 10px;
+  border-left: 8px solid var(--cmc-darkblue-color);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  margin-top: -8px;
+}
+#mentorViewMore[type="checkbox"]:checked ~ h3 label:before {
+  border-left: 8px solid transparent;
+  border-top: 8px solid var(--cmc-darkblue-color);
+  border-right: 8px solid transparent;
+  margin-left: -4px;
+  margin-top: -4px;
+}
+
+.mentorSignUp .hiddenMentorFields {
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 30px;
+  transition: max-height 0.4s ease;
+  z-index: 999;
+  text-align: left;
+}
+#mentorViewMore[type="checkbox"]:checked ~ h3 ~ .hiddenMentorFields {
+  max-height: 600px;
 }
 
 /* Add the following to edit profile
@@ -1202,12 +1316,10 @@ section.container {
 }
 
 .card-container {
-
   display: flex;
   flex-wrap: wrap;
 
   justify-content: center;
-
 }
 
 .tweet {
@@ -1246,7 +1358,6 @@ section.container {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -1466,24 +1577,24 @@ section.container {
     display: none;
   }
 
-  .m-nav .menu-btn:checked~.menu {
+  .m-nav .menu-btn:checked ~ .menu {
     max-height: 240px;
   }
 
-  .m-nav .menu-btn:checked~.menu-icon .navicon {
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
   }
 
-  .m-nav .menu-btn:checked~.menu-icon .navicon:before {
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon:before {
     transform: rotate(-45deg);
   }
 
-  .m-nav .menu-btn:checked~.menu-icon .navicon:after {
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon:after {
     transform: rotate(45deg);
   }
 
-  .m-nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
-  .m-nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+  .m-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .m-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
   }
 
