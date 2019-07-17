@@ -147,12 +147,10 @@ const ProfileEdit = () => {
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Programming language..."
+                  placeholder="Language of interest?"
                   name="progLang"
                 />
-                <small className="form-text">
-                  Please indicate a programming language
-                </small>
+                <small className="form-text">Language of interest?</small>
               </div>
               <div className="form-group">
                 <input
@@ -165,9 +163,9 @@ const ProfileEdit = () => {
                 </small>
               </div>
               <div className="form-group">
-                <textarea placeholder="Bio..." name="bio" />
+                <textarea placeholder="What brought you to CMC?" name="bio" />
                 <small className="form-text">
-                  Please give a brief bio about yourself?
+                  What are you interested in learning?
                 </small>
               </div>
             </div>
@@ -185,7 +183,7 @@ const ProfileEdit = () => {
               time you spend learning, the happier we are.
               <br />
               <br />
-              Become a mentor today and help the programming community...one
+              Become a mentor today and help the programming community... one
               programmer at a time.
             </p>
             <input type="checkbox" id="mentorViewMore" />
@@ -234,9 +232,9 @@ const ProfileEdit = () => {
                 </small>
               </div>
               <div className="form-group">
-                <textarea placeholder="Bio..." name="bio" />
+                <textarea placeholder="I can mentor in..." name="bio" />
                 <small className="form-text">
-                  Please give a brief bio about yourself?
+                  Please share your area of interest on being a mentor.
                 </small>
               </div>
             </div>
