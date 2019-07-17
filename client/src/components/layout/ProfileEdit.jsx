@@ -143,7 +143,7 @@ const ProfileEdit = () => {
             </p>
             <div className="form-group">
               <input type="checkbox" name="menteeSignUp" value="menteeSignUp" />{" "}
-              <strong> I'm looking for help from a CMC mentor.</strong>
+              <strong> I'm looking for a mentor</strong>
               <div className="form-group">
                 <input
                   type="text"

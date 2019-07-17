@@ -1382,6 +1382,12 @@ section.container {
   .scrollProfile {
     display: block;
   }
+
+  /* Edit Profile Page */
+  /*****************/
+  .form .social-input {
+    padding-right: 25px;
+  }
 }
 
 /*************************/
@@ -1724,5 +1730,17 @@ section.container {
   .dashProfileSummary .basic,
   .dashProfileSummary .detail {
     width: 90%;
+  }
+
+  /* Edit Profile Page */
+  /*****************/
+  .editProfile-ct {
+    top: 0;
+    text-align: center;
+  }
+
+  .editProfile-ct .personalInfo,
+  .editProfile-ct .social-input {
+    padding-right: 0;
   }
 }
