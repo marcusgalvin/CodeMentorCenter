@@ -71,10 +71,16 @@ const AboutUs = () => {
                   </div>
                   <div className="footer">
                     <div className="social-links text-center">
-                      <a href="#" className="twitter">
+                      <a
+                        href="https://twitter.com/CKakisis"
+                        className="twitter"
+                      >
                         <i className="fab fa-twitter" />
                       </a>
-                      <a href="#" className="github">
+                      <a
+                        href="https://github.com/Messinias1"
+                        className="github"
+                      >
                         <i className="fab fa-github" />
                       </a>
                     </div>
@@ -137,10 +143,16 @@ const AboutUs = () => {
                   </div>
                   <div className="footer">
                     <div className="social-links text-center">
-                      <a href="#" className="twitter">
+                      <a
+                        href="https://twitter.com/tblais1224"
+                        className="twitter"
+                      >
                         <i className="fab fa-twitter" />
                       </a>
-                      <a href="#" className="github">
+                      <a
+                        href="https://github.com/tblais1224"
+                        className="github"
+                      >
                         <i className="fab fa-github" />
                       </a>
                     </div>
@@ -203,10 +215,16 @@ const AboutUs = () => {
                   </div>
                   <div className="footer">
                     <div className="social-links text-center">
-                      <a href="#" className="twitter">
+                      <a
+                        href="https://twitter.com/MarcusGalvin"
+                        className="twitter"
+                      >
                         <i className="fab fa-twitter" />
                       </a>
-                      <a href="#" className="github">
+                      <a
+                        href="https://github.com/marcusgalvin"
+                        className="github"
+                      >
                         <i className="fab fa-github" />
                       </a>
                     </div>
@@ -272,10 +290,16 @@ const AboutUs = () => {
                     </div>
                     <div className="footer">
                       <div className="social-links text-center">
-                        <a href="#" className="twitter">
+                        <a
+                          href="https://twitter.com/musikit0"
+                          className="twitter"
+                        >
                           <i className="fab fa-twitter" />
                         </a>
-                        <a href="#" className="github">
+                        <a
+                          href="https://github.com/musikito"
+                          className="github"
+                        >
                           <i className="fab fa-github" />
                         </a>
                       </div>
@@ -338,10 +362,16 @@ const AboutUs = () => {
                     </div>
                     <div className="footer">
                       <div className="social-links text-center">
-                        <a href="#" className="twitter">
+                        <a
+                          href="https://twitter.com/htbry20"
+                          className="twitter"
+                        >
                           <i className="fab fa-twitter" />
                         </a>
-                        <a href="#" className="github">
+                        <a
+                          href="https://github.com/HaydenBryant"
+                          className="github"
+                        >
                           <i className="fab fa-github" />
                         </a>
                       </div>
@@ -404,10 +434,16 @@ const AboutUs = () => {
                     </div>
                     <div className="footer">
                       <div className="social-links text-center">
-                        <a href="#" className="twitter">
+                        <a
+                          href="https://twitter.com/carlmarvyns"
+                          className="twitter"
+                        >
                           <i className="fab fa-twitter" />
                         </a>
-                        <a href="#" className="github">
+                        <a
+                          href="https://github.com/carldurand"
+                          className="github"
+                        >
                           <i className="fab fa-github" />
                         </a>
                       </div>
@@ -474,10 +510,13 @@ const AboutUs = () => {
                   </div>
                   <div className="footer">
                     <div className="social-links text-center">
-                      <a href="#" className="twitter">
+                      <a
+                        href="https://twitter.com/TartagliaMatt"
+                        className="twitter"
+                      >
                         <i className="fab fa-twitter" />
                       </a>
-                      <a href="#" className="github">
+                      <a href="https://github.com/m-tartag" className="github">
                         <i className="fab fa-github" />
                       </a>
                     </div>
@@ -540,10 +579,13 @@ const AboutUs = () => {
                   </div>
                   <div className="footer">
                     <div className="social-links text-center">
-                      <a href="#" className="twitter">
+                      <a
+                        href="https://twitter.com/steve_barriere"
+                        className="twitter"
+                      >
                         <i className="fab fa-twitter" />
                       </a>
-                      <a href="#" className="github">
+                      <a href="https://github.com/sfb-git" className="github">
                         <i className="fab fa-github" />
                       </a>
                     </div>
@@ -606,10 +648,13 @@ const AboutUs = () => {
                   </div>
                   <div className="footer">
                     <div className="social-links text-center">
-                      <a href="#" className="twitter">
+                      <a
+                        href="https://twitter.com/oddiahn1"
+                        className="twitter"
+                      >
                         <i className="fab fa-twitter" />
                       </a>
-                      <a href="#" className="github">
+                      <a href="https://github.com/Odiahn12" className="github">
                         <i className="fab fa-github" />
                       </a>
                     </div>
