@@ -15,7 +15,7 @@ const OnlineLearning = () => {
             eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur
             adipisicing elit, sed labore et dolore magna aliqua.
           </p>
-          <Link to="/register" className="btn btn-primary btn-rounded">
+          <Link to="/CmcCareerDevs" className="btn btn-primary btn-rounded">
             EXPLORE ONLINE LEARNING
           </Link>
         </div>

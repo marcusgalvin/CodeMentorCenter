@@ -6,6 +6,7 @@ import Logout from "./Auth/Logout";
 import AboutUs from "./components/layout/AboutUs";
 import Dashboard from "./components/layout/Dashboard";
 import ProfileEdit from "./components/layout/ProfileEdit";
+import CmcCareerDevs from "./components/layout/CmcCareerDevs";
 
 import "./index.css";
 
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/login" component={Login} />
         </Switch>
         <Route path="/AboutUs" component={AboutUs} />
+        <Route path="/CmcCareerDevs" component={CmcCareerDevs} />
       </Fragment>
     </Router>
   );
