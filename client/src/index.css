@@ -1090,6 +1090,7 @@ section.container {
 /*****************/
 /* page styles */
 .cmc-ct {
+
   position: relative;
   top: 108px;
   padding: 10px;
@@ -1097,6 +1098,49 @@ section.container {
   color: var(--cmc-darkblue-color);
 }
 
+.CareerDev-photo {
+  width: 600px;
+  height: 200px;
+  text-align: center;
+  margin: auto;
+}
+
+.mission-statement {
+  text-align: center;
+  font-size: 300%;
+  padding: 1rem;
+  font-weight: 1900;
+}
+
+
+
+.career-devs-info {
+  display: flex;
+  text-align: center;
+  flex-direction: center;
+}
+
+.left-info {
+  display: flex;
+  /* flex-direction: center; */
+  width: 400px;
+
+}
+
+.right-info {
+  display: flex;
+  /* flex-direction: center; */
+  width: 400px;
+}
+
+
+.student-photos {
+  width: 15rem;
+  height: 15rem;
+  text-align: center;
+  display: flex;
+  flex-direction: center;
+}
 
 
 

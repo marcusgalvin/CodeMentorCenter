@@ -25,7 +25,7 @@ const AboutUs = () => {
                   <img src={coverImg} />
                 </div>
                 <div className="user">
-                  <img src={profileImg} />
+                  <img src={require("../images/carl.jpg")} />
                 </div>
                 <div className="content">
                   <div className="main">
@@ -91,7 +91,7 @@ const AboutUs = () => {
                   <img src={coverImg} />
                 </div>
                 <div className="user">
-                  <img src={profileImg} />
+                  <img src={require("../images/tom.jpg")} />
                 </div>
                 <div className="content">
                   <div className="main">
@@ -157,7 +157,7 @@ const AboutUs = () => {
                   <img src={coverImg} />
                 </div>
                 <div className="user">
-                  <img src={profileImg} />
+                  <img src={require("../images/marcus.jpg")} />
                 </div>
                 <div className="content">
                   <div className="main">
@@ -226,7 +226,7 @@ const AboutUs = () => {
                     <img src={coverImg} />
                   </div>
                   <div className="user">
-                    <img src={profileImg} />
+                    <img src={require("../images/jose.png")} />
                   </div>
                   <div className="content">
                     <div className="main">
@@ -292,7 +292,7 @@ const AboutUs = () => {
                     <img src={coverImg} />
                   </div>
                   <div className="user">
-                    <img src={profileImg} />
+                    <img src={require("../images/hayden.png")} />
                   </div>
                   <div className="content">
                     <div className="main">
@@ -358,7 +358,7 @@ const AboutUs = () => {
                     <img src={coverImg} />
                   </div>
                   <div className="user">
-                    <img src={profileImg} />
+                    <img src={require("../images/carlD.jpg")} />
                   </div>
                   <div className="content">
                     <div className="main">
@@ -428,7 +428,7 @@ const AboutUs = () => {
                   <img src={coverImg} />
                 </div>
                 <div className="user">
-                  <img src={profileImg} />
+                  <img src={require("../images/matt.png")} />
                 </div>
                 <div className="content">
                   <div className="main">
@@ -494,7 +494,7 @@ const AboutUs = () => {
                   <img src={coverImg} />
                 </div>
                 <div className="user">
-                  <img src={profileImg} />
+                  <img src={require("../images/steve1.png")} />
                 </div>
                 <div className="content">
                   <div className="main">
@@ -560,7 +560,7 @@ const AboutUs = () => {
                   <img src={coverImg} />
                 </div>
                 <div className="user">
-                  <img src={profileImg} />
+                  <img src={require("../images/oscar.jpg")} />
                 </div>
                 <div className="content">
                   <div className="main">
