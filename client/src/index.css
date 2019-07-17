@@ -1089,31 +1089,166 @@ section.container {
 
 /* About Us Page */
 /*****************/
-.aboutUsBanner {
-  font-size: 3rem;
-  color: var(--cmc-darkblue-color);
-  text-align: center;
-  margin-top: 6.5rem;
+/* page styles */
+.aboutUs-ct {
+  position: relative;
+  top: 108px;
+  padding: 10px;
 }
 
+.aboutUs-ct h2 {
+  text-align: center;
+  color: var(--cmc-darkblue-color);
+}
+
+.aboutUs-ct h3 {
+  color: var(--cmc-darkblue-color);
+}
+
+.aboutUs-ct h4 {
+  color: var(--cmc-red-color);
+}
+
+/* card styles */
 .card-container {
   display: flex;
   flex-wrap: wrap;
-
+  padding-top: 30px;
   justify-content: center;
 }
 
-.tweet {
-  /* color: white; */
-  font-weight: bold;
+/* front of card */
+.flip-card-front .cover {
+  height: 105px;
+  overflow: hidden;
+  border-radius: 4px 4px 0 0;
+}
+
+.flip-card-front .user {
+  border-radius: 50%;
+  display: block;
+  height: 120px;
+  margin: -55px auto 0;
+  overflow: hidden;
+  width: 120px;
+}
+
+.flip-card-front .content {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  padding: 10px 20px 20px;
+}
+
+.flip-card-front .main {
+  min-height: 160px;
+}
+
+.flip-card-front .name {
+  font-size: 22px;
+  line-height: 28px;
+  margin: 10px 0 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.flip-card-front .classYear {
+  color: #999999;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.flip-card-front .center,
+.flip-card-back .center {
+  text-align: center;
+}
+
+.flip-card-front .footer {
+  border-top: 1px solid #eeeeee;
+  color: #999999;
+  margin: 30px 0 0;
+  padding: 10px 0 0;
+  text-align: center;
+}
+
+/* back of card */
+.flip-card-back {
+  background-color: var(--cream-color);
+}
+
+.flip-card-back .header {
+  padding: 15px 20px;
+  height: 90px;
+}
+
+.flip-card-back .motto {
+  border-bottom: 1px solid var(--dark-color);
+  color: var(--dark-color);
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.flip-card-back h5 {
+  margin: 5px 0;
+}
+
+.flip-card-back .content {
+  box-shadow: none;
+  padding: 10px 20px 20px;
+}
+
+.flip-card-back .main {
+  height: 215px;
+}
+
+.flip-card-back .stats-container {
+  width: 100%;
+}
+
+.flip-card-back .stats {
+  display: block;
+  float: left;
+  width: 33.333333%;
+  text-align: center;
+}
+
+.flip-card-back .stats:first-child {
+  border-right: 1px solid var(--dark-color);
+}
+
+.flip-card-back .stats:last-child {
+  border-left: 1px solid var(--dark-color);
+}
+
+.flip-card-back .footer {
+  border-top: 1px solid var(--dark-color);
+  color: var(--dark-color);
+  margin: 77px 0 0;
+  padding: 10px 0 0;
+  text-align: center;
+}
+
+.flip-card-back .social-links {
+  font-size: 18px;
+}
+
+.flip-card-back .social-links a {
+  margin: 0 7px;
+}
+
+.flip-card-back .fas {
+  width: 1.28571429em;
+  text-align: center;
 }
 
 .flip-card {
+  border-radius: 10%;
   background-color: transparent;
-  margin: 2rem;
-  width: 15rem;
-  height: 26.5rem;
+  width: 350px;
+  height: 450px;
   perspective: 100rem;
+  padding: 0 20px;
   /* Remove this if you don't want the 3D effect */
 }
 
@@ -1139,17 +1274,17 @@ section.container {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.6);
 }
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: var(--cmc-lightblue-color);
-  color: black;
+  background-color: var(--white-color);
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: var(--cmc-lightblue-color);
+  background-color: var(--cream-color);
   color: black;
   transform: rotateY(180deg);
 }
@@ -1160,6 +1295,13 @@ section.container {
 
 /* Mobile Styles */
 /*****************/
+@media (max-width: 1030px) {
+  /* About Us Page */
+  /*****************/
+  .flip-card {
+    margin-bottom: 25px;
+  }
+}
 
 /*************************/
 /*************************/
@@ -1551,5 +1693,11 @@ section.container {
   .editProfile-ct .personalInfo,
   .editProfile-ct .social-input {
     padding-right: 0;
+  }
+
+  /* About Us Page */
+  /*****************/
+  .aboutUs-ct {
+    top: 0;
   }
 }
