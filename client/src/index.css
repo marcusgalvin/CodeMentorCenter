@@ -1239,6 +1239,10 @@ section.container {
   text-align: center;
 }
 
+.mentorSignUp h3 {
+  color: var(--cmc-darkblue-color);
+}
+
 #mentorViewMore[type="checkbox"] {
   position: absolute;
   top: 0;
@@ -1247,32 +1251,6 @@ section.container {
   height: 100%;
   opacity: 0;
   z-index: 1;
-}
-
-label {
-  cursor: pointer;
-  position: relative;
-  padding-left: 30px;
-  color: var(--cmc-darkblue-color);
-}
-label:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 50%;
-  left: 10px;
-  border-left: 8px solid var(--cmc-darkblue-color);
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  margin-top: -8px;
-}
-#mentorViewMore[type="checkbox"]:checked ~ h3 label:before {
-  border-left: 8px solid transparent;
-  border-top: 8px solid var(--cmc-darkblue-color);
-  border-right: 8px solid transparent;
-  margin-left: -4px;
-  margin-top: -4px;
 }
 
 .mentorSignUp .hiddenMentorFields {

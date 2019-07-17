@@ -153,11 +153,11 @@ const ProfileEdit = () => {
           <div className="mentorSignUp">
             <input type="checkbox" id="mentorViewMore" />
             <h3>
-              <label for="mentorViewMore">View More on Mentorship</label>
+              Click Here <i class="fas fa-user-ninja" /> Learn More
             </h3>
             <div className="hiddenMentorFields">
-              <input type="checkbox" className="beMentor" /> Please Sign me up
-              to become a CMC mentor
+              <input type="checkbox" className="beMentor" />{" "}
+              <strong>Please Sign me up to become a CMC mentor</strong>
               <div className="form-group">
                 <input
                   type="text"
