@@ -1197,28 +1197,25 @@ section.container {
   flex-shrink: 1;
 }
 
-.editProfile-ct .personalInfo .form-group,
-.editProfile-ct .socialInfo .form-group {
+.editProfile-ct .form-group {
   margin: 0.2rem 0;
 }
 
-.personalInfo .form-group input,
-.personalInfo .form-group select,
-.personalInfo .form-group textarea,
-.socialInfo .form-group input,
+.editProfile-ct .form-group input,
+.editProfile-ct .form-group select,
+.editProfile-ct .form-group textarea,
 .socialInfo .form-group .fab {
   padding: 0.3rem;
   font-size: 1rem;
 }
 
-.personalInfo .form-group input::placeholder,
-.socialInfo .form-group input::placeholder,
-.personalInfo .form-group select::placeholder,
-.personalInfo .form-group textarea::placeholder {
+.editProfile-ct .form-group input::placeholder,
+.editProfile-ct .form-group select::placeholder,
+.editProfile-ct .form-group textarea::placeholder {
   color: var(--dark-color);
 }
 
-.personalInfo .form-group select {
+.editProfile-ct .form-group select {
   background-color: var(--white-color);
 }
 
@@ -1227,20 +1224,50 @@ section.container {
   flex-wrap: nowrap;
 }
 
-.mentorSelect {
-  margin: 15px auto;
-  text-align: center;
-  width: 85%;
+.menteeSignUp {
+  padding: 15px;
+  background-color: var(--cream-color);
+  border: 1px dotted var(--dark-color);
+  margin: 20px 0;
 }
-/***************
-**********/
+
+.menteeSignUp h3,
+.menteeSignUp p {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menteeSignUp p {
+  width: 80%;
+  padding: 10px 0;
+}
+
+.menteeSignUp .form-group {
+  text-align: left;
+}
+
 .mentorSignUp {
   position: relative;
   text-align: center;
 }
 
+.mentorSignUp p {
+  margin: 15px auto;
+  text-align: center;
+  width: 85%;
+}
+
 .mentorSignUp h3 {
   color: var(--cmc-darkblue-color);
+}
+
+.mentorSignUp .hiddenMentorFields {
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  z-index: 999;
+  text-align: left;
 }
 
 #mentorViewMore[type="checkbox"] {
@@ -1253,36 +1280,13 @@ section.container {
   z-index: 1;
 }
 
-.mentorSignUp .hiddenMentorFields {
-  position: relative;
-  max-height: 0;
-  overflow: hidden;
-  padding-left: 30px;
-  transition: max-height 0.4s ease;
-  z-index: 999;
-  text-align: left;
-}
 #mentorViewMore[type="checkbox"]:checked ~ h3 ~ .hiddenMentorFields {
   max-height: 600px;
 }
 
-/* Add the following to edit profile
-
-.becomeMentor {
-  width: 90%;
-  padding: 15px;
+.editProfile-ct .profileBtns {
   text-align: center;
 }
-
-.becomeMentor h1 {
-  padding-bottom: 15px;
-}
-
-.becomeMentor p {
-  padding-bottom: 15px;
-}
-
-*/
 
 /* About Us Page */
 /*****************/

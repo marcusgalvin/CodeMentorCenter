@@ -1,5 +1,10 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
+
+const footerDiv = {
+  marginTop: "108px"
+};
 
 const ProfileEdit = () => {
   return (
@@ -17,16 +22,6 @@ const ProfileEdit = () => {
           <div className="menteeForm-ct">
             <div className="personalInfo">
               <div className="form-group">
-                <p>
-                  <input
-                    type="checkbox"
-                    name="menteeSignUp"
-                    value="menteeSignUp"
-                  />{" "}
-                  <strong> I'm looking for help from a CMC mentor.</strong>
-                </p>
-              </div>
-              <div className="form-group">
                 <input type="text" placeholder="Company" name="company" />
               </div>
               <div className="form-group">
@@ -39,6 +34,7 @@ const ProfileEdit = () => {
               <div className="form-group location">
                 <input type="text" placeholder="City" name="City" />
                 <select>
+                  <option value="">State</option>
                   <option value="AL">Alabama</option>
                   <option value="AK">Alaska</option>
                   <option value="AZ">Arizona</option>
@@ -136,28 +132,18 @@ const ProfileEdit = () => {
               </div>
             </div>
           </div>
-          <p className="mentorSelect">
-            Our goal is to ensure that you have the best learning experience
-            possible. We thought that other tutoring companies weren’t providing
-            a level of service to justify their price tag. This meant designing
-            a platform where tutors and students could connect with each other.
-            We wanted to give students more options in order for them to match
-            with their perfect tutor. You no longer need to spend countless
-            hours finding a tutor, you can spend that time in the classroom. And
-            the more time you spend learning, the happier we are.
-            <br />
-            <br />
-            Become a mentor today and help the programming community...one
-            programmer at a time.
-          </p>
-          <div className="mentorSignUp">
-            <input type="checkbox" id="mentorViewMore" />
-            <h3>
-              Click Here <i class="fas fa-user-ninja" /> Learn More
-            </h3>
-            <div className="hiddenMentorFields">
-              <input type="checkbox" className="beMentor" />{" "}
-              <strong>Please Sign me up to become a CMC mentor</strong>
+          <div className="menteeSignUp">
+            <h3>Looking for mentorship?</h3>
+            <p>
+              You've come to the right place for help and guidance on furthering
+              your education in pursing the right programming career. Please use
+              the form below to tell us a little more on what you are looking
+              for help in. Mentors will use this information to see if they are
+              the right fit with your needs.
+            </p>
+            <div className="form-group">
+              <input type="checkbox" name="menteeSignUp" value="menteeSignUp" />{" "}
+              <strong> I'm looking for help from a CMC mentor.</strong>
               <div className="form-group">
                 <input
                   type="text"
@@ -165,33 +151,93 @@ const ProfileEdit = () => {
                   name="progLang"
                 />
                 <small className="form-text">
-                  Please indicate a programming language to mentor.
+                  Please indicate a programming language
                 </small>
               </div>
               <div className="form-group">
                 <input
                   type="text"
-                  placeholder="Level of expertise..."
-                  name="progKnowledge"
-                />
-                <small className="form-text">
-                  Please rate your experience 1-10
-                </small>
-              </div>
-              <div className="form-group">
-                <input
-                  type="text"
-                  placeholder="Spoken language..."
+                  placeholder="Speaking language..."
                   name="speakLang"
                 />
                 <small className="form-text">
-                  Please rate your experience 1-10
+                  What languages do you speak?
                 </small>
               </div>
               <div className="form-group">
                 <textarea placeholder="Bio..." name="bio" />
                 <small className="form-text">
-                  Please give a brief bio about yourself.
+                  Please give a brief bio about yourself?
+                </small>
+              </div>
+            </div>
+          </div>
+          <div className="mentorSignUp">
+            <h3>Become a CMC mentor</h3>
+            <p>
+              Our goal is to ensure that you have the best learning experience
+              possible. We thought that other tutoring companies weren’t
+              providing a level of service to justify their price tag. This
+              meant designing a platform where tutors and students could connect
+              with each other. We wanted to give students more options in order
+              for them to match with their perfect tutor. You no longer need to
+              spend countless hours finding a tutor, you can spend that time in
+              the classroom. And the more time you spend learning, the happier
+              we are.
+              <br />
+              <br />
+              Become a mentor today and help the programming community...one
+              programmer at a time.
+            </p>
+            <input type="checkbox" id="mentorViewMore" />
+            <h3>
+              Click Here <i class="fas fa-user-ninja" /> Learn More
+            </h3>
+            <div className="hiddenMentorFields">
+              <input type="checkbox" className="beMentor" />{" "}
+              <strong>Please sign me up as a mentor</strong>
+              <div className="form-group">
+                <input
+                  type="text"
+                  placeholder="Programming language..."
+                  name="progLang"
+                />
+                <small className="form-text">
+                  Please indicate a programming language to mentor in
+                </small>
+              </div>
+              <div className="form-group">
+                <select>
+                  <option value="">Rate your experience level</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <small className="form-text">
+                  Please rate your experience 1-10?
+                </small>
+              </div>
+              <div className="form-group">
+                <input
+                  type="text"
+                  placeholder="Speaking language..."
+                  name="speakLang"
+                />
+                <small className="form-text">
+                  What languages do you speak?
+                </small>
+              </div>
+              <div className="form-group">
+                <textarea placeholder="Bio..." name="bio" />
+                <small className="form-text">
+                  Please give a brief bio about yourself?
                 </small>
               </div>
             </div>
@@ -203,6 +249,10 @@ const ProfileEdit = () => {
             </Link>
           </div>
         </form>
+      </div>
+      >
+      <div style={footerDiv}>
+        <Footer />
       </div>
     </Fragment>
   );
