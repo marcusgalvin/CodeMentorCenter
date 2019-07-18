@@ -139,13 +139,16 @@ export default class extends React.Component {
                 </div>
               </div>
             </div>
-            <a
+            <button
               className="btn btn-danger"
               href="javascript:void(0);"
               onClick={() => this.closeModal()}
             >
-              Close
-            </a>
+              Close Popup
+            </button>
+            <button className="btn btn-success" href="javascript:void(0);">
+              Send Mentorship Request
+            </button>
           </div>
         </Modal>
         <div className="p-card">
