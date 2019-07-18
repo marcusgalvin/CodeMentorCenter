@@ -1,9 +1,18 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Landing, TopNavbar } from "./components/layout";
-import Login from "./Auth/Login";
+
+/* Jose Login Below
+  import Login from "./Auth/Login";
+*/
+
+/* Temp Login Page - for testing */
+import Login from "./components/layout/Login";
+
+/* Not being use yet
+  import Logout from "./Auth/Logout";
+*/
 import Register from "./components/layout/Register";
-import Logout from "./Auth/Logout";
 import AboutUs from "./components/layout/AboutUs";
 import Dashboard from "./components/layout/Dashboard";
 import ProfileEdit from "./components/layout/ProfileEdit";

@@ -773,6 +773,28 @@ section.container {
   padding-top: 15px;
 }
 
+.register-ct .form-group input {
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+/* Login User */
+/***************************/
+.login-ct {
+  position: relative;
+  top: 108px;
+  padding: 10px 20px;
+}
+
+.login-ct .lead {
+  padding-top: 15px;
+}
+
+.login-ct .form-group input {
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
 /* User Profile Dashboard */
 /***************************/
 /* Welcome Header Band */
