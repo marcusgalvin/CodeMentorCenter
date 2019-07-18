@@ -360,7 +360,8 @@ section.container {
 /*****************************/
 .heroImg {
   width: 100%;
-  background: url(./components/images/hero_bannerCMCCouple.jpg) no-repeat center 0;
+  background: url(./components/images/hero_bannerCMCCouple.jpg) no-repeat center
+    0;
   background-size: cover;
   background-position: center;
   height: 450px;
@@ -440,14 +441,16 @@ section.container {
 /*   Top Mentors Component  */
 /* Random Mentors Component */
 /****************************/
-.top-rated-mentors,
-.random-mentors,
-.random-mentees {
+.displayCardsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 10px 0;
 }
 
-.random-mentors p,
-.random-mentees p {
+.random-mentors,
+.random-mentees {
   margin: 0 auto;
   padding: 15px 0;
   width: 75%;
@@ -1078,7 +1081,7 @@ section.container {
   z-index: 1;
 }
 
-#mentorViewMore[type="checkbox"]:checked~h3~.hiddenMentorFields {
+#mentorViewMore[type="checkbox"]:checked ~ h3 ~ .hiddenMentorFields {
   max-height: 600px;
 }
 
@@ -1090,7 +1093,6 @@ section.container {
 /*****************/
 /* page styles */
 .cmc-ct {
-
   position: relative;
   top: 108px;
   padding: 10px;
@@ -1113,7 +1115,6 @@ section.container {
 }
 
 .CMC-photo {
-
   width: 300px;
   height: 200px;
   text-align: center;
@@ -1129,20 +1130,18 @@ section.container {
   font-weight: 1900;
 }
 
-
 .career-devs-info {
   display: flex;
   text-align: center;
   flex-direction: center;
 }
 
-
 .middle-info {
   /* padding-top: 0.5rem; */
 
   padding-bottom: 8rem;
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 
 .left-info {
@@ -1150,7 +1149,6 @@ section.container {
   width: 400px;
   float: left;
   margin-right: 10rem;
-
 }
 
 .right-info {
@@ -1158,13 +1156,11 @@ section.container {
   width: 400px;
   float: right;
   margin-left: 10rem;
-
 }
 
 .students {
   text-align: center;
   color: var(--cmc-darkblue-color);
-
 }
 
 .student-photos-ct {
@@ -1179,10 +1175,6 @@ section.container {
   text-align: center;
   padding: 1rem;
 }
-
-
-
-
 
 /* About Us Page */
 /*****************/
@@ -1393,7 +1385,6 @@ section.container {
 /* Mobile Styles */
 /*****************/
 @media (max-width: 1030px) {
-
   /* About Us Page */
   /*****************/
   .flip-card {
@@ -1614,24 +1605,24 @@ section.container {
     display: none;
   }
 
-  .m-nav .menu-btn:checked~.menu {
+  .m-nav .menu-btn:checked ~ .menu {
     max-height: 240px;
   }
 
-  .m-nav .menu-btn:checked~.menu-icon .navicon {
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
   }
 
-  .m-nav .menu-btn:checked~.menu-icon .navicon:before {
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon:before {
     transform: rotate(-45deg);
   }
 
-  .m-nav .menu-btn:checked~.menu-icon .navicon:after {
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon:after {
     transform: rotate(45deg);
   }
 
-  .m-nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
-  .m-nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+  .m-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .m-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
   }
 
