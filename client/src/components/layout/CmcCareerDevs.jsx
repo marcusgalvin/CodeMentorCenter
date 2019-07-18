@@ -98,39 +98,80 @@ const OnlineLearning = () => {
         </p>
       </div>
       <div className="languages">
+        {/* link to html */}
         <div className="seperate-language">
-          <img src={require("../images/HTML5.png")} />
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
+            className="html"
+          >
+            <img src={require("../images/HTML5.png")} />
+          </a>
         </div>
+        {/* link to javascript */}
         <div className="seperate-language">
-          <img src={require("../images/JavaScript-logo.png")} />
+          <a href="https://www.javascript.com/" className="javascript">
+            <img src={require("../images/JavaScript-logo.png")} />
+          </a>
         </div>
+        {/* link to node */}
         <div className="seperate-language">
-          <img src={require("../images/node.png")} />
+          <a href="https://nodejs.org/en/" className="node">
+            <img src={require("../images/node.png")} />
+          </a>
         </div>
+        {/* link to mongoDB */}
         <div className="seperate-language">
-          <img src={require("../images/mongoDB.png")} />
+          <a href="https://www.mongodb.com/" className="mongodb">
+            <img src={require("../images/mongoDB.png")} />
+          </a>
         </div>
+        {/* link to c++ */}
         <div className="seperate-language">
-          <img src={require("../images/c-plus-plus-logo.png")} />
+          <a
+            href="https://www.geeksforgeeks.org/c-plus-plus/"
+            className="cplusplus"
+          >
+            <img src={require("../images/c-plus-plus-logo.png")} />
+          </a>
         </div>
+        {/* link to c-sharp */}
         <div className="seperate-language">
-          <img src={require("../images/c-sharp.png")} />
+          <a
+            href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"
+            className="csharp"
+          >
+            <img src={require("../images/c-sharp.png")} />
+          </a>
         </div>
+        {/* link to java */}
         <div className="seperate-language">
-          <img src={require("../images/java.jpg")} />
+          <a href="https://www.java.com/en/" className="java">
+            <img src={require("../images/java.jpg")} />
+          </a>
         </div>
+        {/* link to aws */}
         <div className="seperate-language">
-          <img src={require("../images/aws.png")} />
+          <a href="https://aws.amazon.com/" className="aws">
+            <img src={require("../images/aws.png")} />
+          </a>
         </div>
+        {/* link to agile */}
         <div className="seperate-language">
-          <img src={require("../images/agile.jpg")} />
+          <a href="https://linchpinseo.com/the-agile-method/" className="agile">
+            <img src={require("../images/agile.jpg")} />
+          </a>
         </div>
+
+        {/* link to github */}
         <div className="seperate-language">
-          <img src={require("../images/github.png")} />
+          <a href="https://github.com/" className="github">
+            <img src={require("../images/github.png")} />
+          </a>
         </div>
       </div>
 
-      <div className="test" />
+      <br />
+
       <Footer />
     </Fragment>
   );
