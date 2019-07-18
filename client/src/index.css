@@ -1098,8 +1098,6 @@ section.container {
   padding: 10px;
   text-align: center;
   color: var(--cmc-darkblue-color);
-
-
 }
 
 .info-container {
@@ -1118,18 +1116,9 @@ section.container {
   width: 30rem;
   /* float: left; */
   padding-left: 7rem;
-
 }
 
 .CMC-photo {
-<<<<<<< HEAD
-  width: 300px;
-  height: 200px;
-  text-align: center;
-  /* margin: auto; */
-  float: left;
-  margin-right: 10rem;
-=======
   width: 20rem;
   /* float: right; */
 }
@@ -1137,9 +1126,7 @@ section.container {
 .CareerDevs-photo {
   width: 20rem;
   /* float: right; */
->>>>>>> fcddf121e6b44166f51cbda391c97ac797e5c49e
 }
-
 
 .lightbulb-photo {
   width: 10rem;
@@ -1147,36 +1134,22 @@ section.container {
   padding-top: 7rem;
 }
 
-<<<<<<< HEAD
-.career-devs-info {
-=======
 .mission-statement {
   color: var(--cmc-darkblue-color);
-
 }
 
 .languages {
->>>>>>> fcddf121e6b44166f51cbda391c97ac797e5c49e
   display: flex;
   flex-direction: center;
   justify-content: center;
 }
 
-<<<<<<< HEAD
-.middle-info {
-  /* padding-top: 0.5rem; */
-
-  padding-bottom: 8rem;
-  display: flex;
-  justify-content: center;
-=======
 .seperate-language {
   /* padding: 2rem; */
   /* margin: 5px; */
   padding-right: 10px;
   width: 5rem;
   text-align: center;
-
 }
 
 .what-you-learn {
@@ -1185,70 +1158,19 @@ section.container {
   color: var(--cmc-darkblue-color);
   text-align: center;
   margin: auto;
->>>>>>> fcddf121e6b44166f51cbda391c97ac797e5c49e
 }
-
-.flex-items {
-  display: flex;
-<<<<<<< HEAD
-  width: 400px;
-  float: left;
-  margin-right: 10rem;
-}
-
-.right-info {
-  display: flex;
-  width: 400px;
-  float: right;
-  margin-left: 10rem;
-=======
-  flex-direction: row;
-}
-
-.flex-item {
-  -webkit-transition: all 2s ease;
-  -moz-transition: all 2s ease;
-  -ms-transition: all 2s ease;
-  transition: all 2s ease;
-
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-
-  &:hover {
-    -webkit-box-flex: 4;
-    -ms-flex-positive: 4;
-    flex-grow: 4;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
 
 .mission-statement {
   text-align: center;
   font-size: 300%;
   padding: 1rem;
   font-weight: 1900;
->>>>>>> fcddf121e6b44166f51cbda391c97ac797e5c49e
 }
 
 .students {
   text-align: center;
   color: var(--cmc-darkblue-color);
-<<<<<<< HEAD
-=======
   /* width: 70rem; */
-
->>>>>>> fcddf121e6b44166f51cbda391c97ac797e5c49e
 }
 
 .student-photos-ct {
@@ -1471,7 +1393,6 @@ section.container {
 /**********************************************/
 
 /* cmcCareerDevs Page */
-
 
 /* Mobile Styles */
 /*****************/
