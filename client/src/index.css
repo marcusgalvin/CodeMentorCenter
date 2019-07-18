@@ -609,6 +609,101 @@ section.container {
   font-size: 0.8rem;
 }
 
+/* Modal Popup Detailed Profile */
+.detailedProfileSummary {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  border: 7px solid var(--cmc-lightblue-color);
+}
+
+.detailedProfileSummary .header {
+  width: 100%;
+  color: var(--cmc-darkblue-color);
+  background-color: var(--cream-color);
+  border: 1px dotted var(--dark-color);
+  padding: 10px;
+}
+
+.detailedProfileSummary h4 {
+  color: var(--dark-color);
+  font-size: 1.2rem;
+}
+
+.detailedProfileSummary .helped-ct {
+  position: absolute;
+  top: 27px;
+  left: 115px;
+  color: var(--dark-color);
+}
+
+.detailedProfileSummary .starRatings {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 49px;
+  left: 565px;
+}
+
+.details {
+  padding: 15px;
+}
+
+.aboutDetail,
+.socialDetail {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+}
+
+.socialDetail {
+  top: -15px;
+  text-align: center;
+  border-left: 1px dotted;
+}
+
+.socialDetail a:hover {
+  color: var(--cmc-red-color);
+  text-decoration: underline;
+}
+
+.bioDetails {
+  margin-top: 15px;
+  padding: 20px 0;
+  border-top: 1px dotted;
+  border-bottom: 1px dotted;
+}
+
+.langDetails {
+  padding: 10px;
+}
+
+.programLang,
+.speakLang {
+  float: left;
+  position: relative;
+  display: inline-block;
+  width: 50%;
+}
+
+.programLang ul {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.programLang ul li {
+  display: inline-block;
+  width: 100px;
+}
+
+.programLang li a:hover {
+  color: var(--cmc-red-color);
+  text-decoration: underline;
+}
+
 /* Online Learning / Higher Learning */
 /*************************************/
 .higherLearning {

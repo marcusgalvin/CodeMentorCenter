@@ -27,15 +27,123 @@ export default class extends React.Component {
       <Fragment>
         <Modal
           visible={this.state.visible}
-          width="400"
-          height="300"
+          width="800px"
+          height="640px"
           effect="fadeInUp"
           onClickAway={() => this.closeModal()}
         >
-          <div>
-            <h1>Title</h1>
-            <p>Some Contents</p>
-            <a href="javascript:void(0);" onClick={() => this.closeModal()}>
+          <div className="detailedProfileSummary">
+            <div className="header">
+              <h3>John Doe</h3>
+              <h4>jdoe123</h4>
+              <div className="helped-ct">
+                <p className="menteeHelp">
+                  Helped Mentees: <span>5</span>
+                </p>
+                <p className="mentoredHelp">
+                  Mentored by another: <span>10</span>
+                </p>
+              </div>
+              <div className="starRatings">
+                <img src={star0} alt="Star Rating" />
+              </div>
+            </div>
+            <div className="details">
+              <div className="aboutDetail">
+                <ul>
+                  <li>
+                    <strong>Company:</strong> USA Company Inc.
+                  </li>
+                  <li>
+                    <strong>School:</strong> UMASS
+                  </li>
+                  <li>
+                    <strong>Studied:</strong> Computer Science
+                  </li>
+                  <li>
+                    <strong>Location:</strong> Providence, RI
+                  </li>
+                  <li>
+                    <strong>Country:</strong> United States
+                  </li>
+                </ul>
+              </div>
+              <div className="socialDetail">
+                <ul>
+                  <li>
+                    <i class="fab fa-facebook-square" />{" "}
+                    <a href="http://wwww.facebook.com"> Facebook: jdoe</a>
+                  </li>
+                  <li>
+                    <i class="fab fa-twitter-square" />{" "}
+                    <a href="http://wwww.facebook.com"> Twitter: johndoe</a>
+                  </li>
+                  <li>
+                    <i class="fab fa-linkedin" />{" "}
+                    <a href="http://wwww.facebook.com">
+                      {" "}
+                      LinkedIn: JohnPaulDoe
+                    </a>
+                  </li>
+                  <li>
+                    <i class="fab fa-github-square" />{" "}
+                    <a href="http://wwww.facebook.com">
+                      {" "}
+                      Github: JohnGithubRepos
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="bioDetails">
+                <p>
+                  John Doe is a Professor in Computer Science at the University
+                  of Washington. He received his Ph.D. from the University of
+                  Pennsylvania in 1995, was a principal member of the technical
+                  staff at AT&T Labs and joined the University of Washington in
+                  2000. Suciu is conducting research in data management, with an
+                  emphasis on topics related to Big Data and data sharing, such
+                  as probabilistic data, data pricing, parallel data processing,
+                  data security.
+                </p>
+              </div>
+              <div className="langDetails">
+                <div className="programLang">
+                  <h4>Proficient in the follow:</h4>
+                  <ul>
+                    <li>
+                      <a href="#">HTML5</a>
+                    </li>
+                    <li>
+                      <a href="#">CSS3</a>
+                    </li>
+                    <li>
+                      <a href="#">JavaScript</a>
+                    </li>
+                    <li>
+                      <a href="#">Mongo</a>
+                    </li>
+                    <li>
+                      <a href="#">Express</a>
+                    </li>
+                    <li>
+                      <a href="#">NodeJS</a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="speakLang">
+                  <h4>Fluent Speaking Language:</h4>
+                  <ul>
+                    <li>English</li>
+                    <li>Spanish</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a
+              className="btn btn-danger"
+              href="javascript:void(0);"
+              onClick={() => this.closeModal()}
+            >
               Close
             </a>
           </div>
@@ -106,7 +214,7 @@ export default class extends React.Component {
               value="Open"
               onClick={() => this.openModal()}
             >
-              REQUEST MENTORSHIP
+              VIEW DETAILS
             </a>
           </div>
         </div>
