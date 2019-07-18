@@ -1090,37 +1090,91 @@ section.container {
 /*****************/
 /* page styles */
 .cmc-ct {
-
   position: relative;
   top: 108px;
   padding: 10px;
   text-align: center;
   color: var(--cmc-darkblue-color);
+
+
 }
 
-.photo-ct {
+.info-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-.CareerDev-photo {
-  width: 400px;
-  height: 200px;
-  text-align: center;
-  /* margin: auto; */
-  float: right;
-  margin-left: 10rem;
+.CMC-left {
+  width: 30rem;
+  /* float: left; */
+  padding-right: 7rem;
+}
+
+.CMC-right {
+  width: 30rem;
+  /* float: left; */
+  padding-left: 7rem;
+
 }
 
 .CMC-photo {
-
-  width: 300px;
-  height: 200px;
-  text-align: center;
-  /* margin: auto; */
-  float: left;
-  margin-right: 10rem;
+  width: 20rem;
+  /* float: right; */
 }
+
+.CareerDevs-photo {
+  width: 20rem;
+  /* float: right; */
+}
+
+
+.lightbulb-photo {
+  width: 10rem;
+  margin: auto;
+  padding-top: 7rem;
+}
+
+.mission-statement {
+  color: var(--cmc-darkblue-color);
+
+}
+
+.languages {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+}
+
+.seperate-language {
+  /* padding: 2rem; */
+  /* margin: 5px; */
+  padding-right: 10px;
+  width: 5rem;
+  text-align: center;
+
+}
+
+.what-you-learn {
+  height: 600px;
+  width: 800px;
+  color: var(--cmc-darkblue-color);
+  text-align: center;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .mission-statement {
   text-align: center;
@@ -1129,41 +1183,10 @@ section.container {
   font-weight: 1900;
 }
 
-
-.career-devs-info {
-  display: flex;
-  text-align: center;
-  flex-direction: center;
-}
-
-
-.middle-info {
-  /* padding-top: 0.5rem; */
-
-  padding-bottom: 8rem;
-  display: flex;
-  justify-content: center
-}
-
-.left-info {
-  display: flex;
-  width: 400px;
-  float: left;
-  margin-right: 10rem;
-
-}
-
-.right-info {
-  display: flex;
-  width: 400px;
-  float: right;
-  margin-left: 10rem;
-
-}
-
 .students {
   text-align: center;
   color: var(--cmc-darkblue-color);
+  /* width: 70rem; */
 
 }
 
@@ -1389,6 +1412,9 @@ section.container {
 /**********************************************/
 /** Media Queries - Mobile Viewport Styling ***/
 /**********************************************/
+
+/* cmcCareerDevs Page */
+
 
 /* Mobile Styles */
 /*****************/

@@ -16,30 +16,26 @@ const OnlineLearning = () => {
         <br />
         <br />
 
-        <div className="photo-ct">
-          <div className="CMC-photo">
-            <img src={cmcNavLogo} alt="Code Mentor Center" />
-          </div>
-
-          <div className="CareerDev-photo">
-            <img src={require("../images/CareerDevs-Logo-600x200.jpg")} />
-          </div>
-        </div>
-
-        <div className="middle-info">
-          <div className="left-info">
+        <div className="info-container">
+          <div className="CMC-left">
+            <div className="CMC-photo">
+              <img src={require("../images/cmc 600x200.png")} />
+            </div>
             <p>
               Code Mentor Centor is your gateway into a successful career in
               computer science & programming. After spending time learning the
-              basic fundamentals of JavaScript with your mentor, you are able to
-              continue your education at Career Devs Computer Science
-              University. Career Devs is the Best Coding and Web Development
-              Opportunity on the Planet! If You Are Hired Into Our Paid
-              Internship After Six Months, We Cancel Your Remaining Balance. Its
-              Yours!
+              basic fundamentals of JavaScript with your mentor, you can
+              continue your education at CareerDevs Computer Science University.
+              CareerDevs is the Best Coding and Web Development Opportunity on
+              the Planet! If You Are Hired Into Our Paid Internship After Six
+              Months, We Cancel Your Remaining Balance. Its Yours!
             </p>
           </div>
-          <div className="right-info">
+          <div className="CMC-right">
+            <div className="CareerDevs-photo">
+              <img src={require("../images/CareerDevs-Logo-600x200.jpg")} />
+            </div>
+            <br />
             <p>
               CareerDevs is a year-long, full-stack program for students looking
               to kickstart their careers in computer science. We are committed
@@ -47,45 +43,94 @@ const OnlineLearning = () => {
               that teaches students the powerful skills needed to thrive in
               today’s economy without incurring the crushing student debts
               affecting Americans today. Guaranteed Full-Time Job Placement
-              After Graduation, Earning $50,000 – $90,000
+              After Graduation, Earning $50,000 – $90,000 New Classes Start
+              Every Two Months Take Classes Online From Anywhere in the World!
             </p>
           </div>
         </div>
       </div>
-      <br />
-      <br />
-      <div className="students">
-        <h2>
-          Here Are Just A Few of Our Employed Grads! Each graduate began a new
-          career earning between $50,000 to $90,000! If you don’t do the same
-          within 5 months after graduating you don’t pay us anything.
-        </h2>
-        <br />
-        <div className="student-photos-ct">
-          <div className="single-student">
-            <img src={require("../images/EmitonAlves.png")} />
-            <p>Emiton Alves</p>
-            <p>Software Engineer</p>
-          </div>
-          <div className="single-student">
-            <img src={require("../images/RebeccaWagaman.jpg")} />
-            <p>Rebecca Wagaman</p>
-            <p>Software Engineer</p>
-          </div>
-          <div className="single-student">
-            <img src={require("../images/MichaelDAntuono.jpg")} />
-            <p>Michael DAntuono</p>
-            <p>Software Engineer</p>
-          </div>
-          <div className="single-student">
-            <img src={require("../images/JamalDawson.jpg")} />
-            <p>Jamal Dawson</p>
-            <p>Software Engineer</p>
-          </div>
+      <div className="right-info">
+        <div className="lightbulb-photo">
+          <img src={require("../images/lightbulb.png")} />
         </div>
-      </div>{" "}
+        <div className="mission-statement">
+          <h2>Our Mission Statement: Teach People Powerful Things</h2>
+        </div>
+      </div>
       <br />
-      }
+      <br />
+      <div className="what-you-learn">
+        <p>
+          <h2>What You Will Learn </h2>
+          <br />
+          <li>
+            Introduction to website development and programming (4 months): We
+            start from the very beginning. We take it slowly, allowing you to
+            learn without being overwhelmed. In addition to being able to ask
+            your instructors questions, every CareerDevs student also receives a
+            mentor (a student from Intermediate or Advanced), whom you can ask
+            questions. By the end of the Introduction phase, you’ve built your
+            first full-stack application. Also, your friends now think you’re
+            weird. 🙂
+          </li>{" "}
+          <br />
+          <li>
+            Intermediate website development and programming (4 months). After
+            completing the Introduction phase, you will have built up your
+            confidence. You are now ready to learn more full-stack computer
+            science concepts and build more robust websites and software
+            programs. You are also eating algorithms for breakfast, building
+            API’s, mastering recursion and can consider yourself an
+            object-oriented developer. Most Impressive!
+          </li>{" "}
+          <br />
+          <li>
+            Advanced website development and programming (4 months). Yes, you
+            are here now. You are now learning to master the most advanced,
+            cutting edge & real-world software development concepts. You have
+            developed several full-stack milestone software projects and a
+            capstone project that would impress Bill Gates. Oh, by the way… you
+            are also earning $50,000 to $80,000 per year. No joke. It’s ok. Tell
+            your friends and family… you’re not bragging, you worked hard for
+            this.
+          </li>
+          <br />
+        </p>
+      </div>
+      <div className="languages">
+        <div className="seperate-language">
+          <img src={require("../images/HTML5.png")} />
+        </div>
+        <div className="seperate-language">
+          <img src={require("../images/JavaScript-logo.png")} />
+        </div>
+        <div className="seperate-language">
+          <img src={require("../images/node.png")} />
+        </div>
+        <div className="seperate-language">
+          <img src={require("../images/mongoDB.png")} />
+        </div>
+        <div className="seperate-language">
+          <img src={require("../images/c-plus-plus-logo.png")} />
+        </div>
+        <div className="seperate-language">
+          <img src={require("../images/c-sharp.png")} />
+        </div>
+        <div className="seperate-language">
+          <img src={require("../images/java.jpg")} />
+        </div>
+        <div className="seperate-language">
+          <img src={require("../images/aws.png")} />
+        </div>
+        <div className="seperate-language">
+          <img src={require("../images/agile.jpg")} />
+        </div>
+        <div className="seperate-language">
+          <img src={require("../images/github.png")} />
+        </div>
+      </div>
+
+      <div className="test" />
       <Footer />
     </Fragment>
   );
