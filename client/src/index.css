@@ -761,6 +761,18 @@ section.container {
   bottom: 0;
 }
 
+/* Register New User */
+/***************************/
+.register-ct {
+  position: relative;
+  top: 108px;
+  padding: 10px 20px;
+}
+
+.register-ct .lead {
+  padding-top: 15px;
+}
+
 /* User Profile Dashboard */
 /***************************/
 /* Welcome Header Band */
