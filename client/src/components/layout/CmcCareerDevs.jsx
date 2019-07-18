@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import cmcNavLogo from "../images/logo_cmcNavbar.png";
 
-const OnlineLearning = () => {
+const CmcCareerDevs = () => {
   return (
     <Fragment>
       <div className="cmc-ct">
@@ -177,4 +177,4 @@ const OnlineLearning = () => {
   );
 };
 
-export default OnlineLearning;
+export default CmcCareerDevs;
