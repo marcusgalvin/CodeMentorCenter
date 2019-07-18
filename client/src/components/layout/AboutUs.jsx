@@ -30,7 +30,7 @@ const AboutUs = () => {
                 <div className="content">
                   <div className="main">
                     <h3 className="name">Carl Kakisis</h3>
-                    <p className="classYear">CareerDevs 2019</p>
+                    <p className="classYear">CareerDevs 2019 | Cohort 7</p>
                     <p className="text-center">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -44,28 +44,29 @@ const AboutUs = () => {
               <div className="flip-card-back">
                 <div className="header">
                   <h5 className="motto">
-                    "To be or not to be, this is my awesome motto!"
+                    “First, solve the problem. Then, write the code.” – John
+                    Johnson
                   </h5>
                 </div>
                 <div className="content">
                   <div className="main">
                     <h4 className="text-center">Studies</h4>
                     <p className="text-center">
-                      Web design, Adobe Photoshop, HTML5, CSS3, Corel and many
-                      others...
+                      JavaScript, HTML/CSS, MERN, Mongo/SQL, C, C#/.NET, JAVA,
+                      Algorithms, Data Structures, Agile, Git/Github
                     </p>
                   </div>
                   <div className="stats-container">
                     <div className="stats">
-                      <h4>235</h4>
+                      <h4>61</h4>
                       <p>Followers</p>
                     </div>
                     <div className="stats">
-                      <h4>114</h4>
+                      <h4>64</h4>
                       <p>Following</p>
                     </div>
                     <div className="stats">
-                      <h4>35</h4>
+                      <h4>59</h4>
                       <p>Projects</p>
                     </div>
                   </div>
@@ -102,7 +103,7 @@ const AboutUs = () => {
                 <div className="content">
                   <div className="main">
                     <h3 className="name">Tom Blais</h3>
-                    <p className="classYear">CareerDevs 2019</p>
+                    <p className="classYear">CareerDevs 2019 | Cohort 7</p>
                     <p className="text-center">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -116,28 +117,29 @@ const AboutUs = () => {
               <div className="flip-card-back">
                 <div className="header">
                   <h5 className="motto">
-                    "To be or not to be, this is my awesome motto!"
+                    “Experience is the name everyone gives to their mistakes.” –
+                    Oscar Wilde
                   </h5>
                 </div>
                 <div className="content">
                   <div className="main">
                     <h4 className="text-center">Studies</h4>
                     <p className="text-center">
-                      Web design, Adobe Photoshop, HTML5, CSS3, Corel and many
-                      others...
+                      JavaScript, HTML/CSS, MERN, Mongo/SQL, C, C#/.NET, JAVA,
+                      Algorithms, Data Structures, Agile, Git/Github
                     </p>
                   </div>
                   <div className="stats-container">
                     <div className="stats">
-                      <h4>235</h4>
+                      <h4>111</h4>
                       <p>Followers</p>
                     </div>
                     <div className="stats">
-                      <h4>114</h4>
+                      <h4>109</h4>
                       <p>Following</p>
                     </div>
                     <div className="stats">
-                      <h4>35</h4>
+                      <h4>38</h4>
                       <p>Projects</p>
                     </div>
                   </div>
@@ -174,7 +176,7 @@ const AboutUs = () => {
                 <div className="content">
                   <div className="main">
                     <h3 className="name">Marcus Galvin</h3>
-                    <p className="classYear">CareerDevs 2019</p>
+                    <p className="classYear">CareerDevs 2019 | Cohort 7</p>
                     <p className="text-center">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -188,28 +190,29 @@ const AboutUs = () => {
               <div className="flip-card-back">
                 <div className="header">
                   <h5 className="motto">
-                    "To be or not to be, this is my awesome motto!"
+                    “In order to be irreplaceable, one must always be different”
+                    – Coco Chanel
                   </h5>
                 </div>
                 <div className="content">
                   <div className="main">
                     <h4 className="text-center">Studies</h4>
                     <p className="text-center">
-                      Web design, Adobe Photoshop, HTML5, CSS3, Corel and many
-                      others...
+                      JavaScript, HTML/CSS, MERN, Mongo/SQL, C, C#/.NET, JAVA,
+                      Algorithms, Data Structures, Agile, Git/Github
                     </p>
                   </div>
                   <div className="stats-container">
                     <div className="stats">
-                      <h4>235</h4>
+                      <h4>327</h4>
                       <p>Followers</p>
                     </div>
                     <div className="stats">
-                      <h4>114</h4>
+                      <h4>508</h4>
                       <p>Following</p>
                     </div>
                     <div className="stats">
-                      <h4>35</h4>
+                      <h4>45</h4>
                       <p>Projects</p>
                     </div>
                   </div>
@@ -249,7 +252,7 @@ const AboutUs = () => {
                   <div className="content">
                     <div className="main">
                       <h3 className="name">JoseMiguel Marte</h3>
-                      <p className="classYear">CareerDevs 2019</p>
+                      <p className="classYear">CareerDevs 2019 | Cohort 7</p>
                       <p className="text-center">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
@@ -263,28 +266,29 @@ const AboutUs = () => {
                 <div className="flip-card-back">
                   <div className="header">
                     <h5 className="motto">
-                      "To be or not to be, this is my awesome motto!"
+                      “Java is to JJavaScript what car is to Carpet.” – Chris
+                      Heilmann
                     </h5>
                   </div>
                   <div className="content">
                     <div className="main">
                       <h4 className="text-center">Studies</h4>
                       <p className="text-center">
-                        Web design, Adobe Photoshop, HTML5, CSS3, Corel and many
-                        others...
+                        JavaScript, HTML/CSS, MERN, Mongo/SQL, C, C#/.NET, JAVA,
+                        Algorithms, Data Structures, Agile, Git/Github
                       </p>
                     </div>
                     <div className="stats-container">
                       <div className="stats">
-                        <h4>235</h4>
+                        <h4>242</h4>
                         <p>Followers</p>
                       </div>
                       <div className="stats">
-                        <h4>114</h4>
+                        <h4>357</h4>
                         <p>Following</p>
                       </div>
                       <div className="stats">
-                        <h4>35</h4>
+                        <h4>51</h4>
                         <p>Projects</p>
                       </div>
                     </div>
@@ -321,7 +325,7 @@ const AboutUs = () => {
                   <div className="content">
                     <div className="main">
                       <h3 className="name">Hayden Bryant</h3>
-                      <p className="classYear">CareerDevs 2019</p>
+                      <p className="classYear">CareerDevs 2019 | Cohort 7</p>
                       <p className="text-center">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
@@ -335,28 +339,28 @@ const AboutUs = () => {
                 <div className="flip-card-back">
                   <div className="header">
                     <h5 className="motto">
-                      "To be or not to be, this is my awesome motto!"
+                      “Knowledge is power.” – Francis Bacon
                     </h5>
                   </div>
                   <div className="content">
                     <div className="main">
                       <h4 className="text-center">Studies</h4>
                       <p className="text-center">
-                        Web design, Adobe Photoshop, HTML5, CSS3, Corel and many
-                        others...
+                        JavaScript, HTML/CSS, MERN, Mongo/SQL, C, C#/.NET, JAVA,
+                        Algorithms, Data Structures, Agile, Git/Github
                       </p>
                     </div>
                     <div className="stats-container">
                       <div className="stats">
-                        <h4>235</h4>
+                        <h4>21</h4>
                         <p>Followers</p>
                       </div>
                       <div className="stats">
-                        <h4>114</h4>
+                        <h4>60</h4>
                         <p>Following</p>
                       </div>
                       <div className="stats">
-                        <h4>35</h4>
+                        <h4>23</h4>
                         <p>Projects</p>
                       </div>
                     </div>
@@ -393,7 +397,7 @@ const AboutUs = () => {
                   <div className="content">
                     <div className="main">
                       <h3 className="name">Carl Durand</h3>
-                      <p className="classYear">CareerDevs 2019</p>
+                      <p className="classYear">CareerDevs 2019 | Cohort 7</p>
                       <p className="text-center">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
@@ -407,28 +411,29 @@ const AboutUs = () => {
                 <div className="flip-card-back">
                   <div className="header">
                     <h5 className="motto">
-                      "To be or not to be, this is my awesome motto!"
+                      “Code is like humor. When you have to explain it, it’s
+                      bad.” – Cory House
                     </h5>
                   </div>
                   <div className="content">
                     <div className="main">
                       <h4 className="text-center">Studies</h4>
                       <p className="text-center">
-                        Web design, Adobe Photoshop, HTML5, CSS3, Corel and many
-                        others...
+                        JavaScript, HTML/CSS, MERN, Mongo/SQL, C, C#/.NET, JAVA,
+                        Algorithms, Data Structures, Agile, Git/Github
                       </p>
                     </div>
                     <div className="stats-container">
                       <div className="stats">
-                        <h4>235</h4>
+                        <h4>64</h4>
                         <p>Followers</p>
                       </div>
                       <div className="stats">
-                        <h4>114</h4>
+                        <h4>44</h4>
                         <p>Following</p>
                       </div>
                       <div className="stats">
-                        <h4>35</h4>
+                        <h4>117</h4>
                         <p>Projects</p>
                       </div>
                     </div>
@@ -469,7 +474,7 @@ const AboutUs = () => {
                 <div className="content">
                   <div className="main">
                     <h3 className="name">Matt Tartaglia</h3>
-                    <p className="classYear">CareerDevs 2019</p>
+                    <p className="classYear">CareerDevs 2019 | Cohort 7</p>
                     <p className="text-center">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -483,28 +488,28 @@ const AboutUs = () => {
               <div className="flip-card-back">
                 <div className="header">
                   <h5 className="motto">
-                    "To be or not to be, this is my awesome motto!"
+                    “Fix the cause, not the symptom.” – Steve Maguire
                   </h5>
                 </div>
                 <div className="content">
                   <div className="main">
                     <h4 className="text-center">Studies</h4>
                     <p className="text-center">
-                      Web design, Adobe Photoshop, HTML5, CSS3, Corel and many
-                      others...
+                      JavaScript, HTML/CSS, MERN, Mongo/SQL, C, C#/.NET, JAVA,
+                      Algorithms, Data Structures, Agile, Git/Github
                     </p>
                   </div>
                   <div className="stats-container">
                     <div className="stats">
-                      <h4>235</h4>
+                      <h4>68</h4>
                       <p>Followers</p>
                     </div>
                     <div className="stats">
-                      <h4>114</h4>
+                      <h4>131</h4>
                       <p>Following</p>
                     </div>
                     <div className="stats">
-                      <h4>35</h4>
+                      <h4>50</h4>
                       <p>Projects</p>
                     </div>
                   </div>
@@ -538,7 +543,7 @@ const AboutUs = () => {
                 <div className="content">
                   <div className="main">
                     <h3 className="name">Steve Barriere</h3>
-                    <p className="classYear">CareerDevs 2019</p>
+                    <p className="classYear">CareerDevs 2019 | Cohort 7</p>
                     <p className="text-center">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -552,28 +557,28 @@ const AboutUs = () => {
               <div className="flip-card-back">
                 <div className="header">
                   <h5 className="motto">
-                    "To be or not to be, this is my awesome motto!"
+                    “Simplicity is the soul of efficiency.” – Austin Freeman
                   </h5>
                 </div>
                 <div className="content">
                   <div className="main">
                     <h4 className="text-center">Studies</h4>
                     <p className="text-center">
-                      Web design, Adobe Photoshop, HTML5, CSS3, Corel and many
-                      others...
+                      JavaScript, HTML/CSS, MERN, Mongo/SQL, C, C#/.NET, JAVA,
+                      Algorithms, Data Structures, Agile, Git/Github
                     </p>
                   </div>
                   <div className="stats-container">
                     <div className="stats">
-                      <h4>235</h4>
+                      <h4>166</h4>
                       <p>Followers</p>
                     </div>
                     <div className="stats">
-                      <h4>114</h4>
+                      <h4>355</h4>
                       <p>Following</p>
                     </div>
                     <div className="stats">
-                      <h4>35</h4>
+                      <h4>58</h4>
                       <p>Projects</p>
                     </div>
                   </div>
@@ -607,7 +612,7 @@ const AboutUs = () => {
                 <div className="content">
                   <div className="main">
                     <h3 className="name">Oscar Diahn</h3>
-                    <p className="classYear">CareerDevs 2019</p>
+                    <p className="classYear">CareerDevs 2019 | Cohort 7</p>
                     <p className="text-center">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -621,28 +626,28 @@ const AboutUs = () => {
               <div className="flip-card-back">
                 <div className="header">
                   <h5 className="motto">
-                    "To be or not to be, this is my awesome motto!"
+                    “Make it work, make it right, make it fast.” – Kent Beck
                   </h5>
                 </div>
                 <div className="content">
                   <div className="main">
                     <h4 className="text-center">Studies</h4>
                     <p className="text-center">
-                      Web design, Adobe Photoshop, HTML5, CSS3, Corel and many
-                      others...
+                      JavaScript, HTML/CSS, MERN, Mongo/SQL, C, C#/.NET, JAVA,
+                      Algorithms, Data Structures, Agile, Git/Github
                     </p>
                   </div>
                   <div className="stats-container">
                     <div className="stats">
-                      <h4>235</h4>
+                      <h4>30</h4>
                       <p>Followers</p>
                     </div>
                     <div className="stats">
-                      <h4>114</h4>
+                      <h4>68</h4>
                       <p>Following</p>
                     </div>
                     <div className="stats">
-                      <h4>35</h4>
+                      <h4>19</h4>
                       <p>Projects</p>
                     </div>
                   </div>

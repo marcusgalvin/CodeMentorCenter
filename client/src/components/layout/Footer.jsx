@@ -35,7 +35,7 @@ const Footer = () => {
             <br />
             100 Niantic Avenue,
             <br />
-            providence, RI 02907
+            Providence, RI 02907
             <br />
           </p>
         </div>
