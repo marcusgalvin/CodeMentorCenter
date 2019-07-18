@@ -1098,11 +1098,28 @@ section.container {
   color: var(--cmc-darkblue-color);
 }
 
+.photo-ct {
+  display: flex;
+  justify-content: center;
+}
+
 .CareerDev-photo {
-  width: 600px;
+  width: 400px;
   height: 200px;
   text-align: center;
-  margin: auto;
+  /* margin: auto; */
+  float: right;
+  margin-left: 10rem;
+}
+
+.CMC-photo {
+
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  /* margin: auto; */
+  float: left;
+  margin-right: 10rem;
 }
 
 .mission-statement {
@@ -1113,36 +1130,55 @@ section.container {
 }
 
 
-
 .career-devs-info {
   display: flex;
   text-align: center;
   flex-direction: center;
 }
 
+
+.middle-info {
+  /* padding-top: 0.5rem; */
+
+  padding-bottom: 8rem;
+  display: flex;
+  justify-content: center
+}
+
 .left-info {
   display: flex;
-  /* flex-direction: center; */
   width: 400px;
+  float: left;
+  margin-right: 10rem;
 
 }
 
 .right-info {
   display: flex;
-  /* flex-direction: center; */
   width: 400px;
+  float: right;
+  margin-left: 10rem;
+
 }
 
-
-.student-photos {
-  width: 15rem;
-  height: 15rem;
+.students {
   text-align: center;
+  color: var(--cmc-darkblue-color);
+
+}
+
+.student-photos-ct {
   display: flex;
+  justify-content: center;
   flex-direction: center;
 }
 
-
+.single-student {
+  width: 15rem;
+  height: 15rem;
+  text-align: center;
+  padding: 1rem;
+}
 
 
 
