@@ -259,6 +259,8 @@ router.post("/request/:request_id/accept", auth, async (req, res) => {
 
     //this may be overkill calling both users. look into refactoring this somehow
     //get email and name of request user
+    
+    //email and name may be available through user when logged in already CHECK THIS!!!!
     let requestUser = await User.findById(request.user);
     //get email and name of current user
     let currentUser = await User.findById(req.user.id);
@@ -339,7 +341,6 @@ router.post("/mentorship/:user_id/finish", auth, async (req, res) => {
     const mentee = profile.currentMentees.find(
       mentee => mentee.user.toString() === req.params.user_id
     );
-    console.log(mentee)
     //mentees profile
     let menteeProfile = await Profile.findOne({
       user: req.params.user_id
