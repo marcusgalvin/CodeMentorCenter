@@ -210,7 +210,7 @@ export default class extends React.Component {
               distribution of letters, as opposed to...
             </p>
           </div>
-          <div className="request-btn">
+          <div className="request-btn viewDetails">
             <a
               href="javascript:void(0);"
               className="btn btn-primary btn-rounded"
@@ -218,6 +218,14 @@ export default class extends React.Component {
               onClick={() => this.openModal()}
             >
               VIEW DETAILS
+            </a>
+          </div>
+          <div className="request-btn m-requestMentorship">
+            <a
+              href="javascript:void(0);"
+              className="btn btn-primary btn-rounded"
+            >
+              REQUEST MENTORSHIP
             </a>
           </div>
         </div>

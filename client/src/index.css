@@ -607,6 +607,14 @@ button {
   font-size: 0.8rem;
 }
 
+.viewDetails {
+  display: block;
+}
+
+.m-requestMentorship {
+  display: none;
+}
+
 /* Modal Popup Detailed Profile */
 .detailedProfileSummary {
   position: relative;
@@ -1552,6 +1560,16 @@ button {
     display: block;
   }
 
+  /* Profile Cards  */
+  /******************/
+  .viewDetails {
+    display: none;
+  }
+
+  .m-requestMentorship {
+    display: block;
+  }
+
   /* Dashboard Page */
   /*****************/
   .currentMentorship {
@@ -1582,6 +1600,12 @@ button {
 
   .navbar ul li a {
     padding: 0;
+  }
+
+  /* Profile Cards  */
+  /******************/
+  .viewDetails {
+    display: none;
   }
 }
 
@@ -1797,6 +1821,16 @@ button {
   }
 
   .scrollProfile {
+    display: block;
+  }
+
+  /* Profile Cards  */
+  /******************/
+  .viewDetails {
+    display: none;
+  }
+
+  .m-requestMentorship {
     display: block;
   }
 
