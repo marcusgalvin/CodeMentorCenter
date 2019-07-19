@@ -360,8 +360,7 @@ section.container {
 /*****************************/
 .heroImg {
   width: 100%;
-  background: url(./components/images/hero_bannerCMCCouple.jpg) no-repeat center
-    0;
+  background: url(./components/images/hero_bannerCMCCouple.jpg) no-repeat center 0;
   background-size: cover;
   background-position: center;
   height: 450px;
@@ -1081,7 +1080,7 @@ section.container {
   z-index: 1;
 }
 
-#mentorViewMore[type="checkbox"]:checked ~ h3 ~ .hiddenMentorFields {
+#mentorViewMore[type="checkbox"]:checked~h3~.hiddenMentorFields {
   max-height: 600px;
 }
 
@@ -1397,6 +1396,7 @@ section.container {
 /* Mobile Styles */
 /*****************/
 @media (max-width: 1030px) {
+
   /* About Us Page */
   /*****************/
   .flip-card {
@@ -1617,24 +1617,24 @@ section.container {
     display: none;
   }
 
-  .m-nav .menu-btn:checked ~ .menu {
+  .m-nav .menu-btn:checked~.menu {
     max-height: 240px;
   }
 
-  .m-nav .menu-btn:checked ~ .menu-icon .navicon {
+  .m-nav .menu-btn:checked~.menu-icon .navicon {
     background: transparent;
   }
 
-  .m-nav .menu-btn:checked ~ .menu-icon .navicon:before {
+  .m-nav .menu-btn:checked~.menu-icon .navicon:before {
     transform: rotate(-45deg);
   }
 
-  .m-nav .menu-btn:checked ~ .menu-icon .navicon:after {
+  .m-nav .menu-btn:checked~.menu-icon .navicon:after {
     transform: rotate(45deg);
   }
 
-  .m-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-  .m-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  .m-nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+  .m-nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
     top: 0;
   }
 
