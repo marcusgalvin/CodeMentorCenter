@@ -47,12 +47,12 @@ const Navbar = ({ logout, auth: { isAuthenticated, loading } }) => {
       </li>
       <li>
         <Link to="/register">
-          <i className="far fa-registered fas" /> Register
+          <i className="far fa-registered fas" /> REGISTER
         </Link>
       </li>
       <li>
         <Link to="/login" className="nav-link">
-          <i className="fas fa-sign-out-alt" /> Login
+          <i className="fas fa-sign-out-alt" /> LOGIN
         </Link>
       </li>
     </ul>
