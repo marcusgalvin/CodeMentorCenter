@@ -6,7 +6,8 @@ import {
   LOGIN_FAIL,
   LOGIN_SUCCESS,
   AUTH_ERROR,
-  USER_LOADED
+  USER_LOADED,
+  LOGOUT
 } from "./types";
 import setAuthToken from "../utils/setAuthToken";
 
@@ -48,7 +49,7 @@ export const register = ({
     password2
   });
   try {
-    const res = await axios.post("/api/users", body, config);
+    const res = await axios.post("/api/register", body, config);
     dispatch({
       type: REGISTER_SUCCESS,
       payload: res.data
@@ -104,4 +105,9 @@ export const login = (email, password) => async dispatch => {
       type: LOGIN_FAIL
     });
   }
+};
+
+//logout
+export const logout = () => dispatch => {
+  dispatch({ type: LOGOUT });
 };

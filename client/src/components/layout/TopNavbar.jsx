@@ -1,50 +1,96 @@
-import React, { Component } from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { logout } from "../../actions/auth";
+
+//img import
 import cmcNavLogo from "../images/logo_cmcNavbar.png";
 
-class Navbar extends Component {
-  render() {
-    return (
-      <div className="container">
-        <nav className="navbar">
-          <div className="logo">
-            <Link to="/">
-              <img src={cmcNavLogo} alt="Code Mentor Center" />
-            </Link>
-          </div>
-          <div class="m-nav">
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn">
-              <p>Menu</p>
-              <span class="navicon" />
-            </label>
-            <ul class="menu">
-              <li>
-                <Link to="/mentors">
-                  <i class="fas fa-user-ninja" /> MENTORS
-                </Link>
-              </li>
-              <li>
-                <Link to="/mentees">
-                  <i class="fas fa-user" /> MENTEES
-                </Link>
-              </li>
-              <li>
-                <Link to="/dashboard">
-                  <i class="far fa-address-card fas" /> PROFILE
-                </Link>
-              </li>
-              <li>
-                <Link to="/" className="nav-link">
-                  <i class="fas fa-sign-out-alt" /> LOGOUT
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    );
-  }
-}
+const Navbar = ({ logout, auth: { isAuthenticated, loading } }) => {
+  const authLinks = (
+    <ul className="menu">
+      <li>
+        <Link to="/mentors">
+          <i className="fas fa-user-ninja" /> MENTORS
+        </Link>
+      </li>
+      <li>
+        <Link to="/mentees">
+          <i className="fas fa-user" /> MENTEES
+        </Link>
+      </li>
+      <li>
+        <Link to="/dashboard">
+          <i className="far fa-address-card fas" /> PROFILE
+        </Link>
+      </li>
+      <li>
+        <a className="nav-link" href="#!" onClick={logout}>
+          <i className="fas fa-sign-out-alt" /> LOGOUT
+        </a>
+      </li>
+    </ul>
+  );
 
-export default Navbar;
+  const guestLinks = (
+    <ul className="menu">
+      <li>
+        <Link to="/mentors">
+          <i className="fas fa-user-ninja" /> MENTORS
+        </Link>
+      </li>
+      <li>
+        <Link to="/mentees">
+          <i className="fas fa-user" /> MENTEES
+        </Link>
+      </li>
+      <li>
+        <Link to="/register">
+          <i className="far fa-registered fas" /> Register
+        </Link>
+      </li>
+      <li>
+        <Link to="/login" className="nav-link">
+          <i className="fas fa-sign-out-alt" /> Login
+        </Link>
+      </li>
+    </ul>
+  );
+
+  return (
+    <div className="container">
+      <nav className="navbar">
+        <div className="logo">
+          <Link to="/">
+            <img src={cmcNavLogo} alt="Code Mentor Center" />
+          </Link>
+        </div>
+        <div className="m-nav">
+          <input className="menu-btn" type="checkbox" id="menu-btn" />
+          <label className="menu-icon" htmlFor="menu-btn">
+            <p>Menu</p>
+            <span className="navicon" />
+          </label>
+          {!loading && (
+            <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
+          )}
+        </div>
+      </nav>
+    </div>
+  );
+};
+
+Navbar.propTypes = {
+  logout: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(
+  mapStateToProps,
+  { logout }
+)(Navbar);

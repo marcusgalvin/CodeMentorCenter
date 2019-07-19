@@ -10,12 +10,12 @@ const Footer = () => {
           <ul>
             <li>
               <a href="http://wwww.facebook.com">
-                <i class="fab fa-facebook-square" /> Facebook
+                <i className="fab fa-facebook-square" /> Facebook
               </a>
             </li>
             <li>
               <a href="http://www.twitter.com">
-                <i class="fab fa-twitter-square" /> Twitter
+                <i className="fab fa-twitter-square" /> Twitter
               </a>
             </li>
           </ul>
