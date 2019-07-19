@@ -135,13 +135,12 @@ h3 {
 
 .alert {
   padding: 0.8rem;
-  margin: 1rem 0;
   opacity: 0.9;
   background: var(--cmc-lightblue-color);
   color: var(--dark-color);
   position: relative;
   z-index: 999;
-  top: 80px;
+  top: 108px;
 }
 
 .btn-primary,
@@ -1599,6 +1598,10 @@ button {
     display: none;
   }
 
+  .alert {
+    top: 0;
+  }
+
   /* Text Styles */
   /***************/
   .x-large {
@@ -1824,6 +1827,18 @@ button {
   /* Landing Page */
   /****************/
   .landing {
+    top: 0;
+  }
+
+  /* Register New User */
+  /*********************/
+  .register-ct {
+    top: 0;
+  }
+
+  /* Login Page */
+  /*********************/
+  .login-ct {
     top: 0;
   }
 
