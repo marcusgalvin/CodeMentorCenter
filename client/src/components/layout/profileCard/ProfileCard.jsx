@@ -140,13 +140,16 @@ export default class extends React.Component {
               </div>
             </div>
             <button
-              className="btn btn-danger"
+              className="btn btn-rounded btn-danger"
               href="javascript:void(0);"
               onClick={() => this.closeModal()}
             >
               Close Popup
             </button>
-            <button className="btn btn-success" href="javascript:void(0);">
+            <button
+              className="btn btn-rounded btn-success"
+              href="javascript:void(0);"
+            >
               Send Mentorship Request
             </button>
           </div>

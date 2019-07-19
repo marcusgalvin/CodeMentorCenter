@@ -710,6 +710,10 @@ button {
   text-decoration: underline;
 }
 
+.detailedProfileSummary button {
+  padding: 4px 25px;
+}
+
 /* Online Learning / Higher Learning */
 /*************************************/
 .higherLearning {
