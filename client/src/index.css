@@ -133,13 +133,15 @@ h3 {
   color: var(--dark-color);
 }
 
-
 .alert {
   padding: 0.8rem;
   margin: 1rem 0;
   opacity: 0.9;
   background: var(--cmc-lightblue-color);
   color: var(--dark-color);
+  position: relative;
+  z-index: 999;
+  top: 80px;
 }
 
 .btn-primary,
@@ -280,10 +282,6 @@ button {
 
 .container {
   position: relative;
-}
-
-section.container {
-  padding: 20px;
 }
 
 .landing h4 {
