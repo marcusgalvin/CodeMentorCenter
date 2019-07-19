@@ -18,6 +18,8 @@ import AboutUs from "./components/layout/AboutUs";
 import Dashboard from "./components/layout/Dashboard";
 import ProfileEdit from "./components/layout/ProfileEdit";
 import CmcCareerDevs from "./components/layout/CmcCareerDevs";
+import Mentors from "./components/layout/Mentors";
+import Mentees from "./components/layout/Mentees";
 
 //redux imports
 import { Provider } from "react-redux";
@@ -54,6 +56,8 @@ const App = () => {
           </section>
           <Route path="/AboutUs" component={AboutUs} />
           <Route path="/CmcCareerDevs" component={CmcCareerDevs} />
+          <Route path="/Mentors" component={Mentors} />
+          <Route path="/Mentees" component={Mentees} />
         </Fragment>
       </Router>
     </Provider>

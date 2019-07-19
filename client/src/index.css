@@ -871,7 +871,7 @@ button {
 .register-ct {
   position: relative;
   top: 108px;
-  padding: 10px 20px;
+  padding: 20px;
 }
 
 .register-ct .lead {
@@ -888,7 +888,7 @@ button {
 .login-ct {
   position: relative;
   top: 108px;
-  padding: 10px 20px;
+  padding: 20px;
 }
 
 .login-ct .lead {
@@ -1100,7 +1100,7 @@ button {
 .editProfile-ct {
   position: relative;
   top: 108px;
-  padding: 10px 20px;
+  padding: 20px;
 }
 
 .editProfile-ct .fieldRequired {
@@ -1228,13 +1228,42 @@ button {
   text-align: center;
 }
 
+/* Mentors & Mentees Pages */
+/***************************/
+.mentors-ct,
+.mentees-ct {
+  position: relative;
+  margin: auto;
+  top: 108px;
+  padding: 20px;
+  text-align: center;
+}
+
+.mentors-ct .pageSummary,
+.mentees-ct .pageSummary {
+  margin: 10px auto;
+  width: 80%;
+}
+
+.mentors-ct h2,
+.mentees-ct h2 {
+  color: var(--cmc-darkblue-color);
+}
+
+.allMentors-ct {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+}
+
 /* CMC & CareerDevs Page */
 /*****************/
 /* page styles */
 .cmc-ct {
   position: relative;
   top: 108px;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   color: var(--cmc-darkblue-color);
 }
@@ -1331,7 +1360,7 @@ button {
 .aboutUs-ct {
   position: relative;
   top: 108px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .aboutUs-ct h2 {
@@ -1345,6 +1374,12 @@ button {
 
 .aboutUs-ct h4 {
   color: var(--cmc-red-color);
+}
+
+.aboutUs-ct .pageSummary {
+  margin: 10px auto;
+  width: 80%;
+  text-align: center;
 }
 
 /* card styles */
@@ -1975,6 +2010,14 @@ button {
   .editProfile-ct .personalInfo,
   .editProfile-ct .social-input {
     padding-right: 0;
+  }
+
+  /* View All - Mentors & Mentors */
+  /********************************/
+  .mentors-ct,
+  .mentees-ct {
+    padding: 0;
+    top: 0;
   }
 
   /* About Us Page */

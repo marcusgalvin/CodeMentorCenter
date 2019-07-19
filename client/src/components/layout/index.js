@@ -10,7 +10,9 @@ import Search from "./Search";
 import ProfileCard from "./profileCard/ProfileCard";
 import RandomMentors from "./RandomMentors";
 import TopMentors from "./TopMentors";
+import Mentors from "./Mentors";
 import RandomMentees from "./RandomMentees";
+import Mentees from "./Mentees";
 import OnlineLearning from "./OnlineLearning";
 import Footer from "./Footer";
 
@@ -27,7 +29,9 @@ export {
   ProfileCard,
   TopMentors,
   RandomMentors,
+  Mentors,
   RandomMentees,
+  Mentees,
   OnlineLearning,
   Footer
 };
