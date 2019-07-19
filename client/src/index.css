@@ -135,10 +135,12 @@ h3 {
 
 .alert {
   padding: 0.8rem;
-  margin: 1rem 0;
   opacity: 0.9;
   background: var(--cmc-lightblue-color);
   color: var(--dark-color);
+  position: relative;
+  z-index: 999;
+  top: 108px;
 }
 
 .btn-primary,
@@ -279,10 +281,6 @@ button {
 
 .container {
   position: relative;
-}
-
-section.container {
-  padding: 20px;
 }
 
 .landing h4 {
@@ -604,8 +602,116 @@ section.container {
 }
 
 .request-btn a {
-  padding: 4px 16px 3px;
+  padding: 6px 16px;
   font-size: 0.8rem;
+  width: 80%;
+}
+
+.viewDetails {
+  display: block;
+}
+
+.m-requestMentorship {
+  display: none;
+}
+
+/* Modal Popup Detailed Profile */
+.detailedProfileSummary {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  border: 7px solid var(--cmc-lightblue-color);
+}
+
+.detailedProfileSummary .header {
+  width: 100%;
+  color: var(--cmc-darkblue-color);
+  background-color: var(--cream-color);
+  border: 1px dotted var(--dark-color);
+  padding: 10px;
+}
+
+.detailedProfileSummary h4 {
+  color: var(--dark-color);
+  font-size: 1.2rem;
+}
+
+.detailedProfileSummary .helped-ct {
+  position: absolute;
+  top: 27px;
+  left: 115px;
+  color: var(--dark-color);
+}
+
+.detailedProfileSummary .starRatings {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 49px;
+  left: 565px;
+}
+
+.details {
+  padding: 15px;
+}
+
+.aboutDetail,
+.socialDetail {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+}
+
+.socialDetail {
+  top: -15px;
+  text-align: center;
+  border-left: 1px dotted;
+}
+
+.socialDetail a:hover {
+  color: var(--cmc-red-color);
+  text-decoration: underline;
+}
+
+.bioDetails {
+  margin-top: 15px;
+  padding: 20px 0;
+  border-top: 1px dotted;
+  border-bottom: 1px dotted;
+}
+
+.langDetails {
+  padding: 10px;
+}
+
+.programLang,
+.speakLang {
+  float: left;
+  position: relative;
+  display: inline-block;
+  width: 50%;
+}
+
+.programLang ul {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.programLang ul li {
+  display: inline-block;
+  width: 100px;
+}
+
+.programLang li a:hover {
+  color: var(--cmc-red-color);
+  text-decoration: underline;
+}
+
+.detailedProfileSummary button {
+  padding: 4px 25px;
 }
 
 /* Online Learning / Higher Learning */
@@ -758,6 +864,40 @@ section.container {
   justify-content: center;
   text-align: center;
   bottom: 0;
+}
+
+/* Register New User */
+/***************************/
+.register-ct {
+  position: relative;
+  top: 108px;
+  padding: 20px;
+}
+
+.register-ct .lead {
+  padding-top: 15px;
+}
+
+.register-ct .form-group input {
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+/* Login User */
+/***************************/
+.login-ct {
+  position: relative;
+  top: 108px;
+  padding: 20px;
+}
+
+.login-ct .lead {
+  padding-top: 15px;
+}
+
+.login-ct .form-group input {
+  padding: 0.3rem;
+  font-size: 1rem;
 }
 
 /* User Profile Dashboard */
@@ -923,6 +1063,10 @@ section.container {
   background-color: var(--cmc-lightblue-color);
 }
 
+.requestedMentorship button {
+  padding: 2px 13px;
+}
+
 .currentMentorship {
   display: flex;
   justify-content: center;
@@ -940,11 +1084,6 @@ section.container {
   width: 100%;
 }
 
-.currentMentorship li button {
-  padding: 4px 8px;
-  font-size: 0.8rem;
-}
-
 .currentMentorship li:last-child {
   text-align: center;
 }
@@ -955,12 +1094,23 @@ section.container {
   padding-right: 5px;
 }
 
+.currentMentorship button,
+.requestedMentorship button {
+  padding: 4px 8px;
+  font-size: 1rem;
+  width: 200px;
+}
+
+.requestedMentorship button:last-child {
+  margin-left: 25px;
+}
+
 /* Edit User Profile */
 /*********************/
 .editProfile-ct {
   position: relative;
   top: 108px;
-  padding: 10px 20px;
+  padding: 20px;
 }
 
 .editProfile-ct .fieldRequired {
@@ -1017,6 +1167,17 @@ section.container {
 
 .editProfile-ct .form-group select {
   background-color: var(--white-color);
+}
+
+.editProfile-ct .profileBtns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+#mentorViewMore[type="checkbox"]:checked ~ h3 ~ .hiddenMentorFields {
+  margin: 25px 0;
 }
 
 .personalInfo .location {
@@ -1088,13 +1249,42 @@ section.container {
   text-align: center;
 }
 
+/* Mentors & Mentees Pages */
+/***************************/
+.mentors-ct,
+.mentees-ct {
+  position: relative;
+  margin: auto;
+  top: 108px;
+  padding: 20px;
+  text-align: center;
+}
+
+.mentors-ct .pageSummary,
+.mentees-ct .pageSummary {
+  margin: 10px auto;
+  width: 80%;
+}
+
+.mentors-ct h2,
+.mentees-ct h2 {
+  color: var(--cmc-darkblue-color);
+}
+
+.allMentors-ct {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+}
+
 /* CMC & CareerDevs Page */
 /*****************/
 /* page styles */
 .cmc-ct {
   position: relative;
   top: 108px;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   color: var(--cmc-darkblue-color);
 }
@@ -1191,7 +1381,7 @@ section.container {
 .aboutUs-ct {
   position: relative;
   top: 108px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .aboutUs-ct h2 {
@@ -1205,6 +1395,12 @@ section.container {
 
 .aboutUs-ct h4 {
   color: var(--cmc-red-color);
+}
+
+.aboutUs-ct .pageSummary {
+  margin: 10px auto;
+  width: 80%;
+  text-align: center;
 }
 
 /* card styles */
@@ -1425,6 +1621,16 @@ section.container {
     display: block;
   }
 
+  /* Profile Cards  */
+  /******************/
+  .viewDetails {
+    display: none;
+  }
+
+  .m-requestMentorship {
+    display: block;
+  }
+
   /* Dashboard Page */
   /*****************/
   .currentMentorship {
@@ -1456,6 +1662,12 @@ section.container {
   .navbar ul li a {
     padding: 0;
   }
+
+  /* Profile Cards  */
+  /******************/
+  .viewDetails {
+    display: none;
+  }
 }
 
 /*************************/
@@ -1469,6 +1681,10 @@ section.container {
 
   .hide-sm {
     display: none;
+  }
+
+  .alert {
+    top: 0;
   }
 
   /* Text Styles */
@@ -1669,6 +1885,16 @@ section.container {
     display: block;
   }
 
+  /* Profile Cards  */
+  /******************/
+  .viewDetails {
+    display: none;
+  }
+
+  .m-requestMentorship {
+    display: block;
+  }
+
   /* Higher Learning */
   /*******************/
   .higherLearning {
@@ -1696,6 +1922,18 @@ section.container {
   /* Landing Page */
   /****************/
   .landing {
+    top: 0;
+  }
+
+  /* Register New User */
+  /*********************/
+  .register-ct {
+    top: 0;
+  }
+
+  /* Login Page */
+  /*********************/
+  .login-ct {
     top: 0;
   }
 
@@ -1784,6 +2022,21 @@ section.container {
     width: 90%;
   }
 
+  .requestedMentorship button:last-child {
+    margin: 0;
+  }
+
+  .requestedMentorship button {
+    width: 100%;
+    border-radius: none;
+    margin-bottom: 10px;
+  }
+
+  .currentMentorship button {
+    width: 100%;
+    border-radius: 0;
+  }
+
   /* Edit Profile Page */
   /*****************/
   .editProfile-ct {
@@ -1794,6 +2047,30 @@ section.container {
   .editProfile-ct .personalInfo,
   .editProfile-ct .social-input {
     padding-right: 0;
+  }
+
+  .editProfile-ct .profileBtns {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #mentorViewMore[type="checkbox"]:checked ~ h3 ~ .hiddenMentorFields {
+    margin: 25px 0;
+  }
+
+  .editProfile-ct .profileBtns .btn {
+    border-radius: inherit;
+    padding: 10px 0;
+    margin: 10px;
+  }
+
+  /* View All - Mentors & Mentors */
+  /********************************/
+  .mentors-ct,
+  .mentees-ct {
+    padding: 0;
+    top: 0;
   }
 
   /* About Us Page */

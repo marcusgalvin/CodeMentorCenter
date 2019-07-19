@@ -10,12 +10,12 @@ const Footer = () => {
           <ul>
             <li>
               <a href="http://wwww.facebook.com">
-                <i class="fab fa-facebook-square" /> Facebook
+                <i className="fab fa-facebook-square" /> Facebook
               </a>
             </li>
             <li>
               <a href="http://www.twitter.com">
-                <i class="fab fa-twitter-square" /> Twitter
+                <i className="fab fa-twitter-square" /> Twitter
               </a>
             </li>
           </ul>
@@ -42,11 +42,20 @@ const Footer = () => {
         <div className="sitemap-ct">
           <h4>Explore Our Site</h4>
           <ul>
-            <li>Home</li>
-            <li>Mentors</li>
-            <li>Mentees</li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/Mentors">Mentors</Link>
+            </li>
+            <li>
+              <Link to="/Mentees">Mentees</Link>
+            </li>
             <li>
               <Link to="/AboutUs">About Us</Link>
+            </li>
+            <li>
+              <Link to="/CmcCareerDevs">CareerDevs</Link>
             </li>
           </ul>
         </div>

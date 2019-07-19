@@ -12,8 +12,8 @@ const Dashboard = () => {
           <div className="onlineStatus">
             Mentor Status: <span>Online</span>
           </div>
-          <Link to="/profileedit" class="edit">
-            <i class="fas fa-user-circle" /> Edit Profile
+          <Link to="/profileedit" className="edit">
+            <i className="fas fa-user-circle" /> Edit Profile
           </Link>
           <button className="delete">
             <i className="fas fa-user-minus" /> Delete My Account
@@ -21,14 +21,15 @@ const Dashboard = () => {
         </div>
         {/* Request alert band is triggered if a user is rquesting mentorship */}
         <div className="requestAlert">
-          <i class="fas fa-envelope-open-text" /> You have a pending requests!
+          <i className="fas fa-envelope-open-text" /> You have a pending
+          requests!
         </div>
       </div>
       <div className="dashProfileSummary">
         <div className="basic profileSummary">
           <h3>Basic Profile Information</h3>
           <div className="profileImg">
-            <i class="fas fa-user-circle" />
+            <i className="fas fa-user-circle" />
           </div>
           <p>
             <strong>John Doe</strong>
@@ -38,19 +39,19 @@ const Dashboard = () => {
           </p>
           <ul>
             <li>
-              <i class="fab fa-facebook-square" />{" "}
+              <i className="fab fa-facebook-square" />{" "}
               <a href="http://wwww.facebook.com"> Facebook: jdoe</a>
             </li>
             <li>
-              <i class="fab fa-twitter-square" />{" "}
+              <i className="fab fa-twitter-square" />{" "}
               <a href="http://wwww.facebook.com"> Twitter: johndoe</a>
             </li>
             <li>
-              <i class="fab fa-linkedin" />{" "}
+              <i className="fab fa-linkedin" />{" "}
               <a href="http://wwww.facebook.com"> LinkedIn: JohnPaulDoe</a>
             </li>
             <li>
-              <i class="fab fa-github-square" />{" "}
+              <i className="fab fa-github-square" />{" "}
               <a href="http://wwww.facebook.com"> Github: JohnGithubRepos</a>
             </li>
           </ul>

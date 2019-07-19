@@ -15,6 +15,12 @@ const AboutUs = () => {
     <Fragment>
       <div className="aboutUs-ct">
         <h2>Meet The Developers</h2>
+        <p className="pageSummary">
+          Transom list stern draught maroon fore chantey booty nipperkin
+          Corsair. Clipper careen gally execution dock long boat league scurvy
+          lee jib transom. Barkadeer swab grapple gibbet bucko bilge Letter of
+          Marque doubloon bilge rat gally.
+        </p>
         {/* Profile cards- row 1 */}
         <div className="card-container">
           {/* Card - Carl K */}
