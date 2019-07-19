@@ -247,8 +247,8 @@ const ProfileEdit = () => {
             </div>
           </div>
           <div className="profileBtns">
-            <input type="submit" className="btn btn-primary my-1" />
-            <Link className="btn btn-light my-1" to="/dashboard">
+            <input type="submit" className="btn btn-rounded btn-primary my-1" />
+            <Link className="btn btn-rounded btn-light my-1" to="/dashboard">
               Go Back
             </Link>
           </div>

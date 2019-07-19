@@ -21,7 +21,8 @@ const Dashboard = () => {
         </div>
         {/* Request alert band is triggered if a user is rquesting mentorship */}
         <div className="requestAlert">
-          <i className="fas fa-envelope-open-text" /> You have a pending requests!
+          <i className="fas fa-envelope-open-text" /> You have a pending
+          requests!
         </div>
       </div>
       <div className="dashProfileSummary">

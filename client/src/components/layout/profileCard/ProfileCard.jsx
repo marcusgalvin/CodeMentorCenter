@@ -140,16 +140,13 @@ export default class extends React.Component {
               </div>
             </div>
             <button
-              className="btn btn-rounded btn-danger"
+              className="btn btn-danger"
               href="javascript:void(0);"
               onClick={() => this.closeModal()}
             >
               Close Popup
             </button>
-            <button
-              className="btn btn-rounded btn-success"
-              href="javascript:void(0);"
-            >
+            <button className="btn btn-success" href="javascript:void(0);">
               Send Mentorship Request
             </button>
           </div>
@@ -216,7 +213,7 @@ export default class extends React.Component {
           <div className="request-btn viewDetails">
             <a
               href="javascript:void(0);"
-              className="btn btn-primary btn-rounded"
+              className="btn btn-primary"
               value="Open"
               onClick={() => this.openModal()}
             >
@@ -224,10 +221,7 @@ export default class extends React.Component {
             </a>
           </div>
           <div className="request-btn m-requestMentorship">
-            <a
-              href="javascript:void(0);"
-              className="btn btn-primary btn-rounded"
-            >
+            <a href="javascript:void(0);" className="btn btn-primary">
               REQUEST MENTORSHIP
             </a>
           </div>

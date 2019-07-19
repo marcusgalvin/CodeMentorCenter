@@ -603,8 +603,9 @@ button {
 }
 
 .request-btn a {
-  padding: 4px 16px 3px;
+  padding: 6px 16px;
   font-size: 0.8rem;
+  width: 80%;
 }
 
 .viewDetails {
@@ -1063,6 +1064,10 @@ button {
   background-color: var(--cmc-lightblue-color);
 }
 
+.requestedMentorship button {
+  padding: 2px 13px;
+}
+
 .currentMentorship {
   display: flex;
   justify-content: center;
@@ -1080,11 +1085,6 @@ button {
   width: 100%;
 }
 
-.currentMentorship li button {
-  padding: 4px 8px;
-  font-size: 0.8rem;
-}
-
 .currentMentorship li:last-child {
   text-align: center;
 }
@@ -1093,6 +1093,17 @@ button {
 .currentMentorship span {
   font-weight: 700;
   padding-right: 5px;
+}
+
+.currentMentorship button,
+.requestedMentorship button {
+  padding: 4px 8px;
+  font-size: 1rem;
+  width: 200px;
+}
+
+.requestedMentorship button:last-child {
+  margin-left: 25px;
 }
 
 /* Edit User Profile */
@@ -1157,6 +1168,17 @@ button {
 
 .editProfile-ct .form-group select {
   background-color: var(--white-color);
+}
+
+.editProfile-ct .profileBtns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+#mentorViewMore[type="checkbox"]:checked ~ h3 ~ .hiddenMentorFields {
+  margin: 25px 0;
 }
 
 .personalInfo .location {
@@ -2000,6 +2022,21 @@ button {
     width: 90%;
   }
 
+  .requestedMentorship button:last-child {
+    margin: 0;
+  }
+
+  .requestedMentorship button {
+    width: 100%;
+    border-radius: none;
+    margin-bottom: 10px;
+  }
+
+  .currentMentorship button {
+    width: 100%;
+    border-radius: 0;
+  }
+
   /* Edit Profile Page */
   /*****************/
   .editProfile-ct {
@@ -2010,6 +2047,22 @@ button {
   .editProfile-ct .personalInfo,
   .editProfile-ct .social-input {
     padding-right: 0;
+  }
+
+  .editProfile-ct .profileBtns {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #mentorViewMore[type="checkbox"]:checked ~ h3 ~ .hiddenMentorFields {
+    margin: 25px 0;
+  }
+
+  .editProfile-ct .profileBtns .btn {
+    border-radius: inherit;
+    padding: 10px 0;
+    margin: 10px;
   }
 
   /* View All - Mentors & Mentors */
