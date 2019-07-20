@@ -11,9 +11,10 @@ const OnlineLearning = () => {
         <div className="ad-copy">
           <h4>Looking to further your mentorship?</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit, sed labore et dolore magna aliqua.
+            Code Mentor Centor is your gateway into a successful career in
+            computer science & programming. After spending time learning the
+            basic fundamentals of JavaScript with your mentor, you can continue
+            your education at CareerDevs Computer Science University!
           </p>
           <Link to="/CmcCareerDevs" className="btn btn-primary btn-rounded">
             EXPLORE ONLINE LEARNING
