@@ -16,7 +16,10 @@ const OnlineLearning = () => {
             basic fundamentals of JavaScript with your mentor, you can continue
             your education at CareerDevs Computer Science University!
           </p>
-          <Link to="/CmcCareerDevs" className="btn btn-primary btn-rounded">
+          <Link
+            to="/OnlineLearningDetails"
+            className="btn btn-primary btn-rounded"
+          >
             EXPLORE ONLINE LEARNING
           </Link>
         </div>

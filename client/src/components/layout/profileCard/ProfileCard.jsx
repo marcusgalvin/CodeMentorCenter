@@ -71,22 +71,22 @@ export default class extends React.Component {
               <div className="socialDetail">
                 <ul>
                   <li>
-                    <i class="fab fa-facebook-square" />{" "}
+                    <i className="fab fa-facebook-square" />{" "}
                     <a href="http://wwww.facebook.com"> Facebook: jdoe</a>
                   </li>
                   <li>
-                    <i class="fab fa-twitter-square" />{" "}
+                    <i className="fab fa-twitter-square" />{" "}
                     <a href="http://wwww.facebook.com"> Twitter: johndoe</a>
                   </li>
                   <li>
-                    <i class="fab fa-linkedin" />{" "}
+                    <i className="fab fa-linkedin" />{" "}
                     <a href="http://wwww.facebook.com">
                       {" "}
                       LinkedIn: JohnPaulDoe
                     </a>
                   </li>
                   <li>
-                    <i class="fab fa-github-square" />{" "}
+                    <i className="fab fa-github-square" />{" "}
                     <a href="http://wwww.facebook.com">
                       {" "}
                       Github: JohnGithubRepos

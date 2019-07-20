@@ -358,7 +358,8 @@ button {
 /*****************************/
 .heroImg {
   width: 100%;
-  background: url(./components/images/hero_bannerCMCCouple.jpg) no-repeat center 0;
+  background: url(./components/images/hero_bannerCMCCouple.jpg) no-repeat center
+    0;
   background-size: cover;
   background-position: center;
   height: 450px;
@@ -1241,7 +1242,7 @@ button {
   z-index: 1;
 }
 
-#mentorViewMore[type="checkbox"]:checked~h3~.hiddenMentorFields {
+#mentorViewMore[type="checkbox"]:checked ~ h3 ~ .hiddenMentorFields {
   max-height: 600px;
 }
 
@@ -1279,101 +1280,107 @@ button {
 }
 
 /* CMC & CareerDevs Page */
-/*****************/
-/* page styles */
-.cmc-ct {
+/*************************/
+.onlineLearningDetails-ct {
   position: relative;
   top: 108px;
   padding: 20px;
   text-align: center;
+}
+
+.onlineLearningDetails-ct h2 {
+  margin-top: 25px;
   color: var(--cmc-darkblue-color);
 }
 
-.info-container {
+.onlineLearningDetails-ct h4 {
+  font-size: 1.3rem;
+}
+
+.onlineLearningDetails-ct .lead {
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 25px;
+}
+
+.programs-ct {
+  margin-top: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: baseline;
 }
 
-.CMC-left {
-  width: 30rem;
-  /* float: left; */
-  padding-right: 7rem;
+.program-details {
+  width: 45%;
+  padding: 10px 20px;
+  text-align: justify;
 }
 
-.CMC-right {
-  width: 30rem;
-  /* float: left; */
-  padding-left: 7rem;
+.program-details h4 {
+  width:100%;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
-.CMC-photo {
-  width: 20rem;
-  /* float: right; */
+.program-details .logo {
+  width: 250px;
+  height: auto;
+  margin: 0 auto;
 }
 
-.CareerDevs-photo {
-  width: 20rem;
-  /* float: right; */
-}
-
-.lightbulb-photo {
-  width: 10rem;
-  margin: auto;
+.about-cd {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   padding-top: 7rem;
 }
 
-.mission-statement {
-  color: var(--cmc-darkblue-color);
+.about-cd h4 {
+  font-size: 1.3rem;
 }
-
-.languages {
-  display: flex;
-  flex-direction: center;
-  justify-content: center;
-}
-
-.seperate-language {
-  /* padding: 2rem; */
-  /* margin: 5px; */
-  padding-right: 10px;
-  width: 5rem;
-  text-align: center;
-}
-
-.what-you-learn {
-  height: 600px;
-  width: 800px;
-  color: var(--cmc-darkblue-color);
-  text-align: center;
+.lightbulb-photo {
+  width: 7rem;
   margin: auto;
 }
 
-.mission-statement {
-  text-align: center;
-  font-size: 300%;
-  padding: 1rem;
-  font-weight: 1900;
+.studies {
+  width: 80%;
+  margin: 0 auto 40px;
 }
 
-.students {
-  text-align: center;
-  color: var(--cmc-darkblue-color);
-  /* width: 70rem; */
+.studies ul li {
+  padding: 20px 0;
+  text-align: justify;
 }
 
-.student-photos-ct {
+.programs-ct {
   display: flex;
-  justify-content: center;
   flex-direction: center;
+  justify-content: center;
 }
 
-.single-student {
-  width: 15rem;
-  height: 15rem;
-  text-align: center;
-  padding: 1rem;
+.program-ct {
+  margin: 0 10px;
+  width: 75px;
+  height: auto;
 }
+
+.program-ct a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.program-ct a:hover {
+opacity: 1;
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
 
 /* About Us Page */
 /*****************/
@@ -1592,11 +1599,26 @@ button {
 /* Mobile Styles */
 /*****************/
 @media (max-width: 1030px) {
-
   /* About Us Page */
   /*****************/
   .flip-card {
     margin-bottom: 25px;
+  }
+
+  /* Online Learning Details Page */
+  /*****************/
+  .onlineLearningDetails-ct .about-cd {
+    padding-top: 3rem;
+  }
+
+  .onlineLearningDetails-ct .program-ct {
+    width: 55px;
+  }
+
+  .program-ct a {
+   -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+   filter: grayscale(0%);
+   opacity: 1;
   }
 }
 
@@ -1646,6 +1668,27 @@ button {
   .form .social-input {
     padding-right: 25px;
   }
+
+  /* Online Learning Details Page */
+  /*****************/
+  .onlineLearningDetails-ct .program-details {
+    width: 100%;
+  }
+
+  .onlineLearningDetails-ct .about-cd {
+    padding-top: 3rem;
+  }
+
+  .onlineLearningDetails-ct .program-ct {
+    width: 40px;
+  }
+  
+  .program-ct a {
+          -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  opacity: 1;
+  }
+
 }
 
 /*************************/
@@ -1833,24 +1876,24 @@ button {
     display: none;
   }
 
-  .m-nav .menu-btn:checked~.menu {
+  .m-nav .menu-btn:checked ~ .menu {
     max-height: 240px;
   }
 
-  .m-nav .menu-btn:checked~.menu-icon .navicon {
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
   }
 
-  .m-nav .menu-btn:checked~.menu-icon .navicon:before {
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon:before {
     transform: rotate(-45deg);
   }
 
-  .m-nav .menu-btn:checked~.menu-icon .navicon:after {
+  .m-nav .menu-btn:checked ~ .menu-icon .navicon:after {
     transform: rotate(45deg);
   }
 
-  .m-nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
-  .m-nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+  .m-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .m-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
   }
 
@@ -2077,5 +2120,52 @@ button {
   /*****************/
   .aboutUs-ct {
     top: 0;
+  }
+
+  /* Online Learning Details Page */
+  /*****************/
+  .onlineLearningDetails-ct {
+    top: 0;
+  }
+
+  .onlineLearningDetails-ct h2 {
+    margin: 0 0 20px;
+    line-height: 2.5rem;
+    font-size: 1.7rem;
+  }
+
+  .onlineLearningDetails-ct h4 {
+    line-height: 1.7rem;
+  }
+
+  .onlineLearningDetails-ct .program-details {
+    width: 100%;
+  }
+
+  .onlineLearningDetails-ct .studies h2 {
+    margin-top: 20px;
+  }
+
+  .onlineLearningDetails-ct .studies ul li {
+    text-align: center;
+  }
+
+  .onlineLearningDetails-ct .about-cd {
+    padding-top: 3rem;
+  }
+
+  .onlineLearningDetails-ct .programs {
+    align-content: center;
+  }
+
+  .onlineLearningDetails-ct .program-ct {
+    width: 75px;
+    margin: 30px;
+  }
+  
+  .program-ct a {
+          -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  opacity: 1;
   }
 }

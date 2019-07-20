@@ -55,7 +55,7 @@ const Footer = () => {
               <Link to="/AboutUs">About Us</Link>
             </li>
             <li>
-              <Link to="/CmcCareerDevs">CareerDevs</Link>
+              <Link to="/OnlineLearningDetails">CareerDevs</Link>
             </li>
           </ul>
         </div>

@@ -1,26 +1,22 @@
 import React, { Fragment, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Landing, TopNavbar } from "./components/layout";
 import ScrollToTopRoute from "./components/layout/ScrollToTopRoute";
 
 /* Jose Login Below
   import Login from "./Auth/Login";
 */
-
 /* Temp Login Page - for testing */
 import Login from "./components/layout/Login";
-
-/* Not being use yet
-  import Logout from "./Auth/Logout";
-*/
+import TopNavbar from "./components/layout/TopNavbar";
+import Landing from "./components/layout/Landing";
 import Alert from "./components/layout/Alert";
 import Register from "./components/layout/Register";
 import AboutUs from "./components/layout/AboutUs";
 import Dashboard from "./components/layout/Dashboard";
 import ProfileEdit from "./components/layout/ProfileEdit";
-import CmcCareerDevs from "./components/layout/CmcCareerDevs";
 import Mentors from "./components/layout/Mentors";
 import Mentees from "./components/layout/Mentees";
+import OnlineLearningDetails from "./components/layout/OnlineLearningDetails";
 
 //redux imports
 import { Provider } from "react-redux";
@@ -56,9 +52,10 @@ const App = () => {
             </Switch>
           </section>
           <ScrollToTopRoute path="/AboutUs" component={AboutUs} />
-
-          <ScrollToTopRoute path="/CmcCareerDevs" component={CmcCareerDevs} />
-
+          <ScrollToTopRoute
+            path="/OnlineLearningDetails"
+            component={OnlineLearningDetails}
+          />
           <ScrollToTopRoute path="/Mentors" component={Mentors} />
           <ScrollToTopRoute path="/Mentees" component={Mentees} />
         </Fragment>
