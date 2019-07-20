@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Landing, TopNavbar } from "./components/layout";
+import ScrollToTopRoute from "./components/layout/ScrollToTopRoute";
 
 /* Jose Login Below
   import Login from "./Auth/Login";
@@ -54,10 +55,12 @@ const App = () => {
               <Route path="/register" component={Register} />
             </Switch>
           </section>
-          <Route path="/AboutUs" component={AboutUs} />
-          <Route path="/CmcCareerDevs" component={CmcCareerDevs} />
-          <Route path="/Mentors" component={Mentors} />
-          <Route path="/Mentees" component={Mentees} />
+          <ScrollToTopRoute path="/AboutUs" component={AboutUs} />
+
+          <ScrollToTopRoute path="/CmcCareerDevs" component={CmcCareerDevs} />
+
+          <ScrollToTopRoute path="/Mentors" component={Mentors} />
+          <ScrollToTopRoute path="/Mentees" component={Mentees} />
         </Fragment>
       </Router>
     </Provider>
