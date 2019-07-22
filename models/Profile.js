@@ -9,6 +9,7 @@ const ProfileSchema = new mongoose.Schema({
     type: Schema.Types.ObjectId,
     required: true
   },
+  image: String,
   //if available true, else false
   status: {
     type: Boolean,
